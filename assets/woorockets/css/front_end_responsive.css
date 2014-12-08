@@ -1,0 +1,71 @@
+/*------------------------------------------------------
+    SMARTPHONE LAYOUT (240 - 480)
+------------------------------------------------------*/
+@media only screen and (max-width: 480px) , ( max-device-width : 480px)
+	{
+	#fancybox-wrap,#fancybox-content,.jsn-bootstrap3 .progress-info,.jsn-bootstrap3 .wr-element-pricingtable[class
+		*="table-"]>div {
+		width: 100% !important;
+	}
+	.jsn-bootstrap3 .carousel .carousel-image,.mejs-container.mejs-audio,.local_file
+		{
+		max-width: 100%;
+	}
+	#fancybox-wrap,#fancybox-content {
+		left: 0 !important;
+	}
+	.jsn-bootstrap3 .btn {
+		margin: 5px;
+	}
+	.jsn-bootstrap3 .btn-group .btn {
+		margin: 0;
+	}
+	.jsn-bootstrap3 .carousel-caption {
+		position: absolute;
+	}
+	.testimonial .testimonial-item {
+		margin-bottom: 20px;
+	}
+	.jsn-bootstrap3 .row-fluid.wr_fullwidth {
+		padding: 10px !important;
+	}
+	.jsn-bootstrap3 .wr-element-pricingtable {
+		display: inline-block;
+	}
+	.jsn-bootstrap3 .wr-pricingtable .wr-prtbl-cols-featured {
+		margin-top: 35px;
+	}
+	.jsn-bootstrap3 .contentclips-item {
+		margin-bottom: 15px;
+	}
+	.jsn-bootstrap3 .wr-pricingtable .wr-prtbl-cols {
+		border-left: 1px solid #E4E4E4;
+	}
+}
+
+/*------------------------------------------------------
+    TABLET LAYOUT (481 - 960)
+------------------------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width: 960px) , (
+		min-device-width : 481px) and (max-device-width: 960px) {
+	.jsn-bootstrap3 .row {
+		margin: 0;
+	}
+	#fancybox-wrap,#fancybox-content {
+		width: 100% !important;
+		left: 0 !important;
+	}
+	.jsn-bootstrap3 .carousel .carousel-image,.mejs-container.mejs-audio,.local_file
+		{
+		max-width: 100%;
+	}
+	.jsn-bootstrap3 .btn {
+		margin: 5px;
+	}
+	.jsn-bootstrap3 .btn-group .btn {
+		margin: 0;
+	}
+	.testimonial .testimonial-item {
+		margin-bottom: 20px;
+	}
+}

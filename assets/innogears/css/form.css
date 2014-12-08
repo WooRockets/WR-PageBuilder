@@ -1,0 +1,82 @@
+/**
+ * @version    $Id$
+ * @package    IG_Library
+ * @author     InnoGears Team <support@innogears.com>
+ * @copyright  Copyright (C) 2014 InnoGears.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.innogears.com
+ */
+
+/* Override 3rd-party style */
+.ui-dialog {
+	z-index: 999999;
+}
+.ui-dialog-titlebar-close {
+	display: block !important;
+}
+
+.colorpicker {
+	z-index: 999999 !important;
+}
+
+.ClassyGradient .arrow {
+	display: none;
+}
+
+/* Loading state */
+.ig-loading {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	min-height: 32px;
+	background: rgba(255,255,255,.25) url(../../3rd-party/bs2/jsn/images/icons-32/icon-32-loading-circle.gif) 50% 50% no-repeat !important;
+}
+
+/* Tabs */
+.tab-content {
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-radius: 0 4px 4px;
+	padding: 15px;
+	background-color: #fff;
+}
+
+/* Sortable list */
+.ig-form .ui-sortable {
+	margin: 0;
+	border: 1px solid #DDDDDD;
+	padding: 4px 6px;
+	width: 100%;
+	background-color: #fff;
+	list-style: none;
+}
+.ig-form .ui-sortable li {
+	border: 1px solid #FFFFFF;
+	padding: 5px 5px 2px;
+	list-style: none;
+}
+.ig-form .ui-sortable li:hover {
+	border: 1px solid #FBEED5;
+	background-color: #FCF8E3;
+	cursor: move;
+	transition: background 0.3s ease-out 0s;
+}
+.ig-form .ui-sortable li label {
+	display: inline-block;
+	line-height: 21px;
+	white-space: nowrap;
+}
+.ig-form .ui-sortable .ui-state-highlight {
+	margin-bottom: 0;
+	border: 1px dashed #CCCCCC;
+	height: 20px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Form actions */
+.jsn-master .jsn-bootstrap .ig-form.form-horizontal .form-actions {
+	padding-left: 180px;
+	text-align: left;
+}

@@ -1,0 +1,68 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2012 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/*=================== FONT ICOMOON OVERRIDES ===========================*/
+ .jsn-master .jsn-bootstrap3[class ^="icon-"],
+ .jsn-master .jsn-bootstrap3[class *=" icon-"] {
+    background-image: none !important;
+    font-size: 16px;
+}
+.jsn-master .jsn-bootstrap3 .ui-tabs-nav[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .ui-tabs-nav[class *=" icon-"],
+.jsn-master .jsn-bootstrap3 .jsn-add-more[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .jsn-add-more[class *="-icon-"],
+.jsn-master #toolbar-custom[class ^="icon-"],
+.jsn-master #toolbar-custom[class *=" icon-"],
+.jsn-master .jsn-bootstrap3 .jsn-reset-search[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .jsn-reset-search[class *=" icon-"],
+#jsn_is_showcase_tabs ul.ui-widget-header[class ^="icon-"],
+#jsn_is_showcase_tabs ul.ui-widget-header[class *=" icon-"] {
+    font-size: 12px;
+}
+.jsn-master .jsn-bootstrap3 .btn[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .btn[class *=" icon-"] {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.jsn-master .jsn-bootstrap3 .btn.btn-icon[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .btn.btn-icon[class *=" icon-"] {
+    margin: 0;
+}
+.jsn-master .jsn-bootstrap3 .progress .bar[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .progress .bar[class *=" icon-"] {
+    margin: 0 8px;
+}
+.jsn-master .jsn-bootstrap3 .accordion-heading[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .accordion-heading[class *=" icon-"],
+.jsn-master .jsn-bootstrap3 .nav-tabs[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .nav-tabs[class *=" icon-"],
+.jsn-master .jsn-bootstrap3 .carousel-content h4[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .carousel-content h4[class *=" icon-"] {
+    margin-right: 8px;
+}
+.jsn-master .jsn-bootstrap3 .jsn-style-dark[class ^="icon-"],
+.jsn-master .jsn-bootstrap3 .jsn-style-dark[class *=" icon-"] {
+    color: #fff;
+}
+.jsn-master .pagetitle, .jsn-master #jsn-adminbar #module-menu a,
+.jsn-master #module-menu #menu ul li a {
+    width: auto;
+    /* Only fix in J2.5 */
+}
+.icon-magic:before {
+    content:"\6b";
+}
+.icon-list-alt:before {
+    content:"\31";
+}
+.icon-bolt:before {
+    content:"\79";
+}

@@ -1,0 +1,131 @@
+/*------------------------------------------------------
+    Common css for front end
+------------------------------------------------------*/
+.jsn-bootstrap3 .carousel h4 {
+    /*color: #fff;*/
+    font-weight: bold;
+}
+.jsn-bootstrap3 .carousel h4 i {
+	margin-right: 10px;
+}
+div.wr_text p.dropcap:first-letter {
+    margin: 0.1em 0.2em 0.1em -0.05em;
+}
+.jsn-master .jsn-bootstrap3 .mejs-container, .jsn-master .jsn-bootstrap3 .local_file, iframe, object, video {
+    max-width: 100%;
+}
+.wr_loading {
+    display: none;
+}
+.wr_loading.active {
+    display: block !important;
+}
+[class *="col-"] {
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    -o-box-sizing: border-box !important;
+    -ms-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+/* === Prevent image shows beyond the container === */
+.wr-element-container img {
+    max-width: 100%;
+    float: inherit !important;
+}
+/* Add margin for WP audio */
+.wp-audio-shortcode {
+    margin: 10px 0;
+}
+/* === tooltip === */
+.tipsy img {
+    float: none !important;
+}
+/* === social icons === */
+ul.wr-social-links li a.facebook {
+    background: url(../images/icon-socials/facebook.png) no-repeat 2px 3px #ECEEF5;
+    border: 1px solid #CAD4E7;
+    width: 20px;
+}
+ul.wr-social-links li a.facebook:hover {
+    border-color: #9DACCE;
+}
+ul.wr-social-links li a.twitter {
+    background: url(../images/icon-socials/twitter.png) no-repeat 2px 5px #EEE;
+    border: 1px solid #CCC;
+    width: 22px;
+}
+ul.wr-social-links li a.googleplus {
+    background: url(../images/icon-socials/gplus.png) no-repeat 8px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    width: 42px;
+}
+ul.wr-social-links {
+    margin: 0;
+    padding: 0;
+}
+ul.wr-social-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px 0 0 !important;
+}
+ul.wr-social-links li a:hover {
+    text-decoration: none;
+}
+ul.wr-social-links li a {
+    font-size: 0.9em;
+    display: inline-block;
+    height: 21px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+ul.wr-social-links li a.googleplus:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+ul.wr-social-links li a.twitter:hover {
+    border-color: #AAA;
+}
+/* === Full width === */
+.wr-full-width {
+    overflow-x: hidden;
+}
+
+/** element typography **/
+.jsn-bootstrap3 .wr-element-container p {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #666;
+}
+
+/* Video & audio No file selected */
+.jsn-bootstrap3 .wr-element-container>.jsn-bglabel {
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #D3D3D3;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    text-align: center;
+    margin-top: 65px;
+}
+.jsn-bootstrap3 .wr-element-container[class ^="icon-"] {
+    margin-right: 5px;
+}
+
+/*------   Button   ------*/
+.jsn-bootstrap3 .btn-group .btn {
+	margin-bottom: 5px;
+}
+.jsn-bootstrap3 .btn-toolbar.text-center .btn-group {
+	float: none;
+}
+
+/*------   Icon   ------*/
+.jsn-bootstrap3 .progress-info i {
+	margin-right: 10px;
+}
+
+/*------   Accordion   ------*/
+.jsn-bootstrap3 .elementFilter {
+	margin: 0;
+}

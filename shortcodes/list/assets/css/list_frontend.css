@@ -1,0 +1,107 @@
+/*** List  ***/
+ .jsn-bootstrap3 .wr-list-icons {
+    margin: 0;
+    padding: 0;
+}
+.jsn-bootstrap3 .wr-list-icons {
+    padding-bottom: 0px;
+}
+.jsn-bootstrap3 .wr-list-icons li {
+    clear: both;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+    min-height: 60px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10px;
+}
+.jsn-bootstrap3 .wr-list-icons .wr-icon-base i {
+    position: relative;
+}
+.jsn-bootstrap3 .wr-list-icons [class ^="icon-"], .jsn-bootstrap3 .wr-list-icons [class *=" icon-"] {
+    height: auto;
+    line-height: 100%;
+    margin-top: 0;
+    vertical-align: middle;
+    width: auto;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-16 .wr-icon-base i[class *="icon-"] {
+    font-size: 14px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-24 .wr-icon-base i[class *="icon-"] {
+    font-size: 22px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-32 .wr-icon-base i[class *="icon-"] {
+    font-size: 30px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-48 .wr-icon-base i[class *="icon-"] {
+    font-size: 46px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-64 .wr-icon-base i[class *="icon-"] {
+    font-size: 62px;
+}
+.jsn-bootstrap3 .wr-list-icons .wr-icon-base i[class *="icon-"] {
+    margin: 0;
+}
+.jsn-bootstrap3 .wr-list-icons .wr-icon-base {
+    position: relative;
+    z-index: 9;
+    text-align: center;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-circle .wr-icon-base {
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-square .wr-icon-base {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-position-left .wr-icon-base {
+    float: left;
+    margin-right: 15px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-position-right {
+    text-align: right;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-position-right .wr-icon-base {
+    float: right;
+    margin-left: 15px;
+}
+.jsn-bootstrap3 .wr-list-content-wrap {
+    overflow: hidden;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-circle.wr-icon-16 .wr-icon-base, .jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-16 .wr-icon-base {
+    width: 45px;
+    height: 45px;
+    line-height: 37px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-circle.wr-icon-24 .wr-icon-base, .jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-24 .wr-icon-base {
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-32 .wr-icon-base {
+    width: 67px;
+    height: 67px;
+    line-height: 60px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-48 .wr-icon-base {
+    width: 85px;
+    height: 85px;
+    line-height: 81px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-icon-64 .wr-icon-base {
+    width: 100px;
+    height: 100px;
+    line-height: 98px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-16 .wr-icon-base {
+    line-height: 42px;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-24 .wr-icon-base {
+    line-height: 54px;
+}

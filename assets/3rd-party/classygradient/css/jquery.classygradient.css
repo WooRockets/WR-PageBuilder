@@ -1,0 +1,92 @@
+/*!
+ * jQuery ClassyGradient
+ * http://www.class.pm/projects/jquery/classygradient
+ *
+ * Copyright 2012 - 2013, Class.PM www.class.pm
+ * Written by Marius Stanciu - Sergiu <marius@picozu.com>
+ * Licensed under the GPL Version 3 license.
+ * Version 1.0.0
+ *
+ */
+.ClassyGradient {
+	margin-bottom: 18px;
+}
+
+.ClassyGradient .canvas {
+	border: 1px solid #333;
+}
+
+.ClassyGradient .info {
+	display: none;
+	margin-right: 20px;
+	margin-top: 4px;
+	position: absolute;
+	z-index: 80;
+}
+
+.ClassyGradient .info .arrow {
+	border-style: solid;
+	border-width: 10px;
+	height: 0px;
+	width: 0px;
+	margin-left: 20px;
+}
+
+.ClassyGradient .info .content {
+	color: black;
+	padding: 8px;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	font-size: 12px;
+	font-family: Verdana, Arial;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.ClassyGradient .points {
+	position: absolute;
+	z-index: 99;
+	max-height: 20px;
+	margin-top: 2px;
+}
+
+.ClassyGradient .point {
+	position: relative;
+	width: 8px;
+	margin-left: -4px;
+	height: 8px;
+	border: 1px solid #333;
+}
+
+.ClassyGradient .point-position {
+	position: relative;
+	top: -12px;
+	margin-left: 6px;
+}
+
+.ClassyGradient .delete {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url('../images/close.png');
+	position: relative;
+	top: -9px;
+	margin-left: 8px;
+}
+
+.ClassyGradient .point-color {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background: url('../images/select.png');
+}
+
+.ClassyGradient .point-color div {
+	position: relative;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: url('../images/select.png') center;
+}

@@ -1,0 +1,127 @@
+@font-face {
+	font-family: 'wr-element-font';
+	src:url('../fonts/wr-element-font.eot?152d9u');
+	src:url('../fonts/wr-element-font.eot?#iefix152d9u') format('embedded-opentype'),
+		url('../fonts/wr-element-font.woff?152d9u') format('woff'),
+		url('../fonts/wr-element-font.ttf?152d9u') format('truetype'),
+		url('../fonts/wr-element-font.svg?152d9u#wr-element-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="wr-icon-"], [class*=" wr-icon-"] {
+	font-family: 'wr-element-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.jsn-bootstrap3 .wr-icon-accordion:before {
+	content: "\e600";
+}
+.jsn-bootstrap3 .wr-icon-add-col:before {
+	content: "\e601";
+}
+.jsn-bootstrap3 .wr-icon-add-row:before {
+	content: "\e602";
+}
+.jsn-bootstrap3 .wr-icon-alert:before {
+	content: "\e603";
+}
+.jsn-bootstrap3 .wr-icon-align-center:before {
+	content: "\e604";
+}
+.jsn-bootstrap3 .wr-icon-align-left:before {
+	content: "\e605";
+}
+.jsn-bootstrap3 .wr-icon-align-right:before {
+	content: "\e606";
+}
+.jsn-bootstrap3 .wr-icon-audio:before {
+	content: "\e607";
+}
+.jsn-bootstrap3 .wr-icon-button:before {
+	content: "\e608";
+}
+.jsn-bootstrap3 .wr-icon-button-bar:before {
+	content: "\e609";
+}
+.jsn-bootstrap3 .wr-icon-carousel:before {
+	content: "\e60a";
+}
+.jsn-bootstrap3 .wr-icon-content-clip:before {
+	content: "\e60b";
+}
+.jsn-bootstrap3 .wr-icon-content-list:before {
+	content: "\e60c";
+}
+.jsn-bootstrap3 .wr-icon-divider:before {
+	content: "\e60d";
+}
+.jsn-bootstrap3 .wr-icon-google-map:before {
+	content: "\e60e";
+}
+.jsn-bootstrap3 .wr-icon-heading:before {
+	content: "\e60f";
+}
+.jsn-bootstrap3 .wr-icon-image:before {
+	content: "\e610";
+}
+.jsn-bootstrap3 .wr-icon-list:before {
+	content: "\e611";
+}
+.jsn-bootstrap3 .wr-icon-pricing-table:before {
+	content: "\e612";
+}
+.jsn-bootstrap3 .wr-icon-progress-bar:before {
+	content: "\e613";
+}
+.jsn-bootstrap3 .wr-icon-progress-circle:before {
+	content: "\e614";
+}
+.jsn-bootstrap3 .wr-icon-promotion-box:before {
+	content: "\e615";
+}
+.jsn-bootstrap3 .wr-icon-qr-code:before {
+	content: "\e616";
+}
+.jsn-bootstrap3 .wr-icon-tab:before {
+	content: "\e617";
+}
+.jsn-bootstrap3 .wr-icon-tab-bottom:before {
+	content: "\e618";
+}
+.jsn-bootstrap3 .wr-icon-table:before {
+	content: "\e619";
+}
+.jsn-bootstrap3 .wr-icon-tab-left:before {
+	content: "\e61a";
+}
+.jsn-bootstrap3 .wr-icon-tab-right:before {
+	content: "\e61b";
+}
+.jsn-bootstrap3 .wr-icon-tab-top:before {
+	content: "\e61c";
+}
+.jsn-bootstrap3 .wr-icon-testimonial:before {
+	content: "\e61d";
+}
+.jsn-bootstrap3 .wr-icon-text:before {
+	content: "\e61e";
+}
+.jsn-bootstrap3 .wr-icon-tooltip:before {
+	content: "\e61f";
+}
+.jsn-bootstrap3 .wr-icon-video:before {
+	content: "\e620";
+}
+.jsn-bootstrap3 .wr-icon-widget:before {
+	content: "\e621";
+}

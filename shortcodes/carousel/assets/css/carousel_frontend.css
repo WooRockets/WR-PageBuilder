@@ -1,0 +1,59 @@
+/* Carousel */
+.jsn-bootstrap3 .carousel {
+    max-width: 100%;
+}
+.jsn-bootstrap3 .carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 25px 35px 25px;
+    text-shadow: none;
+    left: 10%;
+    right: 10%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.jsn-bootstrap3 .carousel .carousel-caption i {
+    margin: 0 15px 0 0;
+}
+.jsn-bootstrap3 .carousel .carousel-caption p {
+    color: #AAA;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 19px;
+}
+.jsn-bootstrap3 .carousel .carousel-content {
+    padding: 0 50px;
+}
+.jsn-bootstrap3 .carousel .carousel-control {
+    background: none;
+}
+.jsn-bootstrap3 .carousel .carousel-control span {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    margin-top: -19px;
+    font-size: 15px;
+    line-height: 38px;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: 0px;
+}
+.jsn-bootstrap3 .carousel .carousel-indicators {
+    bottom: 15px;
+}
+.jsn-bootstrap3 .carousel .carousel-indicators li {
+    margin: 1px 3px;
+}
+.jsn-bootstrap3 .carousel .carousel-indicators .active {
+    margin: 0 2px;
+}
+.jsn-bootstrap3 .carousel .carousel-control span.icon-arrow-left {
+    left: 20px;
+}
+.jsn-master .jsn-bootstrap3 .carousel .carousel-control span.icon-arrow-right {
+    right: 20px;
+}

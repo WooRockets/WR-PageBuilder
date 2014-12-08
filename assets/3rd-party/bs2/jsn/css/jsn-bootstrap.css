@@ -1,0 +1,695 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/*=================== BOOTSTRAP OVERRIDES ===========================*/
+.jsn-master .jsn-bootstrap h1 {
+	font-size: 20px;
+}
+.jsn-master .jsn-bootstrap h2 {
+	font-size: 18px;
+}
+.jsn-master .jsn-bootstrap h3 {
+	font-size: 16px;
+}
+.jsn-master .jsn-bootstrap h4 {
+	font-size: 14px;
+}
+.jsn-master .jsn-bootstrap h5,
+.jsn-master .jsn-bootstrap h6 {
+	font-weight: bold;
+}
+.jsn-master .jsn-bootstrap h1,
+.jsn-master .jsn-bootstrap h2,
+.jsn-master .jsn-bootstrap h3,
+.jsn-master .jsn-bootstrap h4,
+.jsn-master .jsn-bootstrap h5,
+.jsn-master .jsn-bootstrap h6 {
+	margin: 5px 0 10px;
+	font-weight: normal;
+	color: #000;
+}
+.jsn-master .jsn-bootstrap h1 small,
+.jsn-master .jsn-bootstrap h2 small,
+.jsn-master .jsn-bootstrap h3 small,
+.jsn-master .jsn-bootstrap h4 small,
+.jsn-master .jsn-bootstrap h5 small,
+.jsn-master .jsn-bootstrap h6 small {
+	font-size: 85%;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark h1,
+.jsn-master .jsn-bootstrap .jsn-style-dark h2,
+.jsn-master .jsn-bootstrap .jsn-style-dark h3,
+.jsn-master .jsn-bootstrap .jsn-style-dark h4,
+.jsn-master .jsn-bootstrap .jsn-style-dark h5,
+.jsn-master .jsn-bootstrap .jsn-style-dark h6 {
+	  color: #fff;
+}
+.jsn-master .jsn-bootstrap form {
+	margin: 0;
+}
+.jsn-master .jsn-bootstrap legend {
+	font-weight: normal;
+	font-size: 18px;
+}
+.jsn-master .jsn-bootstrap legend + .control-group {
+	margin-top: 0;
+}
+.jsn-master .jsn-bootstrap p {
+	padding: 0;
+	margin: 5px 0 15px 0;
+}
+.jsn-master .jsn-bootstrap li {
+	margin: 5px 0;
+	padding: 0;
+}
+/* Override Chosen CSS */
+.jsn-master .jsn-bootstrap .chzn-container .chzn-results li {
+	padding: 5px 6px;
+}
+.jsn-master .jsn-bootstrap .chzn-container-single .chzn-search input {
+	height: 26px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.jsn-master .jsn-bootstrap .chzn-container .chzn-drop {
+	z-index: 1200;
+}
+
+.jsn-master .jsn-bootstrap select {
+	padding: 4px;
+}
+.jsn-master .jsn-bootstrap input[type="file"] {
+	display: inline-block;
+	height: 22px;
+	padding: 4px 6px;
+	margin-bottom: 9px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555555;
+	-webkit-border-radius: 3px;
+	 -moz-border-radius: 3px;
+	      border-radius: 3px;
+}
+.jsn-master .jsn-bootstrap input[type="text"],
+.jsn-master .jsn-bootstrap input[type="password"],
+.jsn-master .jsn-bootstrap input[type="number"],
+.jsn-master .jsn-bootstrap input[type="search"],
+.jsn-master .jsn-bootstrap input[type="email"],
+.jsn-master .jsn-bootstrap input[type="url"] {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+}
+.jsn-master .jsn-bootstrap fieldset {
+	margin-top: 20px;
+}
+.jsn-master .jsn-bootstrap fieldset:first-child {
+	margin-top: 0;
+}
+.jsn-master .jsn-bootstrap fieldset label {
+	margin-top: 0;
+}
+.jsn-master .jsn-bootstrap fieldset p {
+	font-size: 1em;
+}
+.jsn-master .jsn-bootstrap .control-group hr {
+	margin: 0;
+}
+
+.jsn-master .jsn-bootstrap .btn.disabled,
+.jsn-master .jsn-bootstrap .btn[disabled] {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.jsn-master .jsn-bootstrap .btn .label {
+	font-size: 10px;
+	margin: 0px 3px 0 0;
+	position: relative;
+	top: -2px;
+	left: -4px;
+}
+
+.jsn-bootstrap .form-horizontal .control-group {
+	margin-bottom: 15px;
+}
+
+.jsn-master .jsn-bootstrap .form-inline label {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.jsn-master .jsn-bootstrap .form-inline input,
+.jsn-master .jsn-bootstrap .form-inline label,
+.jsn-master .jsn-bootstrap .form-inline button,
+.jsn-master .jsn-bootstrap .form-inline select,
+.jsn-master .jsn-bootstrap .form-inline textarea {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.jsn-master .jsn-bootstrap .form-actions {
+	text-align: center;
+}
+.jsn-master .jsn-bootstrap .form-actions,
+.jsn-master.ui-dialog-contentpane .jsn-bootstrap .form-actions {
+	margin: 15px 0;
+	padding: 10px;
+	background: none;
+	border: none;
+}
+.jsn-master .jsn-bootstrap .help-inline {
+	padding-right: 5px;
+}
+.jsn-master .jsn-bootstrap .alert {
+	color: #666;
+	border-color: #DDD;
+}
+.jsn-master .jsn-bootstrap .input-prepend input:focus,
+.jsn-master .jsn-bootstrap .input-append input:focus,
+.jsn-master .jsn-bootstrap .input-prepend select:focus,
+.jsn-master .jsn-bootstrap .input-append select:focus,
+.jsn-master .jsn-bootstrap .input-prepend .uneditable-input:focus,
+.jsn-master .jsn-bootstrap .input-append .uneditable-input:focus {
+	  z-index: 0;
+}
+
+.jsn-master .jsn-bootstrap .jsn-form-bar {
+	margin: 10px 0;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar .control-group {
+	display: inline-block;
+	margin: 0 5px;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar .control-group:first-child {
+	margin-left: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar .control-group:last-child {
+	margin-right: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar .control-group .control-label {
+	display: inline-block;
+	width: auto;
+	float: none;
+	margin-right: 5px;
+}
+.jsn-master .jsn-bootstrap .control-label .icon-question-sign {
+	margin-left: 5px;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar .control-group .controls {
+	display: inline-block;
+	margin-left: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar select,
+.jsn-master .jsn-bootstrap .jsn-form-bar input {
+	margin-bottom: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-form-bar label {
+	white-space: nowrap;
+}
+.jsn-master .jsn-bootstrap .popover {
+	max-width: none;
+}
+.jsn-master .jsn-bootstrap .popover-title {
+	font-weight: bold;
+	margin: 0;
+	font-size: 14px;
+}
+.jsn-master .jsn-bootstrap .popover-content {
+	padding: 15px;
+}
+.jsn-master .jsn-bootstrap .popover-content form {
+	margin: 0;
+}
+.jsn-master .jsn-bootstrap .navbar .nav li.dropdown.open>.dropdown-toggle,
+.jsn-master .jsn-bootstrap .navbar .nav li.dropdown.active>.dropdown-toggle,
+.jsn-master .jsn-bootstrap .navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	 background-image: none;
+}
+
+.jsn-master .jsn-bootstrap .progress {
+	height: auto;
+}
+.jsn-master .jsn-bootstrap .progress .bar {
+	text-align: left;
+	padding: 5px 10px;
+	min-height: 20px;
+}
+
+.jsn-master .jsn-bootstrap .nav-tabs {
+	margin: 0;
+}
+.jsn-master .jsn-bootstrap .nav-tabs > li {
+	margin: 0 0 -1px 0;
+}
+.jsn-master .jsn-bootstrap .nav-tabs > li > a {
+	margin-right: 0;
+	padding: 0 15px;
+	line-height: 34px;
+	font-size: 1.1em;
+}
+.jsn-master .jsn-bootstrap .nav-tabs > .active > a,
+.jsn-master .jsn-bootstrap .nav-tabs > .active > a:hover,
+.jsn-master .jsn-bootstrap .nav-tabs > .active > a:focus {
+	color: #333;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.jsn-master .jsn-bootstrap .nav-tabs .dropdown-toggle .caret {
+	margin-top: 16px;
+}
+.jsn-master .jsn-bootstrap .tab-content {
+	padding: 15px;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-top: none;
+	margin-bottom: 20px;
+}
+.jsn-master .jsn-bootstrap .accordion .accordion-group {
+	margin-bottom: 10px;
+	line-height: 1.5;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.jsn-master .jsn-bootstrap .accordion .accordion-heading .accordion-toggle {
+	color: #555;
+	font-weight: bold;
+}
+.jsn-master .jsn-bootstrap .accordion .accordion-heading .accordion-toggle.collapsed {
+	font-weight: normal;
+}
+.jsn-master .jsn-bootstrap .accordion .accordion-heading .accordion-toggle:hover {
+	text-decoration: none;
+	background-color: #EEE;
+}
+.jsn-master .jsn-bootstrap .carousel .carousel-control {
+	top: 50%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 45px;
+	line-height: 28px;
+}
+.jsn-master .jsn-bootstrap .carousel .carousel-caption h4 {
+	font-size: 20px;
+}
+.jsn-master .jsn-bootstrap .carousel .carousel-caption h4 [class^="icon-"],
+.jsn-master .jsn-bootstrap .carousel .carousel-caption h4 [class*=" icon-"] {
+	font-size: 16px;
+	width: 16px;
+	height: 20px;
+	line-height: 20px;
+	margin: 3px 8px 0 0;
+	margin-right: 8px;
+}
+.jsn-master .jsn-bootstrap .carousel.carousel-small .carousel-control {
+	width: 32px;
+	height: 32px;
+	font-size: 32px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border-width: 2px;
+	line-height: 23px;
+}
+.jsn-master .jsn-bootstrap .carousel .carousel-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.jsn-master .jsn-bootstrap .carousel-indicators li {
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 8px;
+    border: 1px solid transparent;
+}
+.jsn-master .jsn-bootstrap .carousel-indicators li:hover {
+    border-color: rgba(255,255,255,0.5);
+    cursor: pointer;	
+}
+.jsn-master .jsn-bootstrap .carousel-indicators .active {
+    background: #08c;
+}
+
+
+
+/*=================== BOOTSTRAP RTL STYLES ===========================*/
+html[dir="rtl"] .jsn-master .jsn-bootstrap .radio,
+html[dir="rtl"] .jsn-master .jsn-bootstrap .checkbox {
+	padding-left: 0;
+	padding-right: 18px;
+}
+html[dir="rtl"] .jsn-master .jsn-bootstrap .radio input[type="radio"],
+html[dir="rtl"] .jsn-master .jsn-bootstrap .checkbox input[type="checkbox"] {
+	float: right;
+	margin-left: 0;
+	margin-right: -18px;
+}
+html[dir="rtl"] .jsn-master .jsn-bootstrap .form-horizontal .control-label {
+	  float: right;
+}
+html[dir="rtl"] .jsn-master .jsn-bootstrap .form-horizontal .controls {
+	  margin-left: 0;
+	  margin-right: 180px;
+}
+/*=================== BOOTSTRAP DARK STYLES ===========================*/
+.jsn-master .jsn-bootstrap .jsn-style-dark {
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .well,
+.jsn-master .jsn-bootstrap .jsn-style-dark .breadcrumb,
+.jsn-master .jsn-bootstrap .jsn-style-dark input,
+.jsn-master .jsn-bootstrap .jsn-style-dark input[type="file"],
+.jsn-master .jsn-bootstrap .jsn-style-dark select,
+.jsn-master .jsn-bootstrap .jsn-style-dark textarea,
+.jsn-master .jsn-bootstrap .jsn-style-dark .progress,
+.jsn-master .jsn-bootstrap .jsn-style-dark code,
+.jsn-master .jsn-bootstrap .jsn-style-dark pre {
+	-moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+	-o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+	background: #202020;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark body {
+	background: #2f2f2f;
+	color: #c6c6c6;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .breadcrumb {
+	border: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .breadcrumb li {
+	text-shadow: 0 1px 0 #000;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .page-header {
+	-moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	border-bottom: 1px solid #121212;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark h1,
+.jsn-master .jsn-bootstrap .jsn-style-dark h2,
+.jsn-master .jsn-bootstrap .jsn-style-dark h3,
+.jsn-master .jsn-bootstrap .jsn-style-dark h4,
+.jsn-master .jsn-bootstrap .jsn-style-dark h5,
+.jsn-master .jsn-bootstrap .jsn-style-dark h6 {
+	color: white;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark h6 {
+	color: #999;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs .open .dropdown-toggle,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-pills .open .dropdown-toggle,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav > .open.active > a:hover {
+	background-color: #222222;
+	border-color: #2f2f2f #2f2f2f transparent #2f2f2f;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav > .dropdown.active > a:hover {
+	color: #fff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs .active .dropdown-toggle .caret,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-pills .active .dropdown-toggle .caret {
+	border-top-color: #fff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs {
+	border-bottom: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs > .active > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs > .active > a:hover {
+	background-color: #2f2f2f;
+	color: #fff;
+	border-color: #666 #666 transparent #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs > li > a:hover {
+	border-color: #2f2f2f #2f2f2f #666666 #2f2f2f;
+	background-color: #222222;
+	color: #00aaff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs.nav-stacked > li > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-tabs.nav-stacked > li > a:hover {
+	border-color: #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-pills > li > a:hover {
+	background-color: #222222;
+	color: #00aaff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-list > li > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-list .nav-header {
+	text-shadow: 0 1px 0 #000;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-list > li > a:hover {
+	background-color: #161616;
+	color: #00aaff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .nav-list .active > a:hover {
+	background-color: #0088cc;
+	color: white;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-below .nav-tabs {
+	border-top: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-left .nav-tabs {
+	border-right: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-right .nav-tabs {
+	border-left: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-below .nav-tabs > li > a:hover {
+	border-top: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-left .nav-tabs > li > a:hover {
+	border-color: transparent #666 transparent transparent;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-right .nav-tabs > li > a:hover {
+	border-color: transparent transparent transparent #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-below .nav-tabs .active > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-below .nav-tabs .active > a:hover {
+	border-color: transparent #666 #666 #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-left .nav-tabs .active > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-left .nav-tabs .active > a:hover {
+	border-color: #666 transparent #666 #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-right .nav-tabs .active > a,
+.jsn-master .jsn-bootstrap .jsn-style-dark .tabs-right .nav-tabs .active > a:hover {
+	border-color: #666 #666 #666 transparent;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark :-moz-placeholder {
+	color: #666666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark ::-webkit-input-placeholder {
+	color: #666666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .input-prepend .add-on,
+.jsn-master .jsn-bootstrap .jsn-style-dark .input-append .add-on {
+	background: #444;
+	color: #c6c6c6;
+	border-color: #111;
+	text-shadow: 0 1px 0  black;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark label {
+	color: #c6c6c6;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark input,
+.jsn-master .jsn-bootstrap .jsn-style-dark input[type="file"],
+.jsn-master .jsn-bootstrap .jsn-style-dark select,
+.jsn-master .jsn-bootstrap .jsn-style-dark textarea {
+	color: white;
+	border-color: #111111;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .search-query {
+	-webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0) 0 1px 7px 0px inset;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark legend {
+	color: white;
+	-moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	border-bottom: 1px solid #121212;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .form-actions {
+	border-top-color: #222;
+	background-color: #444;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .help-inline {
+	color: #999;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning > label,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning .help-block,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning .help-inline {
+	color: #faa732;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning input,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning select,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning textarea {
+	color: #faa732;
+	border-color: #faa732;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning input:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning select:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.warning textarea:focus {
+	border-color: #faa732;
+	-moz-box-shadow: 0 0 6px #faa732;
+	-webkit-box-shadow: 0 0 6px #faa732;
+	-o-box-shadow: 0 0 6px #faa732;
+	box-shadow: 0 0 6px #faa732;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success > label,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success .help-block,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success .help-inline {
+	color: #5bb75b;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success input,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success select,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success textarea {
+	color: #5bb75b;
+	border-color: #5bb75b;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success input:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success select:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.success textarea:focus {
+	border-color: #5bb75b;
+	-moz-box-shadow: 0 0 6px #5bb75b;
+	-webkit-box-shadow: 0 0 6px #5bb75b;
+	-o-box-shadow: 0 0 6px #5bb75b;
+	box-shadow: 0 0 6px #5bb75b;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error > label,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error .help-block,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error .help-inline {
+	color: #fc5b5e;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error input,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error select,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error textarea {
+	color: #fc5b5e;
+	border-color: #fc5b5e;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error input:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error select:focus,
+.jsn-master .jsn-bootstrap .jsn-style-dark .control-group.error textarea:focus {
+	border-color: #fc5b5e;
+	-moz-box-shadow: 0 0 6px #fc5b5e;
+	-webkit-box-shadow: 0 0 6px #fc5b5e;
+	-o-box-shadow: 0 0 6px #fc5b5e;
+	box-shadow: 0 0 6px #fc5b5e;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .table thead {
+	color: white;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .table td {
+	border-top-color: #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-striped tbody tr:nth-child(2n+1) td,
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-striped tbody tr:nth-child(2n+1) th {
+	background-color: #444;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-bordered {
+	border: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-bordered th + th,
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-bordered td + td,
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-bordered th + td,
+.jsn-master .jsn-bootstrap .jsn-style-dark .table-bordered td + th {
+	border-left: 1px solid #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .pagination a:hover {
+	color: #00aaff;
+	background-color: #222222;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .pagination .active a {
+	color: #fff;
+	background-color: #222222;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .pagination a {
+	border-color: #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .pager a {
+	background-color: #2f2f2f;
+	border-color: #666;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .pager a:hover {
+	background-color: #222222;
+	color: #00aaff;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert {
+	color: #fff;
+	background-color: #faa732;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #a86404;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert h4 {
+	color: #c17305;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-success {
+	color: #fff;
+	background-color: #5bb75b;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #2d662d;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-success h4 {
+	color: #347834;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-error {
+	color: #fff;
+	background-color: #fc5b5e;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #d40408;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-error h4 {
+	color: #ed0409;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-info {
+	color: #fff;
+	background-color: #3a87ad;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #1a3c4e;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .alert-info h4 {
+	color: #204b61;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .modal {
+	background-color: #444;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .modal-header {
+	border-bottom: 1px solid #222;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .modal-body p {
+	color: #c6c6c6;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark .modal-footer {
+	background-color: #373737;
+	border-top: 1px solid #222;
+	-moz-box-shadow: 0 1px 0 #333333 inset;
+	-webkit-box-shadow: 0 1px 0 #333333 inset;
+	-o-box-shadow: 0 1px 0 #333333 inset;
+	box-shadow: 0 1px 0 #333333 inset;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark blockquote {
+	border-left-color: #111;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark blockquote.pull-right {
+	border-right-color: #111;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark hr {
+	-moz-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	-o-box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	box-shadow: rgba(255, 255, 255, 0.07) 0 1px 0;
+	border-bottom: 1px solid #333;
+	border-top: none;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark code {
+	border: none;
+}
+.jsn-master .jsn-bootstrap .jsn-style-dark pre {
+	border: none;
+	color: #c6c6c6;
+}

@@ -1,0 +1,497 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/*==================== PAGE - MENU ====================*/
+/*========== TOOLBAR MENU ==========*/
+/* General */
+#toolbar #submenu-box {
+	display: none;
+}
+#toolbar .jsn-menu {
+	float: left;
+	text-align: left;
+	padding: 2px 5px;
+	margin: 0 5px;
+}
+#toolbar .jsn-menu li a {
+	float: none;
+	border: none;
+}
+#toolbar .jsn-menu li.primary > a {
+	color: #333;
+	font-weight: bold;
+}
+#toolbar .jsn-menu li.primary > a span {
+	display: inline-block;
+	float: left;
+}
+/* 1-st level */
+#toolbar .jsn-menu > li a span {
+	display: block;
+}
+/* 2-nd level */
+#toolbar .jsn-menu li:hover > ul {
+	right: 0;
+	left: auto;
+}
+#toolbar .jsn-menu ul li {
+	float: none;
+	padding: 0;
+	height: auto;
+	text-align: left;
+	z-index: 1;
+}
+#toolbar .jsn-menu ul li.separator {
+	margin-top: 5px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #FFF;
+}
+#toolbar .jsn-menu ul li.primary > a {
+	line-height: 24px;
+}
+#toolbar .jsn-menu ul li.primary > a span {
+	margin-right: 6px;
+}
+/* 3-rd level */
+#toolbar .jsn-menu ul li:hover ul {
+	right: 0;
+	left: -205px;
+}
+#toolbar .jsn-menu ul ul li.primary > a {
+	line-height: 16px;
+	font-size: 11px;
+}
+#toolbar .jsn-menu ul ul li.primary > a span {
+	margin-right: 5px;
+}
+/*========== BOOTSTRAP-STYLE DROPDOWN MENU ==========*/
+#toolbar .jsn-bootstrap .navbar {
+	margin: 0;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav {
+	margin: 0;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav > li {
+	margin: 0;
+	line-height: inherit;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav > li.dropdown > a#toolbar-menu b.caret {
+	border-top-color: #000;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav > li > a {
+	padding: 1px 5px;
+	line-height: inherit;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav > li > a > span {
+	display: block;
+}
+
+#toolbar .jsn-bootstrap .navbar .nav > li > .dropdown-menu:before {
+	right: 9px;
+	left: auto;
+}
+#toolbar .jsn-bootstrap .navbar .nav > li > .dropdown-menu:after {
+	right: 10px;
+	left: auto;
+}
+#toolbar .jsn-bootstrap .jsn-menu .nav li.open > a {
+	background-color: #F6F6F6;
+}
+#toolbar .jsn-menu .nav > li.open ul {
+	right: 0;
+	left: auto;
+}
+
+#toolbar .jsn-menu li.dropdown li.dropdown ul.dropdown-menu,
+#toolbar .jsn-menu li.dropdown li.dropdown li.dropdown ul.dropdown-menu {
+	margin: -32px 159px 0 0;
+}
+
+.jsn-bootstrap .jsn-menu.navbar {
+	margin: 10px;
+}
+.jsn-bootstrap .jsn-menu.navbar li {
+	margin: 0;
+}
+
+.jsn-bootstrap .jsn-menu.navbar li img.jsn-menu-icon {
+	vertical-align: text-bottom;
+	margin-right: 3px;
+}
+.jsn-bootstrap .jsn-menu.navbar li li.separator {
+	background-color: #E5E5E5;
+	border-bottom: 1px solid #FFFFFF;
+	height: 1px !important;
+	margin: 9px 1px;
+	overflow: hidden;
+}
+
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown i.icon-caret-right {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+}
+.jsn-bootstrap .jsn-menu.navbar li.dropdown.open li.dropdown ul.dropdown-menu,
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown.open li.dropdown ul.dropdown-menu {
+	display: none;
+}
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown.open ul.dropdown-menu,
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown li.dropdown.open ul.dropdown-menu {
+	display: block;
+}
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown ul.dropdown-menu,
+.jsn-bootstrap .jsn-menu.navbar li.dropdown li.dropdown li.dropdown ul.dropdown-menu {
+	margin: -32px 0 0 159px;
+}
+
+.jsn-bootstrap .jsn-menu.navbar .nav .dropdown-menu li.dropdown.open > .dropdown-toggle,
+.jsn-bootstrap .jsn-menu.navbar .nav .dropdown-menu li.dropdown.active > .dropdown-toggle,
+.jsn-bootstrap .jsn-menu.navbar .nav .dropdown-menu li.dropdown.open.active > .dropdown-toggle {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #0088cc;
+	background-color: #0081c2;
+	background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+	background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+	background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+	background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+}
+/*========== BOOTSTRAP DROPDOWN MENU ==========*/
+.jsn-drop-menu .navbar .nav img.jsn-menu-icon {
+	vertical-align: text-bottom;
+	margin-right: 2px;
+}
+
+#toolbar-box .jsn-drop-menu .navbar-inner {
+	min-height: auto;
+	padding: 0;
+	background-color: transparent;
+	background-image: none;
+	border: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	filter: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+#toolbar-box .jsn-drop-menu .navbar .nav {
+	margin: 0;
+}
+#toolbar-box .jsn-drop-menu .navbar .nav li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+#toolbar-box .jsn-drop-menu .navbar .nav li a {
+	float: none;
+	border: 0;
+	text-align: left;
+}
+#toolbar-box .jsn-drop-menu .navbar .nav > li > a {
+	padding: 1px 5px;
+}
+#toolbar-box .jsn-drop-menu .navbar .nav > li > a .jsn-icon32 {
+	display: block;
+	margin: 0 auto;
+}
+
+#content-box #toolbar-box + .jsn-drop-menu .navbar {
+	margin: 10px;
+}
+#content-box #toolbar-box + .jsn-drop-menu .navbar .nav li {
+	margin: 0;
+}
+/*==================== PAGE - GENERAL ====================*/
+.jsn-master .jsn-page-list {
+	margin: 10px 0;
+}
+.jsn-master .jsn-page-footer {
+	font-size: 0.9em;
+	margin-top: 10px;
+}
+.jsn-master .jsn-footer-menu {
+	margin: 5px 0;
+}
+.jsn-master .jsn-footer-menu li {
+	display: inline;
+	list-style: none;
+	padding: 0 5px 0 10px;
+	border-left: 1px solid #999;
+	margin: 0;
+}
+.jsn-master .jsn-footer-menu li.first {
+	border: none;
+}
+/*=================== PAGE - LIST ===========================*/
+.jsn-master .jsn-page-list .container {
+	margin: 0;
+	width: auto;
+	text-align: center;
+}
+
+.jsn-master .jsn-page-list table .jsn-column-select {
+	width: 2%;
+}
+.jsn-master .jsn-page-list table .jsn-column-title {
+	text-align: left !important;
+}
+.jsn-master .jsn-page-list table .jsn-column-access,
+.jsn-master .jsn-page-list table .jsn-column-ordering {
+	width: 10%;
+}
+.jsn-master .jsn-page-list table .jsn-column-published,
+.jsn-master .jsn-page-list table .jsn-column-id {
+	width: 5%;
+}
+
+.jsn-master .jsn-page-list .pagination {
+	display: inline-block;
+	margin: 10px 0;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] {
+	background: none;
+	margin: 0 5px;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] > div {
+	background: none;
+	margin: 0;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] a,
+.jsn-master .jsn-page-list .pagination div[class*=button2-] span,
+.jsn-master .jsn-page-list .pagination div[class*=button2-] button {
+	padding: 0 15px;
+	line-height: 26px;
+	border: 1px solid #DDD;
+	height: 26px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] a {
+	text-decoration: none;
+	background-color: #fff;
+	color: #08C;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] a:hover {
+	background: transparent;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] .page span,
+.jsn-master .jsn-page-list .pagination div[class*=button2-] .page a {
+	margin: 0 3px;
+}
+.jsn-master .jsn-page-list .pagination div[class*=button2-] .page span {
+	color: #999;
+	font-weight: normal;
+}
+.jsn-master .jsn-page-list .pagination div.limit {
+	line-height: 26px;
+	height: 26px;
+}
+.jsn-master .jsn-page-list .pagination div.limit select#limit {
+	width: 60px;
+	margin: 0 0 0 5px;
+}
+.jsn-master .jsn-page-list th.header-checkbox,
+.jsn-master .jsn-page-list th.header-2percent {
+	width: 2%;
+}
+.jsn-master .jsn-page-list th.header-published,
+.jsn-master .jsn-page-list th.header-5percent {
+	width: 5%;
+}
+/*=================== PAGE - EDIT ===========================*/
+.jsn-master.jsn-loading-page .jsn-page-settings {
+    min-height: 500px;
+}
+/*=================== PAGE - CONFIGURATION ===========================*/
+.jsn-master .jsn-page-configuration {
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+}
+.jsn-master .jsn-page-configuration > div {
+	width: 100%;
+	position: relative;
+	right: 75%;
+	border-right: 3px solid #08C;
+}
+.jsn-master .jsn-page-configuration > div > div {
+	width: 100%;
+	position: relative;
+	left: 75%;
+}
+.jsn-master .jsn-page-configuration .jsn-page-nav {
+	width: 25%;
+	float: left;
+}
+.jsn-master .jsn-page-configuration .jsn-page-content {
+	width: 75%;
+	float: left;
+}
+.jsn-master .jsn-page-configuration .jsn-page-content > div {
+	padding: 15px 20px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list .nav-header {
+	margin: 0 0 10px 0;
+	color: #333;
+	font-size: 18px;
+	font-weight: normal;
+	text-shadow: 0 1px 0 #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 5px;
+	position: relative;
+	line-height: 32px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list {
+	padding: 15px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li {
+	margin: 5px 0;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li > a {
+	color: #797B7F;
+	margin: 0 -15px;
+	padding: 6px 8px 6px 60px;
+	font-size: 14px;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	position: relative;
+	line-height: 32px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li > a:hover {
+	color: #000000;
+	text-decoration: none;
+	background-color: #ddd;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li.active > a,
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li.active > a:hover {
+	margin-right: -18px;
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #08C;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .nav-list > li > a > i {
+	position: absolute;
+	left: 15px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .jsn-language-item {
+	padding: 3px 0 3px 40px;
+	float: left;
+	width: 300px;
+	margin: 10px 5px;
+	position: relative;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .jsn-language-item span[class*="jsn-icon24"] {
+	position: absolute;
+	left: 5px;
+	top: 10px;
+}
+.jsn-master .jsn-page-configuration .jsn-bootstrap .jsn-language-item label {
+	margin: 0;
+	display: block;
+}
+
+.jsn-master .jsn-page-configuration .jsn-bootstrap .jsn-horizon-header{
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    border-bottom: #E5E5E5 solid 1px;
+}
+
+.jsn-master .jsn-page-configuration .jsn-bootstrap .jsn-configurations-checkbox{
+    margin-top: 0px;
+}
+/*=================== PAGE - SEARCH ===========================*/
+.jsn-master .jsn-page-search {
+}
+.jsn-master .jsn-page-search .jsn-search-filter {
+	text-align: center;
+	padding: 15px;
+}
+.jsn-master .jsn-page-search .jsn-search-filter {
+	border: 1px solid #CCCCCC;
+}
+.jsn-master .jsn-page-search .jsn-search-filter form {
+	margin: 0;
+}
+/*=================== PAGE - ABOUT ===========================*/
+.jsn-master .jsn-page-about {
+	width: 600px;
+	margin: 50px auto;
+}
+.jsn-master .jsn-page-about div.jsn-product-about {
+	background-color: #FFF;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-bottom: 30px;
+}
+.jsn-master .jsn-page-about .jsn-product-intro {
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.jsn-master .jsn-page-about .jsn-product-thumbnail {
+	width: 20%;
+	float: left;
+}
+.jsn-master .jsn-page-about .jsn-product-details {
+	width: 78%;
+	float: right;
+}
+.jsn-master .jsn-page-about .jsn-product-intro dl {
+	margin-bottom: 1em;
+}
+.jsn-master .jsn-page-about .jsn-product-intro dt {
+	width: 16%;
+	margin: 0;
+	color: #666;
+	float: left;
+	padding: 3px;
+	font-weight: bold;
+}
+.jsn-master .jsn-page-about .jsn-product-intro dd {
+	padding: 3px;
+	margin-left: 18%;
+}
+.jsn-master .jsn-page-about .jsn-product-cta {
+}
+.jsn-master .jsn-page-about .jsn-product-support > div {
+	margin-bottom: 30px;
+}
+/*=================== PAGE - UPGRADE ===========================*/
+.jsn-master .jsn-page-upgrade,
+.jsn-master .jsn-page-update,
+.jsn-master .jsn-page-install {
+}
+.jsn-master .jsn-page-upgrade .jsn-page-content,
+.jsn-master .jsn-page-update .jsn-page-content,
+.jsn-master .jsn-page-install .jsn-page-content {
+	width: 800px;
+	padding: 25px;
+	margin: 50px auto;
+	background-color: #FFFFFF;
+	border: 1px solid #D5D5D5;
+	position: relative;
+}
+.jsn-master .jsn-page-upgrade .jsn-page-content #jsn-upgrade-cancel,
+.jsn-master .jsn-page-update .jsn-page-content #jsn-update-cancel {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}

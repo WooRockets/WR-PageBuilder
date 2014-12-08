@@ -1,0 +1,106 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/*========================= FIX STYLE FOR BLUESTORK ========================*/
+.tmpl-bluestork div.pagetitle {
+	height: 52px;
+	display: block;
+	padding-left: 60px;
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	margin-left: 5px;
+}
+.tmpl-bluestork div.pagetitle h2 {
+	font-size: 24px;
+	color: #333;
+	line-height: 55px;
+	text-shadow: 1px 1px 1px #eee;
+	margin-left: 5px;
+}
+.tmpl-bluestork ul.menu_types {
+	padding: 0 0 0 15px;
+}
+.tmpl-bluestork .pane-sliders {
+	margin-top: 8px;
+}
+.tmpl-bluestork .pane-sliders .panel h3 {
+	font-size: 12px;
+	padding: 5px;
+	font-weight: bold;
+}
+.tmpl-bluestork .jsn-bootstrap fieldset.panelform label,
+.tmpl-bluestork .jsn-bootstrap fieldset.panelform div.paramrow label,
+.tmpl-bluestork .jsn-bootstrap fieldset.panelform span.faux-label,
+.tmpl-bluestork .jsn-bootstrap fieldset.adminform label,
+.tmpl-bluestork .jsn-bootstrap fieldset.adminform span.faux-label {
+	max-width: none;
+	min-width: 0;
+	width: 135px;
+}
+.tmpl-bluestork .jsn-bootstrap fieldset.radio label {
+	width: auto;
+}
+.tmpl-bluestork .jsn-bootstrap fieldset label,
+.tmpl-bluestork .jsn-bootstrap fieldset input,
+.tmpl-bluestork .jsn-bootstrap fieldset textarea,
+.tmpl-bluestork .jsn-bootstrap fieldset select,
+.tmpl-bluestork .jsn-bootstrap fieldset button {
+	float: none;
+}
+.tmpl-bluestork .jsn-bootstrap .thumbnail > img {
+	float: none;
+	margin: 0;
+}
+.tmpl-bluestork .jsn-bootstrap dl.tabs {
+	margin-top: 5px;
+}
+/*========== HORIZONTAL MENU ==========*/
+.jsn-master.tmpl-bluestork #toolbar-box,
+.jsn-master.tmpl-bluestork #submenu-box,
+.jsn-master.tmpl-bluestork #element-box {
+	padding: 0;
+	margin: 10px;
+}
+.jsn-master.tmpl-bluestork #submenu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 115%;
+}
+.jsn-master.tmpl-bluestork #submenu li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.jsn-master.tmpl-bluestork #submenu li a {
+	color: #025A8D;
+	font-weight: normal;
+	padding: 10px 15px;
+	border-right-color: #DDDDDD;
+	text-decoration: none;
+	float: left;
+	line-height: 1em;
+}
+.jsn-master.tmpl-bluestork #submenu-box div.m {
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 0;
+}
+.jsn-master.tmpl-bluestork #submenu a.active {
+	background: #e9e9e9 !important;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05) inset;
+	color: #666;
+	cursor: default;
+	font-weight: bold;
+}
+.jsn-master.tmpl-bluestork #submenu a:hover {
+	background: #eee;
+}

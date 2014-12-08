@@ -1,0 +1,7 @@
+ClassyKeyboard is a jQuery plugin that allows you to easily bind callback functions to any key or key combo. It also allows you to override existing shortcuts, block the context menu and many more.
+
+@name ClassyKeyboard
+@package jQuery plugin
+@author Marius Stanciu - Sergiu <marius@picozu.net>
+@website http://www.class.pm/projects/jquery/classykeyboard
+@version 1.1.0

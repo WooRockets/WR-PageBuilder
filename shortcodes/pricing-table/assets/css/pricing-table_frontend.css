@@ -1,0 +1,163 @@
+
+/* Pricing Table */
+.jsn-bootstrap3 .wr-element-pricing_table {
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+.jsn-bootstrap3 .wr-element-pricing_table li{
+    list-style: none;
+    font-size: 13px;
+	line-height: 20px;
+	color: #666;
+	font-weight: normal;
+}
+.jsn-bootstrap3 .wr-element-pricing_table li:nth-child(even) {
+	background: #F7F7F7;
+}
+.jsn-bootstrap3 .wr-element-pricing_table li:nth-child(odd) {
+	background: #FFF;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols {
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    float: left;
+    margin: 20px 0 0;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols .wr-prtbl-tipsy {
+	margin: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first .wr-prtbl-features label {
+	color: #8C8C8C;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first,
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first .wr-prtbl-header,
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first .wr-prtbl-header * {
+	border-color: #fff;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols .wr-prtbl-cols.first .wr-prtbl-header .wr-prtbl-features {
+	margin-top: 2px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first ul li {
+	text-align: right;
+	padding-right: 20px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first .wr-prtbl-title {
+	background: none;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols.first .wr-prtbl-price {
+	border-top-color: #fff;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols:nth-Child(2) {
+	border-left: 1px solid #e5e5e5;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-header {
+	height: 100%;
+	border-bottom: 1px solid #e5e5e5;
+}
+.jsn-bootstrap3 .table-2-col .wr-prtbl-cols {
+	width: 49.5%;
+}
+.jsn-bootstrap3 .table-3-col .wr-prtbl-cols {
+	width: 32.5%;
+}
+.jsn-bootstrap3 .table-4-col .wr-prtbl-cols {
+	width: 24.5%;
+}
+.jsn-bootstrap3 .table-5-col .wr-prtbl-cols {
+	width: 19.5%;
+}
+.jsn-bootstrap3 .table-6-col .wr-prtbl-cols {
+	width: 16%;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-title {
+	padding: 5px 0;
+	color: #FFF;
+	background: #4D4D4D;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-meta {
+	background: #FFF;
+	min-height: 150px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-title h3 {
+	font-size: 18px;
+	line-height: 1.2;
+	margin: 5px 0;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-title .wr-prtbl-image {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin: 5px 0 -8px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-title .wr-prtbl-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured .wr-prtbl-title {
+	background: #428BCA;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-desc {
+	font-size: 11px;
+	line-height: 18px;
+	color: #999;
+	margin: 5px 15px 15px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-price {
+	text-transform: capitalize;
+	font-size: 3.0em;
+	line-height: 1.2;
+	margin-left: 25px;
+	padding: 30px 0 10px;
+	font-weight: bold;
+	color: #428BCA;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-header sup {
+	font-weight: normal;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-header sub {
+    font-size: 0.3em;
+    font-weight: normal;
+    color: #666;
+}
+.jsn-bootstrap3 .wr-element-pricing_table ul.wr-prtbl-features {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.jsn-bootstrap3 .wr-element-pricing_table ul.wr-prtbl-features li {
+	border-bottom: 1px solid #EEE;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 21px;
+    min-height: 42px;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols .wr-prtbl-footer {
+	background: #FFF;
+	padding: 20px 0;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured {
+	margin: 0 -1px;
+	border: 1px solid #EEE;
+	border-top: none;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured .wr-prtbl-title {
+	padding: 15px 0 15px;
+	border: none;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured .wr-prtbl-footer {
+	padding: 30px 0;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured .wr-prtbl-footer .btn {
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+}
+.jsn-bootstrap3 .wr-element-pricing_table .wr-prtbl-cols-featured .wr-prtbl-footer .btn:hover {
+	color: #fff;
+	background-color: #3276b1;
+	border-color: #285e8e;
+}

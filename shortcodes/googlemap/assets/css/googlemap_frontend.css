@@ -1,0 +1,12 @@
+.jsn-bootstrap3 .wr-element-googlemap .wr-googlemap img {
+    max-width: none;
+    box-shadow: none !important;
+}
+.jsn-bootstrap3 .wr-element-googlemap .wr-googlemap .gm-style .wr-gmi-thumb {
+	max-width: 120px;
+	max-height: 120px;
+	float:right;
+}
+.jsn-bootstrap3 .wr-element-googlemap .wr-googlemap .wr-gmi-thumb img {
+	max-width: 100%;
+}

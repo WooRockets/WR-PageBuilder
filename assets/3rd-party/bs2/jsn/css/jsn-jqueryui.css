@@ -1,0 +1,314 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/*=================== JQUERYUI OVERRIDES ===========================*/
+/*========== TAB ========*/
+.jsn-master .ui-tabs.ui-widget-content {
+	background: none;
+}
+.jsn-master .ui-tabs .ui-tabs-panel {
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid #DDD;
+	border-top: none;
+}
+.jsn-master .ui-tabs .ui-tabs-panel .control-group:last-child {
+	margin-bottom: 0;
+}
+.jsn-master .ui-tabs {
+	padding: 0;
+}
+.jsn-master .ui-tabs .ui-tabs-nav {
+	padding: 0;
+	margin: 0;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li {
+	margin: 0;
+	padding: 0;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li a {
+	margin-right: 0;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li a,
+.jsn-master .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	margin-bottom: 0;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li:hover,
+.jsn-master .ui-tabs .ui-tabs-nav li a:hover {
+	background-color: #eee;
+	border-bottom: none;
+}
+.jsn-master .ui-tabs .ui-tabs-nav [class^="icon-"],
+.jsn-master .ui-tabs .ui-tabs-nav [class*=" icon-"] {
+	margin-right: 5px;	
+}
+.jsn-master .ui-tabs .ui-tabs-nav li.ui-state-active a {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-bottom-color: #ffffff;
+	cursor: text;
+	outline: none;
+	font-weight: bold;
+	color: #333;
+	font-size: 1.1em;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li.ui-state-active a i {
+	font-weight: normal;
+}
+.jsn-master .ui-tabs .ui-tabs-nav li.ui-state-active a:hover {
+	background-color: #fff;
+}
+
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav {
+	width: 180px;
+	float: left;
+	padding: 10px 0;
+	border: none;
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav > li {
+	float: none;
+	margin-left: 10px;
+	position: relative;
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav > li > a {
+	display: block;
+	float: none;
+	border: none;
+	padding: 2px 20px;
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav > li.ui-state-active {
+	top: 0;
+	left: 1px;
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav > li.ui-state-active a {
+	border: 1px solid #ddd;
+	border-bottom-color: #ddd;
+	border-right-color: #fff;
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-nav > li.ui-state-active > a:hover {
+}
+.jsn-master .ui-tabs.ui-tabs-vertical > .ui-tabs-panel {
+	margin-left: 180px;
+	border: none;
+	border-left: 1px solid #ddd;
+}
+
+/*========== ACCORDION ========*/
+.jsn-master .ui-accordion .ui-accordion-header {
+	background: none;
+	border-color: #E5E5E5;
+	font-weight: normal;
+	font-size: 13px;
+	margin: 0;
+	margin-top: 10px;
+	line-height: 1.5em;
+}
+.jsn-master .ui-accordion .ui-accordion-header:first-child {
+	margin-top: 0;
+}
+.jsn-master .ui-accordion .ui-accordion-header .ui-icon {
+	display: none;
+}
+.jsn-master .ui-accordion .ui-accordion-header a {
+	padding: 8px 15px;
+}
+.jsn-master .ui-accordion .ui-accordion-header a:hover {
+	background-color: #EEE;
+}
+.jsn-master .ui-accordion .ui-accordion-header .jsn-accordion-radio {
+	margin: -3px 3px 0 0;
+}
+.jsn-master .ui-accordion .ui-accordion-header.ui-state-active {
+	color: #000;
+	font-weight: bold;
+	border-bottom-width: 2px;
+	background-color: #EEE;
+}
+.jsn-master .ui-accordion .ui-accordion-content {
+	border-color: #E5E5E5;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+/*========== SLIDER ========*/
+.jsn-master .ui-slider-horizontal {
+	width: 220px;
+	margin-top: 10px;
+}
+
+/*========== MODAL WINDOW ==========*/
+.jsn-master .ui-dialog .ui-dialog-titlebar {
+	padding: 5px 10px;
+}
+.jsn-master .ui-dialog .ui-dialog-titlebar-close {
+	display: none;
+}
+.jsn-master .ui-dialog .ui-dialog-content {
+	padding: 2px 0;
+}
+.jsn-master .jsn-modal.ui-dialog-content {
+	overflow: hidden;
+}
+.jsn-master .ui-dialog .ui-dialog-content iframe {
+	overflow: auto;
+}
+.jsn-master .ui-dialog-content-inner {
+	padding: 15px;
+}
+.jsn-master.contentpane {
+	padding: 15px;
+	margin: 0;
+}
+div.ui-dialog .ui-dialog-buttonpane {
+	margin: 0;
+}
+/* SEARCH BOX ON TITLE BAR */
+div.ui-dialog .ui-dialog-titlebar .ui-window-searchbar-wrapper {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+div.ui-dialog .ui-dialog-titlebar .ui-window-searchbar {
+	color : #CCCCCC;
+}
+div.ui-dialog .ui-dialog-titlebar .ui-window-closetext-keyword {
+	background: url("../images/icons-8/ui-window-closetextkeyword.png") center center no-repeat;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 24px;
+	height: 24px;
+	display: none;
+}
+/* === */
+.jsn-master .ui-widget-overlay {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	background: #333;
+}
+.jsn-master .ui-widget-content form,
+.jsn-master .ui-widget-content table {
+	margin: 0;
+}
+.jsn-master .ui-widget-content .jsn-page-list {
+	margin: 0;
+}
+.jsn-master .img-box-loading {
+	width: 48px;
+	height: 48px;
+	position: relative;
+	background: #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.jsn-master .img-box-loading .imgLoading {
+	position: relative;
+	top: 12px;
+	left: 12px;
+}
+
+.jsn-master .ui-sortable .ui-state-default {
+	border: 1px solid transparent;
+	position: relative;
+	background: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.jsn-master .ui-sortable .ui-state-default:hover,
+.jsn-master .ui-sortable .ui-state-default.ui-state-edit {
+/*	border: 1px solid #FBEED5;
+	background-color: #FCF8E3;*/
+	border: 1px solid #ddd;
+	background-color: #f4f4f4;
+	cursor: move;
+    transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -webkit-transition: background 0.3s ease-out;
+}
+.jsn-master .ui-sortable .ui-state-default:hover .jsn-iconbar {
+	background-color: #f4f4f4;
+}
+.jsn-master .ui-sortable .ui-state-default.ui-state-edit {
+	cursor: default;
+}
+.jsn-master .ui-sortable .ui-state-default.ui-sortable-helper {
+	box-shadow: 0 3px 5px 0 #999;
+	-webkit-box-shadow: 0 3px 5px 0 #999;
+}
+.jsn-master .ui-sortable .ui-state-highlight {
+	border: 1px dashed #ccc;
+	background: none;
+	background-color: #FCF8E3;
+	padding: 10px;
+	margin: 0;
+}
+.jsn-master .ui-sortable .ui-state-disabled {
+	opacity: 0.5;
+}
+.jsn-master .ui-sortable .ui-state-disabled:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+.jsn-master .jsn-style-dark .ui-sortable .ui-state-default {
+	color: #ccc;
+}
+.jsn-master .jsn-style-dark .ui-sortable .ui-state-default:hover,
+.jsn-master .jsn-style-dark .ui-sortable .ui-state-default.ui-state-edit {
+	border: 1px solid #666;
+	background-color: #444;
+}
+
+.jsn-master .ui-resizable-e {
+	background: #fff url("../images/backgrounds/bg-handle-resize-h.png") center center no-repeat;
+}
+
+.jsn-master .ui-resizable-s {
+	background: #fff url("../images/backgrounds/bg-handle-resize-v.png") center center no-repeat;
+}
+
+/*========== MODAL WINDOW ========*/
+.ui-dialog.jsn-loading {
+	background-image: url(../images/preloading.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.ui-dialog.jsn-loading .ui-dialog-content,
+.ui-dialog.jsn-loading .ui-dialog-buttonpane {
+	visibility: hidden;
+}
+.jsn-modal-overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter:alpha(opacity=20);
+}
+.jsn-modal-indicator {
+	display: none;
+	content: ' ';
+	background: #000 url(../images/icons-24/icon-24-dark-loading-circle.gif) no-repeat center center;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+	border-radius: 3px;
+	opacity: 0.7;
+	-moz-opacity: 0.7;
+	filter:alpha(opacity=70);
+}

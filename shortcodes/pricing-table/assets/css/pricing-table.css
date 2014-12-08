@@ -1,0 +1,20 @@
+
+.wr-tbl-pricing tr:nth-child(1) {
+	background: #FFFFFF !important;
+}
+
+.wr-tbl-pricing tr {
+	list-style: none;
+}
+
+.wr-tbl-pricing tr td {
+	border-top: 1px solid #ddd !important;
+}
+
+.wr-tbl-pricing tr td.wr-delete-column-td {
+	border-top: none !important;
+}
+
+.wr-tbl-pricing .jsn-element {
+	padding: 10px !important;
+}

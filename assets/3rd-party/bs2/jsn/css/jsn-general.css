@@ -1,0 +1,1444 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+ /* =============== GENERAL HTML =============== */
+html {
+    overflow: inherit !important;
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+html body.contentpane {
+	height: auto;
+	font-size: 75%;
+}
+iframe{
+    border: 0px;
+}
+/* =============== DEFAULT HTML - TEXT STYLES =============== */
+.jsn-master {
+	font-size: 12px;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.jsn-master object {
+	display: block;
+}
+.jsn-master .jsn-readonly {
+	padding: 3px;
+	background-color: #E9E9E9;
+	border: 1px solid #B9B9B9;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.jsn-master a.disabled,
+.jsn-master a.disabled:hover {
+	cursor: default;
+	text-decoration: none;
+	font-weight: inherit;
+}
+.jsn-master .clearbreak {
+	clear: both;
+}
+.jsn-master .clearafter:after {
+	height: 0;
+	clear: both;
+	content: ".";
+	display: block;
+	visibility: hidden;
+}
+
+/* =============== JSN GUI =============== */
+.jsn-master .jsn-iconbar-trigger {
+	position: relative;
+}
+.jsn-master .jsn-iconbar-trigger .jsn-iconbar {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 100;
+}
+.jsn-master .jsn-iconbar-trigger.ui-state-edit .jsn-iconbar,
+.jsn-master .jsn-iconbar-trigger:hover .jsn-iconbar {
+	display: block;
+}
+.jsn-master .jsn-iconbar a {
+	margin: 0;
+	padding: 5px;
+	color: #333;
+	display: inline-block;
+}
+.jsn-master .jsn-iconbar a.disabled {
+	color: #ccc;
+}
+.jsn-master .jsn-iconbar.jsn-vertical a {
+	display: block;
+}
+.jsn-master .jsn-iconbar.jsn-vertical hr {
+	margin: 5px 0;
+}
+.jsn-master .jsn-iconbar a:hover {
+	text-decoration: none;
+	color: #000;
+	background-color: rgba(0,0,0,0.1);
+}
+.jsn-master .jsn-iconbar a.disabled:hover {
+	background-color: transparent;
+	color: #ccc;
+}
+.jsn-master .jsn-iconbar a i {
+	font-size: 14px;
+	opacity: 0.8;
+	min-height: 16px;
+	min-width: 16px;
+	text-align: center;
+}
+.jsn-master .jsn-iconbar a:hover i {
+	opacity: 1;
+}
+.jsn-master .jsn-iconbar a.disabled i,
+.jsn-master .jsn-iconbar a i.disabled {
+	opacity: 0.5;
+}
+.jsn-master .jsn-section {
+	margin-bottom: 20px;
+}
+.jsn-master .jsn-section-header {
+	margin: 0 0 15px 0;
+	color: #333;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #CCC;
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 5px;
+	position: relative;
+	line-height: 32px;
+	text-transform: uppercase;
+}
+.jsn-master .jsn-section-header .jsn-buttonbar {
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+}
+.jsn-master .jsn-section-content {
+	padding: 15px;
+	background-color: #fff;
+	border: 1px solid #E5E5E5;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.jsn-master .jsn-section-striped > div {
+	background-color: #fff;
+}
+.jsn-master .jsn-section-striped > div:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+.jsn-master .jsn-section-empty {
+	padding: 100px 30px;
+}
+.jsn-master .jsn-input-mini-fluid {
+	width: 15%;
+}
+.jsn-master .jsn-input-small-fluid {
+	width: 30%;
+}
+.jsn-master .jsn-input-medium-fluid {
+	width: 50%;
+}
+.jsn-master .jsn-input-large-fluid {
+	width: 70%;
+}
+.jsn-master .jsn-input-xlarge-fluid {
+	width: 90%;
+}
+.jsn-master .jsn-input-xxlarge-fluid {
+	width: 97%;
+}
+.jsn-master .jsn-input-fluid {
+	width: auto;
+}
+
+.jsn-master .jsn-padding-mini {
+	padding: 2px;
+}
+.jsn-master .jsn-padding-small {
+	padding: 5px;
+}
+.jsn-master .jsn-padding-medium {
+	padding: 10px;
+}
+.jsn-master .jsn-padding-large {
+	padding: 15px;
+}
+.jsn-master .jsn-padding-xlarge {
+	padding: 20px;
+}
+
+.jsn-master .jsn-rounded-mini {
+	border-radius: 1px;
+	-webkit-border-radius: 1px;
+}
+.jsn-master .jsn-rounded-small {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.jsn-master .jsn-rounded-medium {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.jsn-master .jsn-rounded-large {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.jsn-master .jsn-rounded-xlarge {
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+.jsn-master .jsn-box-shadow-mini {
+	box-shadow: 0px 0px 2px 1px #ddd;
+	-webkit-box-shadow: 0px 0px 2px 1px #ddd;
+}
+.jsn-master .jsn-box-shadow-small {
+	box-shadow: 0px 0px 3px 1px #aaa;
+	-webkit-box-shadow: 0px 0px 3px 1px #aaa;
+}
+.jsn-master .jsn-box-shadow-medium {
+	box-shadow: 0 2px 5px 0 #888;
+	-webkit-box-shadow: 0 2px 5px 0 #888;
+}
+.jsn-master .jsn-box-shadow-large {
+	box-shadow: 0 3px 5px 0 #666;
+	-webkit-box-shadow: 0 3px 5px 0 #666;
+}
+.jsn-master .jsn-box-shadow-xlarge {
+	box-shadow: 0 5px 8px 0 #333;
+	-webkit-box-shadow: 0 5px 8px 0 #333;
+}
+
+.jsn-master .jsn-inner-shadow-white {
+	-webkit-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 1);
+	box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 1);
+	border: 1px solid #ccc;
+}
+.jsn-master .jsn-inner-shadow-black {
+	-webkit-box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+	border: 1px solid #ccc;
+}
+
+.jsn-master .jsn-pane {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+	padding: 15px;
+	margin: 15px 0;
+}
+.jsn-master .jsn-pane:first-child {
+	margin-top: 0;
+}
+.jsn-master .jsn-pane:last-child {
+	margin-bottom: 0;
+}
+.jsn-master .jsn-bootstrap .jsn-pane .control-group:last-child {
+	margin-bottom: 0;
+}
+.jsn-master .jsn-pane.pane-default {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+	background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 );
+}
+.jsn-master .jsn-pane.pane-warning {
+	background: #ffaf4b;
+	background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffaf4b), color-stop(100%, #ff920a));
+	background: -webkit-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+	background: -o-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+	background: -ms-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
+	background: linear-gradient(to bottom, #ffaf4b 0%, #ff920a 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=0 );
+}
+.jsn-master .jsn-pane.pane-info {
+	color: #eee;
+	background: rgb(40,152,204);
+	background: -moz-linear-gradient(top, rgba(40,152,204,1) 0%, rgba(38,142,191,1) 45%, rgba(34,127,170,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40,152,204,1)), color-stop(45%, rgba(38,142,191,1)), color-stop(100%, rgba(34,127,170,1)));
+	background: -webkit-linear-gradient(top, rgba(40,152,204,1) 0%, rgba(38,142,191,1) 45%, rgba(34,127,170,1) 100%);
+	background: -o-linear-gradient(top, rgba(40,152,204,1) 0%, rgba(38,142,191,1) 45%, rgba(34,127,170,1) 100%);
+	background: -ms-linear-gradient(top, rgba(40,152,204,1) 0%, rgba(38,142,191,1) 45%, rgba(34,127,170,1) 100%);
+	background: linear-gradient(to bottom, rgba(40,152,204,1) 0%, rgba(38,142,191,1) 45%, rgba(34,127,170,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2898cc', endColorstr='#227faa', GradientType=0 );
+}
+.jsn-master .jsn-pane h3 {
+	margin: 0;
+	border: none;
+	text-shadow: 1px 1px 1px #eee;
+	font-weight: bold;
+}
+.jsn-master .jsn-pane.pane-warning h3 {
+	color: #000;
+	text-shadow: 1px 1px 1px #999;
+	filter: dropshadow(color=#999, offx=1, offy=1);
+}
+.jsn-master .jsn-pane.pane-info h3 {
+	color: #fff;
+	text-shadow: 1px 1px 1px #666;
+	filter: dropshadow(color=#666, offx=1, offy=1);
+}
+.jsn-master .jsn-bglabel {
+	color: #D3D3D3;
+	font-size: 32px;
+	text-align: center;
+	background-position: center top;
+	background-repeat: no-repeat;
+	line-height: 1.5em;
+}
+.jsn-master .jsn-bglabel > .jsn-icon64 {
+	display: block;
+	margin: 20px auto;
+}
+.jsn-master .jsn-bgpattern.pattern-sidebar {
+	background: #E9E9E9 url("../images/backgrounds/bg-pattern-grey.png");
+}
+.jsn-master .jsn-bgimage {
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.jsn-master .jsn-bgimage .image-cover {
+	background-size: cover;
+}
+.jsn-master .jsn-bgimage.image-loading-16 {
+    background-image: url("../images/icons-16/icon-16-loading-circle.gif");
+}
+.jsn-master .jsn-bgimage.image-loading-24 {
+    background-image: url("../images/icons-24/icon-24-loading-circle.gif");
+}
+.jsn-master .jsn-bgimage.image-loading-32 {
+    background-image: url("../images/icons-32/icon-32-loading-circle.gif");
+}
+.jsn-master .jsn-bgloading {
+	padding: 100px 10px;
+	text-align: center;
+}
+.jsn-master .jsn-badge-large {
+	width: 80px;
+	text-align: center;
+	background-color: #FFF;
+	border: 1px solid #D4D4D4;
+	border-radius: 75px;
+	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;
+	margin: 0;
+	color: #D4D4D4;
+	font-size: 50px;
+	line-height: 80px;
+	font-weight: bold;
+}
+.jsn-master .jsn-disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.jsn-master .jsn-overlay {
+	position: absolute;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+}
+
+/* =============== TEXT =============== */
+.jsn-master .jsn-text-center {
+	text-align: center;
+}
+.jsn-master .jsn-text-success {
+	color: #009900;
+}
+.jsn-master .jsn-text-warning {
+	color: #f99406;
+}
+.jsn-master .jsn-text-important {
+	color: #ba4a48;
+}
+.jsn-master .jsn-text-info {
+	color: #4483a2;
+}
+.jsn-master .jsn-highlight {
+	font-weight: bold;
+}
+/* =============== LINK =============== */
+.jsn-master .jsn-link-action {
+	color: #025A8D;
+	cursor: pointer;
+	padding: 1px 2px;
+	font-weight: bold;
+	text-decoration: underline;
+	transition: color 0.3s linear, background 0.3s ease-out;
+	-webkit-transition: color 0.3s linear, background 0.3s ease-out;
+}
+.jsn-master .jsn-link-action:hover {
+	color: #fff !important;
+	text-decoration: none !important;
+	background-color: #025A8D;
+}
+.jsn-master .jsn-link-image {
+	text-indent: -9999em;
+}
+/* =============== LIST =============== */
+.jsn-master ul.jsn-list-horizontal {
+	margin: 0;
+	list-style: none;
+}
+.jsn-master ul.jsn-list-horizontal li {
+	margin: 0 .5em;
+	display: inline;
+}
+.jsn-master ul.jsn-list-nobullet {
+	margin: 0;
+	list-style: none;
+}
+.jsn-master ul.jsn-list-nobullet li {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+/* =============== ICON =============== */
+.jsn-master a[class^="jsn-icon "]:hover,
+.jsn-master a[class*=" jsn-icon "]:hover {
+	text-decoration: none;
+}
+.jsn-master [class^="jsn-icon "].disabled,
+.jsn-master [class*=" jsn-icon "].disabled {
+	opacity: .3;
+	filter: alpha(opacity=30);
+}
+/* =============== ICON 16 =============== */
+.jsn-master .jsn-icon16 {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url(../images/icons-16/icons-16-uni.png) !important;
+}
+.jsn-master .jsn-icon16.jsn-icon-search {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-cog {
+	background-position: -16px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-finder {
+	background-position: -32px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-warning-sign {
+	background-position: -48px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-home {
+	background-position: -64px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-off {
+	background-position: -0px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-star {
+	background-position: -16px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-heart {
+	background-position: -32px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-envelope {
+	background-position: -48px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-file {
+	background-position: -64px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-lock {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-download {
+	background-position: -16px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-wrench {
+	background-position: -32px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-graph {
+	background-position: -48px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-folder {
+	background-position: -64px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-help {
+	background-position: -0px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-globe {
+	background-position: -16px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-pencil {
+	background-position: -32px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-music {
+	background-position: -48px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-plus {
+	background-position: -64px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-monitor {
+	background-position: -0px -64px;
+}
+.jsn-master .jsn-icon16.jsn-icon-remove {
+	background-position: -16px -64px;
+}
+.jsn-master .jsn-icon16.jsn-icon-ok {
+	background-position: -32px -64px;
+}
+.jsn-master .jsn-icon16.jsn-icon-user {
+	background-position: -48px -64px;
+}
+.jsn-master .jsn-icon16.jsn-icon-database {
+	background-position: -64px -64px;
+}
+.jsn-master .jsn-icon16.jsn-icon-menu {
+	background-position: -0px -80px;
+}
+.jsn-master .jsn-icon16.jsn-icon-info-sign {
+	background-position: -16px -80px;
+}
+.jsn-master .jsn-icon16.jsn-icon-comment {
+	background-position: -32px -80px;
+}
+.jsn-master .jsn-icon16.jsn-icon-picture {
+	background-position: -48px -80px;
+}
+.jsn-master .jsn-icon16.jsn-icon-trash {
+	background-position: -64px -80px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social {
+	background-image: url(../images/icons-16/icons-16-social.png) !important;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-linkedin {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-stumbleupon {
+	background-position: -16px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-pinterest {
+	background-position: -32px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-vimeo {
+	background-position: -0px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-rss {
+	background-position: -16px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-youtube {
+	background-position: -32px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-digg {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-twitter {
+	background-position: -16px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-gplus {
+	background-position: -32px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-social.jsn-icon-facebook {
+	background-position: -0px -48px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout {
+	background-image: url(../images/icons-16/icons-16-layout.png) !important;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.active {
+	background-image: url(../images/icons-16/icons-16-layout-active.png) !important;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-tiles {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-thumbnails {
+	background-position: -16px -0px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-details {
+	background-position: -0px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-blocks {
+	background-position: -16px -16px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-thumbnaildetails {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-layout.jsn-icon-flipcover {
+	background-position: -16px -32px;
+}
+.jsn-master .jsn-icon16.jsn-icon-loading {
+	background: url(../images/icons-16/icon-16-loading-circle.gif) center center no-repeat !important;
+}
+/* Depricated */
+.jsn-master .jsn-icon16.jsn-icon-failed {
+	background-position: 0 -860px;
+}
+.jsn-master .jsn-icon16.jsn-icon-check {
+	background-position: 0 -946px;
+}
+.jsn-master .jsn-icon16.jsn-icon-warning {
+	background-position: 0 -1032px;
+}
+/* =============== ICON 24 =============== */
+.jsn-master .jsn-icon24 {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url(../images/icons-24/icons-24-uni.png) !important;
+}
+.jsn-master .jsn-icon24.jsn-icon-search {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-cog {
+	background-position: -24px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-finder {
+	background-position: -48px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-warning-sign {
+	background-position: -72px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-home {
+	background-position: -96px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-off {
+	background-position: -0px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-star {
+	background-position: -24px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-heart {
+	background-position: -48px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-envelope {
+	background-position: -72px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-file {
+	background-position: -96px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-lock {
+	background-position: -0px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-download {
+	background-position: -24px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-wrench {
+	background-position: -48px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-graph {
+	background-position: -72px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-folder {
+	background-position: -96px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-help {
+	background-position: -0px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-globe {
+	background-position: -24px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-pencil {
+	background-position: -48px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-music {
+	background-position: -72px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-plus {
+	background-position: -96px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-monitor {
+	background-position: -0px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-remove {
+	background-position: -24px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-ok {
+	background-position: -48px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-user {
+	background-position: -72px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-database {
+	background-position: -96px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-menu {
+	background-position: -0px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-info-sign {
+	background-position: -24px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-comment {
+	background-position: -48px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-picture {
+	background-position: -72px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-trash {
+	background-position: -96px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social {
+	background-image: url(../images/icons-24/icons-24-social.png) !important;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-linkedin {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-stumbleupon {
+	background-position: -24px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-pinterest {
+	background-position: -48px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-vimeo {
+	background-position: -0px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-rss {
+	background-position: -24px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-youtube {
+	background-position: -48px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-digg {
+	background-position: -0px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-twitter {
+	background-position: -24px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-gplus {
+	background-position: -48px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-social.jsn-icon-facebook {
+	background-position: -0px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag {
+	background-image: url(../images/icons-24/icons-24-flag.png) !important;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.en-gb {
+	background-position: 0 0;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.es-co {
+	background-position: -24px 0;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.cz-cz {
+	background-position: -48px 0;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.it-it {
+	background-position: -72px 0;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.en-ca {
+	background-position: 0 -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.nl-nl {
+	background-position: -24px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.ja-jp {
+	background-position: -48px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.en-us {
+	background-position: -72px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.es-es {
+	background-position: 0 -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.he-il {
+	background-position: -24px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.pt-br {
+	background-position: -48px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.bg-bg {
+	background-position: -72px -48px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.de-de {
+	background-position: 0 -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.pt-pt {
+	background-position: -24px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.vi-vn {
+	background-position: -48px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.ru-ru {
+	background-position: -72px -72px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.fr-fr {
+	background-position: 0 -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.pl-pl {
+	background-position: -24px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.en-za {
+	background-position: -48px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.en-au {
+	background-position: -72px -96px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.da-dk {
+	background-position: 0 -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.sr-rs {
+	background-position: -24px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.zh-tw {
+	background-position: -48px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.hr-hr {
+	background-position: -72px -120px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.tr-tr {
+	background-position: 0 -144px;
+}
+.jsn-master .jsn-icon24.jsn-icon-flag.fi-fi {
+	background-position: -24px -144px;
+}
+
+.jsn-master .jsn-icon24.jsn-icon-joomla {
+	background-image: url(../images/icons-24/icons-24-joomla.png) !important;
+}
+.jsn-master .jsn-icon24.jsn-icon-joomla.jsn-icon-module {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-joomla.jsn-icon-plugin {
+	background-position: -24px -0px;
+}
+.jsn-master .jsn-icon24.jsn-icon-joomla.jsn-icon-component {
+	background-position: -0px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-joomla.jsn-icon-language {
+	background-position: -24px -24px;
+}
+.jsn-master .jsn-icon24.jsn-icon-loading {
+	background: url(../images/icons-24/icon-24-loading-circle.gif) center center no-repeat !important;
+}
+/* =============== ICON32 =============== */
+.jsn-master .jsn-icon32 {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url(../images/icons-32/icons-32-uni.png) !important;
+}
+.jsn-master .jsn-icon32.jsn-icon-search {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-cog {
+	background-position: -32px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-finder {
+	background-position: -64px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-warning-sign {
+	background-position: -96px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-home {
+	background-position: -128px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-off {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-star {
+	background-position: -32px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-heart {
+	background-position: -64px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-envelope {
+	background-position: -96px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-file {
+	background-position: -128px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-lock {
+	background-position: -0px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-download {
+	background-position: -32px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-wrench {
+	background-position: -64px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-graph {
+	background-position: -96px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-folder {
+	background-position: -128px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-help {
+	background-position: -0px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-globe {
+	background-position: -32px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-pencil {
+	background-position: -64px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-music {
+	background-position: -96px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-plus {
+	background-position: -128px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-monitor {
+	background-position: -0px -128px;
+}
+.jsn-master .jsn-icon32.jsn-icon-remove {
+	background-position: -32px -128px;
+}
+.jsn-master .jsn-icon32.jsn-icon-ok {
+	background-position: -64px -128px;
+}
+.jsn-master .jsn-icon32.jsn-icon-user {
+	background-position: -96px -128px;
+}
+.jsn-master .jsn-icon32.jsn-icon-database {
+	background-position: -128px -128px;
+}
+.jsn-master .jsn-icon32.jsn-icon-menu {
+	background-position: -0px -160px;
+}
+.jsn-master .jsn-icon32.jsn-icon-info-sign {
+	background-position: -32px -160px;
+}
+.jsn-master .jsn-icon32.jsn-icon-comment {
+	background-position: -64px -160px;
+}
+.jsn-master .jsn-icon32.jsn-icon-picture {
+	background-position: -96px -160px;
+}
+.jsn-master .jsn-icon32.jsn-icon-trash {
+	background-position: -128px -160px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social {
+	background-image: url(../images/icons-32/icons-32-social.png) !important;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-linkedin {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-stumbleupon {
+	background-position: -32px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-pinterest {
+	background-position: -64px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-vimeo {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-rss {
+	background-position: -32px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-youtube {
+	background-position: -64px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-digg {
+	background-position: -0px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-twitter {
+	background-position: -32px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-gplus {
+	background-position: -64px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-social.jsn-icon-facebook {
+	background-position: -0px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-products {
+	background-image: url(../images/icons-32/icons-32-products.png) !important;
+}
+.jsn-master .jsn-icon32.jsn-icon-products.jsn-icon-poweradmin {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon32.jsn-icon-products.jsn-icon-imageshow {
+	background-position: -0px -32px;
+}
+.jsn-master .jsn-icon32.jsn-icon-products.jsn-icon-uniform {
+	background-position: -0px -64px;
+}
+.jsn-master .jsn-icon32.jsn-icon-products.jsn-icon-mobilize {
+	background-position: -0px -96px;
+}
+.jsn-master .jsn-icon32.jsn-icon-loading {
+	background: url(../images/icons-32/icon-32-loading-circle.gif) center center no-repeat !important;
+}
+/* =============== ICON 48 =============== */
+.jsn-master .jsn-icon48 {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+.jsn-master .jsn-icon48.jsn-icon-products {
+	background-image: url(../images/icons-48/icons-48-products.png) !important;
+}
+.jsn-master .jsn-icon48.jsn-icon-products.jsn-icon-poweradmin {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon48.jsn-icon-products.jsn-icon-imageshow {
+	background-position: -0px -48px;
+}
+.jsn-master .jsn-icon48.jsn-icon-products.jsn-icon-uniform {
+	background-position: -0px -96px;
+}
+.jsn-master .jsn-icon48.jsn-icon-products.jsn-icon-mobilize {
+	background-position: -0px -144px;
+}
+/* =============== ICON 64 =============== */
+.jsn-master .jsn-icon64 {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	line-height: 64px;
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url(../images/icons-64/icons-64-bg.png) !important;
+}
+.jsn-master .jsn-icon64.jsn-icon-pointer {
+	background-position: -0px -0px;
+}
+.jsn-master .jsn-icon64.jsn-icon-download {
+	background-position: -64px -0px;
+}
+.jsn-master .jsn-icon64.jsn-icon-empty {
+	background-position: -0px -64px;
+}
+.jsn-master .jsn-icon64.jsn-icon-save {
+	background-position: -64px -64px;
+}
+.jsn-master .jsn-icon64.jsn-icon-refresh {
+	background-position: -0px -128px;
+}
+.jsn-master .jsn-icon64.jsn-icon-remove {
+	background-position: -64px -128px;
+}
+/* =============== TABLE =============== */
+.jsn-master table.jsn-table-centered th,
+.jsn-master table.jsn-table-centered td {
+	text-align: center;
+}
+.jsn-master table .jsn-column-mini {
+	width: 2%;
+}
+.jsn-master table .jsn-column-small {
+	width: 5%;
+}
+.jsn-master table .jsn-column-medium {
+	width: 10%;
+}
+.jsn-master table .jsn-column-large {
+	width: 20%;
+}
+.jsn-master table .jsn-column-xlarge {
+	width: 50%;
+}
+/* =============== COLUMNS =============== */
+.jsn-master .jsn-columns-container .jsn-column-item {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.jsn-master .jsn-columns-container .jsn-column-item:first-child {
+	padding-top: 0;	 
+}
+.jsn-master .jsn-columns-container.jsn-columns-count-two .jsn-column-item {
+	float: left;
+	width: 49.8%;
+}
+.jsn-master .jsn-columns-container.jsn-columns-count-three .jsn-column-item {
+	float: left;
+	width: 33.3%;
+}
+.jsn-master .jsn-columns-container.jsn-columns-count-no .jsn-column-item {
+	float: left;
+	margin-right: 20px;
+}
+
+/* =============== TABS =============== */
+.jsn-master .jsn-tabs {
+	position: relative;
+}
+.jsn-master .jsn-tabs .jsn-buttonbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* =============== DESIGN PANEL =============== */
+.jsn-master .jsn-layout {
+
+}
+.jsn-master .jsn-row-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.jsn-master .jsn-row-container > .jsn-iconbar {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    right: -45px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+}
+
+.jsn-master .jsn-row-container .jsn-column-container {
+    border: 0 none;
+    padding: 0;
+    margin-right: 12px;
+    float: left;
+}
+
+.jsn-master .jsn-row-container .jsn-column-container.last-child {
+    margin-right: 0px;
+}
+
+.jsn-master .jsn-row-container .span1 .control-group .span6,
+.jsn-master .jsn-row-container .span2 .control-group .span6,
+.jsn-master .jsn-row-container .span3 .control-group .span6,
+.jsn-master .jsn-row-container .span4 .control-group .span6,
+.jsn-master .jsn-row-container .span5 .control-group .span6,
+.jsn-master .jsn-row-container .span6 .control-group .span6,
+.jsn-master .jsn-row-container .span7 .control-group .span6,
+.jsn-master .jsn-row-container .span8 .control-group .span6,
+.jsn-master .jsn-row-container .span9 .control-group .span6 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.jsn-master .jsn-column-content {
+    float: left;
+    width: 100%;
+}
+
+.jsn-master .jsn-element-container {
+    min-height: 50px;
+}
+
+.jsn-master .jsn-element {
+    padding: 10px;
+}
+
+.jsn-master .jsn-element-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    opacity: 0.001;
+    filter: alpha(opacity = 1);
+    z-index: 9;
+}
+
+.jsn-master .ui-resizable-e {
+    right: -10px;
+    width: 8px;
+}
+
+.jsn-master .ui-resizable-handle {
+    z-index: 0 !important;
+}
+
+.jsn-master .jsn-add-more {
+	border: 1px dashed #bbb;
+	border-radius: 3px 3px 3px 3px;
+	color: #888;
+	display: block;
+	margin-top: 10px;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.7);
+	transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+}
+.jsn-master .jsn-add-more:hover {
+	background-color: rgba(225,225,225,0.7);
+	color: #333;
+	text-decoration: none;
+	border-style: solid;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.jsn-master .jsn-add-more [class^="icon-"],
+.jsn-master .jsn-add-more [class*=" icon-"] {
+	margin-right: 5px;
+}
+.jsn-master .jsn-percent-arrow {
+    position: absolute;
+    background: url('../images/icons-8/tipsy.gif') no-repeat bottom center;
+    width: 9px;
+    height: 5px;
+    bottom: -5px;
+}
+
+.jsn-master .jsn-percent-column {
+    position: absolute;
+    top: -30px;
+}
+
+.jsn-master .jsn-percent-inner {
+    padding: 5px 8px 4px 8px;
+    background-color: black;
+    color: white;
+    max-width: 200px;
+    text-align: center;
+}
+
+.jsn-master .jsn-percent-inner {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+/* =============== GENERIC ITEMS LIST =============== */
+.jsn-master .jsn-items-list-container {
+	position: relative;
+}
+.jsn-master .jsn-items-list-container .jsn-buttonbar {
+	position: absolute;
+	right: 0;
+	top: -5px;
+}
+.jsn-master .jsn-items-list-container .control-label {
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+.jsn-master .jsn-items-list {
+	border: 1px solid #ccc;
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 5px;
+	margin: 0;
+}
+.jsn-master .jsn-items-list .jsn-item {
+	padding: 10px;
+	margin: 0;
+	border: 1px solid transparent;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	list-style: none;
+}
+.jsn-master .jsn-items-list .jsn-item:hover {
+	background-color: #f4f4f4;
+	transition: background 0.3s ease-out;
+	-moz-transition: background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-out;
+}
+.jsn-master .jsn-items-list .jsn-item label {
+	margin-bottom: 0;
+	display: inline;
+	padding-left: 5px;
+}
+.jsn-master .jsn-items-list .jsn-item label input {
+	margin-left: 0;
+}
+.jsn-master .jsn-items-list .jsn-item.jsn-highlight label {
+	font-weight: bold;
+}
+.jsn-master .jsn-items-list .jsn-item .jsn-item-content [class^="icon-"],
+.jsn-master .jsn-items-list .jsn-item .jsn-item-content [class*=" icon-"] {
+	margin-right: 8px;
+}
+
+
+/* =============== ICONS SELECTOR =============== */
+.jsn-master .jsn-iconselector .jsn-items-list li {
+	float: left;
+	width: 33.3%;
+	padding: 0;
+	border: none;
+}
+.jsn-master .jsn-iconselector .jsn-items-list li a {
+	color: #333;
+	display: block;
+	padding: 8px 12px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.jsn-master .jsn-iconselector .jsn-items-list li a:hover {
+	text-decoration: none;
+}
+.jsn-master .jsn-iconselector .jsn-items-list li a [class^="icon-"],
+.jsn-master .jsn-iconselector .jsn-items-list li a [class*=" icon-"] {
+	margin-right: 10px;
+}
+.jsn-master .jsn-iconselector .jsn-items-list li.active {
+	background-color: #08c;
+}
+.jsn-master .jsn-iconselector .jsn-items-list li.active a {
+	color: #fff;
+}
+
+/* =============== ELEMENTS SELECTOR =============== */
+.jsn-master .jsn-elementselector .jsn-items-list {
+	height: 250px;
+}
+.jsn-master .jsn-elementselector .jsn-items-list li {
+	float: left;
+	width: 33.3%;
+	padding: 10px;
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.jsn-master .jsn-elementselector .jsn-items-list li:hover {
+	background-color: transparent;
+}
+.jsn-master .jsn-elementselector .jsn-items-list li button {
+	line-height: 16px;
+	padding: 8px 12px;
+}
+
+.jsn-master .jsn-style-dark.jsn-section-content {
+	background-color: #333;
+	color: #ccc;
+	transition: background 0.3s ease-out;
+	-moz-transition: background 0.3s ease-out;
+	-webkit-transition: background 0.3s ease-out;
+}
+.jsn-master .jsn-style-dark .jsn-add-more {
+	color: #999;
+}
+.jsn-master .jsn-style-dark .jsn-add-more:hover {
+	background-color: #444;
+}
+/* =============== ELEMENTS QUICK SEARCH =============== */
+.jsn-master .jsn-reset-search{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    color: #aaaaaa;
+}
+.jsn-master .jsn-reset-search:hover{
+    color: #0e0e0e;
+    text-decoration: none;
+}
+.jsn-master .jsn-quick-search{
+    position: relative;
+}
+/* =============== ANIMATION =============== */
+.jsn-master .jsn-fade-out {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: visibility 0s linear 0.3s, opacity 0.5s linear;
+	-moz-transition: visibility 0s linear 0.3s, opacity 0.5s linear;
+	transition: visibility 0s linear 0.3s, opacity 0.5s linear;
+}
+.jsn-master .jsn-fade-in {
+}
+
+.jsn-master .jsn-download-progress {
+	display: inline-block;
+	width: 150px;
+	display: none;
+}
+
+.jsn-master .jsn-download-progress .progress {
+	margin: 0 5px;
+	margin-top: 5px;
+	margin-bottom: -7px;
+	display: inline-block;
+	width: 50px;
+}
+
+.jsn-master .jsn-download-progress .percentage {
+	display: inline-block;
+}
+
+#jsn-upgrade-editions,
+#jsn-upgrade-message {
+	display: none;
+}
+
+.jsn-master .jsn-handle-drag {
+	background: none repeat scroll 0 0 #EFEFEF;
+	cursor: move;
+}
+.jsn-master .jsn-handle-drag.jsn-horizontal {
+	height: 40px;
+	margin-bottom: 10px;
+}
+
+.jsn-master .jsn-handle-drag.jsn-vertical {
+	width: 30px;
+	height: 100%;
+	margin-left: 10px;
+}
+.jsn-master .jsn-handle-drag.jsn-iconbar-trigger .jsn-iconbar {
+	top: 5px;
+}
+
+.jsn-master .jsn-fieldset-filter {
+	margin-bottom: 15px;
+}
+.jsn-master .jsn-bootstrap .jsn-fieldset-filter label,
+.jsn-master .jsn-bootstrap .jsn-fieldset-filter input,
+.jsn-master .jsn-bootstrap .jsn-fieldset-filter select,
+.jsn-master .jsn-bootstrap .jsn-fieldset-filter .btn {
+	margin: 0 3px;
+	float: left;
+}
+.jsn-master .jsn-fieldset-search {
+}
+.jsn-master .jsn-fieldset-select {
+}
+.jsn-master .jsn-fieldset-filter-select {
+	width: 250px;
+	padding-bottom: 10px;
+}
+.jsn-master .jsn-fieldset-filter-select select {
+	float: left;
+    margin: 2px 3px;
+}
+.jsn-master .select2-container {
+	width: 220px;
+}
+
+/* Form validation */
+.jsn-form-validation-failed {
+	position: fixed;
+	top: 33%;
+	left: 50%;
+	width: auto;
+	max-width: 66%;
+}
+.jsn-bootstrap input.invalid,
+.jsn-bootstrap textarea.invalid {
+	border-color: red;
+}

@@ -1,0 +1,11 @@
+/* Progress Bar */
+.jsn-bootstrap3 .wr-element-progressbar {
+	padding: 0 0 5px;
+}
+.jsn-bootstrap3 .progress-info>span {
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.jsn-bootstrap3 .progress-info .progress-percentage {
+	margin-left: 10px;
+}

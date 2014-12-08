@@ -1,0 +1,19 @@
+/**
+ * @version    $Id$
+ * @package    JSN_Framework
+ * @author     JoomlaShine Team <support@joomlashine.com>
+ * @copyright  Copyright (C) 2014 JoomlaShine.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.joomlashine.com
+ * Technical Support:  Feedback - http://www.joomlashine.com/contact-us/get-support.html
+ */
+
+/* ============================== JOOMLASHINE GUI ============================== */
+
+@import url("jsn-general.css");
+@import url("jsn-bootstrap.css");
+@import url("jsn-jqueryui.css");
+@import url("jsn-admintemplates.css");
+@import url("jsn-pages.css");
+@import url("jsn-fonticomoon.css");

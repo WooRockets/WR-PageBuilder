@@ -1,0 +1,69 @@
+/**
+ * @version    $Id$
+ * @package    WR_Library
+ * @author     WooRockets Team <support@woorockets.com>
+ * @copyright  Copyright (C) 2014 WooRockets.com. All Rights Reserved.
+ * @license    GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Websites: http://www.woorockets.com
+ */
+
+/* Override common styles */
+.jsn-master.ui-front {
+	z-index: 999999;
+}
+.jsn-master.ui-front .ui-dialog-titlebar .ui-button {
+	display: none;
+}
+
+.wrap > h2 + p {
+	margin: 0 0 2em;
+}
+
+/* Loading state */
+.wr-loading {
+	display: inline-block;
+	min-width: 16px;
+	min-height: 16px;
+	background: url(../../3rd-party/bs2/jsn/images/icons-16/icon-16-loading-circle.gif) 0 50% no-repeat !important;
+	color: #333333 !important;
+}
+.modal-footer .wr-loading,
+.actions .wr-loading {
+	padding-left: 33px;
+	background-position: 9px 50% !important;
+}
+
+/* Product addons screen */
+#wr-product-addons .thumbnails {
+	margin: 0;
+}
+#wr-product-addons .thumbnails .thumbnail {
+	position: relative;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	margin: 0 15px 15px 0;
+	width: 330px;
+}
+#wr-product-addons .thumbnails .thumbnail .caption {
+	padding: 5px;
+}
+#wr-product-addons .thumbnails .thumbnail img {
+	margin: 5px 5px 0;
+	width: 320px;
+	height: 240px;
+}
+#wr-product-addons .thumbnails .thumbnail .label {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+/* Authentication modal */
+.jsn-master.ui-front .wr-product-addons-authentication .form-horizontal {
+	margin-top: 10px;
+}
+
+.jsn-master.ui-front .wr-product-addons-authentication .form-horizontal .control-group .controls label input[type="checkbox"] {
+	vertical-align: text-bottom;
+}

@@ -1,0 +1,87 @@
+/*** Tabs ***/
+[id *="tab_"] {
+    padding: 10px 0;
+}
+.jsn-bootstrap3 a, .jsn-bootstrap3 a:active, .jsn-bootstrap3 a:focus {
+    outline: none;
+}
+.jsn-bootstrap3 .tabbable {
+    padding: 0;
+}
+.jsn-bootstrap3 .tabbable .tab-content {
+    overflow: auto;
+    background: #FFF;
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 12px 20px 10px 20px;
+}
+.jsn-bootstrap3 .tabs-below .tab-content {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.jsn-bootstrap3 .nav-tabs {
+    margin: 0px;
+}
+.jsn-bootstrap3 .tabs-below .nav-tabs li {
+    margin: -1px 0 0;
+}
+.jsn-bootstrap3 .nav-tabs li i {
+    margin: 2px 5px 0 0;
+}
+.jsn-bootstrap3 .tabs-below .tab-content, .jsn-bootstrap3 .tabs-left .tab-content, .jsn-bootstrap3 .tabs-right .tab-content {
+    border-top: 1px solid #DDD;
+}
+.jsn-bootstrap3 .tabs-left .nav-tabs {
+    border-right: none;
+    margin-right: -3px;
+}
+.jsn-bootstrap3 .tabs-right .nav-tabs {
+    border-left: none;
+    margin-left: -1px;
+}
+.jsn-bootstrap3 .nav-tabs li, .jsn-bootstrap3 .nav-tabs li {
+    margin-left: 0;
+}
+.jsn-bootstrap3 .tabs-left .nav-tabs li, .jsn-bootstrap3 .tabs-right .nav-tabs li {
+    margin: 0;
+}
+.jsn-bootstrap3 .tabs-below .nav-tabs {
+    border-bottom: none;
+    border-top: 1px solid #DDD;
+}
+.jsn-bootstrap3 .tabs-below .nav-tabs li.active a {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #DDD;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+.jsn-bootstrap3 .tabs-left>.nav-tabs>li, .jsn-bootstrap3 .tabs-right>.nav-tabs>li {
+    float: none;
+}
+.jsn-bootstrap3 .tabs-left>.nav-tabs {
+    float: left;
+}
+.jsn-bootstrap3 .tabs-left .nav-tabs, .jsn-bootstrap3 .tabs-right .nav-tabs, .jsn-bootstrap3 .tabs-left .nav-tabs li a {
+    border: none;
+}
+.jsn-bootstrap3 .tabs-left .nav-tabs li.active a {
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #DDD;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+.jsn-bootstrap3 .tabs-right>.nav-tabs {
+    float: right;
+}
+.jsn-bootstrap3 .tabs-right .nav-tabs li.active a {
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #DDD;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}

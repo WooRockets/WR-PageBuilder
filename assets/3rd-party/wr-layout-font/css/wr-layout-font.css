@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'wr-layout-font';
+	src:url('../fonts/wr-layout-font.eot?ukxywo');
+	src:url('../fonts/wr-layout-font.eot?#iefixukxywo') format('embedded-opentype'),
+		url('../fonts/wr-layout-font.woff?ukxywo') format('woff'),
+		url('../fonts/wr-layout-font.ttf?ukxywo') format('truetype'),
+		url('../fonts/wr-layout-font.svg?ukxywo#wr-layout-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="wr-layout-"], [class*=" wr-layout-"] {
+	font-family: 'wr-layout-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.jsn-bootstrap3 .wr-layout-2-2-2-2-2-2:before {
+	content: "\e600";
+}
+.jsn-bootstrap3 .wr-layout-3-3-3-3:before {
+	content: "\e601";
+}
+.jsn-bootstrap3 .wr-layout-3-3-6:before {
+	content: "\e602";
+}
+.jsn-bootstrap3 .wr-layout-3-6-3:before {
+	content: "\e603";
+}
+.jsn-bootstrap3 .wr-layout-3-9:before {
+	content: "\e604";
+}
+.jsn-bootstrap3 .wr-layout-4-4-4:before {
+	content: "\e605";
+}
+.jsn-bootstrap3 .wr-layout-4-8:before {
+	content: "\e606";
+}
+.jsn-bootstrap3 .wr-layout-6-3-3:before {
+	content: "\e607";
+}
+.jsn-bootstrap3 .wr-layout-6-6:before {
+	content: "\e608";
+}
+.jsn-bootstrap3 .wr-layout-8-4:before {
+	content: "\e609";
+}
+.jsn-bootstrap3 .wr-layout-9-3:before {
+	content: "\e60a";
+}
+.jsn-bootstrap3 .wr-layout-12:before {
+	content: "\e60b";
+}

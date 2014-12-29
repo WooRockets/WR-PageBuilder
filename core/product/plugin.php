@@ -64,6 +64,13 @@ class WR_Pb_Product_Plugin {
 					'menu_slug'  => 'wr-pb-settings',
 					'function'   => array( __CLASS__, 'settings' ),
 				),
+				array(
+					'page_title' => __( 'WR PageBuilder - About Us', WR_PBL ),
+					'menu_title' => __( 'About Us', WR_PBL ),
+					'capability' => 'manage_options',
+					'menu_slug'  => 'wr-pb-about-us',
+					'function'   => array( __CLASS__, 'about_us' ),
+				),
 			),
 		);
 
@@ -199,6 +206,15 @@ class WR_Pb_Product_Plugin {
 		WR_Pb_Init_Assets::load( array( 'wr-pb-settings-js' ) );
 
 		include WR_PB_TPL_PATH . '/settings.php';
+	}
+
+	/**
+	 * Render About-us page.
+	 *
+	 * @return  void
+	 */
+	public static function about_us() {
+		include WR_PB_TPL_PATH . '/about-us.php';
 	}
 
 	/**

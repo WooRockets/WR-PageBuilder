@@ -3,7 +3,7 @@
  * Plugin Name: WR PageBuilder
  * Plugin URI:  http://www.woorockets.com
  * Description: Awesome content builder for Wordpress websites
- * Version:     2.4.2
+ * Version:     2.4.4
  * Author:      WooRockets Team <support@www.woorockets.com>
  * Author URI:  http://www.wordpress.org/plugins/wr-pagebuilder
  * License:     GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,11 @@ class WR_Pb_Init {
 		add_action( 'widgets_init', array(                 &$this, 'init'          ), 100 );
 		add_action( 'admin_init'  , array(       'WR_Pb_Gadget_Base', 'hook'          ), 100 );
 		add_action( 'admin_init'  , array( 'WR_Pb_Product_Plugin', 'settings_form' )      );
+
+		// Activate plugin
+		register_activation_hook( WR_PB_FILE, array( $this, 'do_activate' ) );
+		// Redirect after plugin activation
+		add_action( 'admin_init' , array( $this, 'do_activation_redirect' ) );
 
 		// Initialize built-in shortcodes
 		include dirname( __FILE__ ) . '/shortcodes/main.php';
@@ -95,6 +100,27 @@ class WR_Pb_Init {
 
 		// Allow autoload registration from outside
 		do_action( 'wr_pb_autoload' );
+	}
+
+	/**
+	 * Activate handle.
+	 *
+	 * @return  void
+	 */
+	public function do_activate() {
+		update_option( 'wr_pagebuilder_do_activation_redirect', 'Yes' );
+	}
+
+	/**
+	 * Activation redirect handle.
+	 *
+	 * @return  void
+	 */
+	public function do_activation_redirect() {
+		if ( get_option( 'wr_pagebuilder_do_activation_redirect', 'No' ) == 'Yes' ) {
+			update_option( 'wr_pagebuilder_do_activation_redirect', 'No' );
+			wp_redirect( admin_url( 'admin.php?page=wr-pb-about-us' ) );
+		}
 	}
 }
 

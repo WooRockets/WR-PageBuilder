@@ -2581,10 +2581,10 @@
 			if (p - start >= (2 + 44 * index)) {
 				header.addClass('jsn-element wr-sticky-item');
 				position = 'fixed';
-				top = '0px';
+				top = (div.parents('.wr-pb-setting-tab').offset().top - parseInt(header.css('margin-top').replace('px', ''))) + 'px';
 				margin = '-1px';
 				height = '45px';
-				width = parseInt(header.closest('.jsn-item').width(), 10) + 2 + 'px';
+				width = parseInt(header.closest('.jsn-item').width(), 10) + 1 + 'px';
 			} else {
 				header.removeClass('jsn-element wr-sticky-item');
 			}

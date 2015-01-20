@@ -22,7 +22,7 @@ class WR_Pb_Product_Plugin {
 	 *
 	 * @var  array
 	 */
-	public static $pages = array( 'wr-pb-settings', 'wr-pb-addons' );
+	public static $pages = array( 'wr-pb-settings', 'wr-pb-addons', 'wr-pb-about-us' );
 
 	/**
 	 * Current WR PageBuilder settings.
@@ -53,9 +53,9 @@ class WR_Pb_Product_Plugin {
 			'page_title' => __( 'WR PageBuilder', WR_PBL ),
 			'menu_title' => $menu_title,
 			'capability' => 'manage_options',
-			'menu_slug'  => 'wr-pb-settings',
+			'menu_slug'  => 'wr-pb-about-us',
 			'icon_url'   => WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/wr-pgbldr-icon-white.png',
-			'function'   => array( __CLASS__, 'settings' ),
+			'function'   => array( __CLASS__, 'about_us' ),
 			'children'   => array(
 				array(
 					'page_title' => __( 'WR PageBuilder - Settings', WR_PBL ),
@@ -65,8 +65,8 @@ class WR_Pb_Product_Plugin {
 					'function'   => array( __CLASS__, 'settings' ),
 				),
 				array(
-					'page_title' => __( 'WR PageBuilder - About Us', WR_PBL ),
-					'menu_title' => __( 'About Us', WR_PBL ),
+					'page_title' => __( 'WR PageBuilder - About', WR_PBL ),
+					'menu_title' => __( 'About', WR_PBL ),
 					'capability' => 'manage_options',
 					'menu_slug'  => 'wr-pb-about-us',
 					'function'   => array( __CLASS__, 'about_us' ),
@@ -98,6 +98,9 @@ class WR_Pb_Product_Plugin {
 
 		// Register admin menus
 		WR_Pb_Init_Admin_Menu::add( $admin_menus );
+
+		// Remove redundant menu
+		WR_Pb_Init_Assets::inline( 'js', '$(\'#toplevel_page_wr-pb-about-us .wp-first-item\').hide();' );
 
 		// Register 'wr_pb_installed_product' filter
 		add_filter( 'wr_pb_installed_product', array( __CLASS__, 'register_product' ) );
@@ -214,6 +217,9 @@ class WR_Pb_Product_Plugin {
 	 * @return  void
 	 */
 	public static function about_us() {
+		// Load assets
+		WR_Pb_Init_Assets::load( array( 'wr-pb-bootstrap-css', 'wr-pb-bootstrap-js' ) );
+		// Load template
 		include WR_PB_TPL_PATH . '/about-us.php';
 	}
 

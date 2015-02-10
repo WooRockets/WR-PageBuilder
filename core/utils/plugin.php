@@ -74,7 +74,11 @@ class WR_Pb_Utils_Plugin {
 
 			if ( $deactivate_action ) {
 				$wr_action  = 'wr_deactivate';
-				$plugin_url = admin_url( 'plugins.php' );
+				if( is_network_admin() ){
+				    $plugin_url = network_admin_url( 'plugins.php' );
+				} else {
+				    $plugin_url = admin_url( 'plugins.php' );
+				}
 				// check whether delete only WR PageBuilder OR Bulk deactivate plugins
 				$deactivate_one = isset( $_POST['action'] ) ? false : true;
 
@@ -182,6 +186,41 @@ class WR_Pb_Utils_Plugin {
 							$meta_key3
 							)
 							);
+
+							// update post content = value of '_wr_html_content', deactivate pagebuilder all blog
+							if( is_network_admin() ){
+								// get list id blog all
+								$list_prefix_musite = $wpdb->get_results(
+									"SELECT blog_id FROM $wpdb->blogs",
+									ARRAY_A
+								);
+
+								if($list_prefix_musite && count($list_prefix_musite) > 1){
+									foreach ($list_prefix_musite as $key => $value) {
+										if ($value['blog_id'] == 1) continue;
+										
+										$prefix = $wpdb->prefix.$value['blog_id'].'_';
+										$wpdb->query(
+											$wpdb->prepare(
+												"
+												UPDATE		{$prefix}posts p
+												LEFT JOIN	{$prefix}postmeta p1
+															ON p1.post_id = p.ID
+												LEFT JOIN	{$prefix}postmeta p2
+															ON p2.post_id = p.ID
+												SET			post_content = p1.meta_value, p2.meta_value = %d
+												WHERE		p1.meta_key = %s
+															AND p2.meta_key = %s
+												",
+												$meta_key1,
+												$meta_key2,
+												$meta_key3
+											)
+										);
+									}
+								}
+							}
+
 							// delete pagebuilder content
 							WR_Pb_Utils_Common::delete_meta_key( array( '_wr_page_builder_content', '_wr_page_active_tab' ) );
 

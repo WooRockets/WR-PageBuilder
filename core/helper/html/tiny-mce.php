@@ -22,9 +22,6 @@ class WR_Pb_Helper_Html_Tiny_Mce extends WR_Pb_Helper_Html {
 		if ( $element['exclude_quote'] == '1' ) {
 			$element['std'] = str_replace( '<wr_quote>', '"', $element['std'] );
 		}
-		// Fix LineBreak bug
-		$element['std'] = str_replace("\n<br>", '<br>', $element['std']);
-		$element['std'] = str_replace("\n", '<br>', $element['std']);
 
 		$settings = array(
 			'textarea_name' => $element['id'],

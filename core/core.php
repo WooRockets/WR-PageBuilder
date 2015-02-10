@@ -1111,16 +1111,58 @@ JS;
 
 			$wrapper_style = $tab_active ? 'style="display:none"' : '';
 
+			// Get array list of dismissed pointers for current user and convert it to array
+			$dismissed_pointers = explode( ',', get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
+
+			// If this post has not used PageBuilder
+			global $post;
+			$not_used_pb = isset( $post ) && ( 1 !== get_post_meta( $post->ID, '_wr_page_active_tab' ) );
+			
+			// Check if our pointer is not among dismissed ones
+			$translate = NULL;
+			$current_lang = get_option( 'WPLANG' );
+			
+			if( $current_lang && !preg_match("/^en/", $current_lang) && $not_used_pb && !in_array( 'wr_pb_settings_pointer_translate', $dismissed_pointers ) ){
+				
+				$language = 'your language';
+				if (file_exists(ABSPATH . 'wp-admin/includes/translation-install.php')) {
+					require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
+					$translations = wp_get_available_translations();
+					$language = $translations[$current_lang]['native_name'];
+				}
+				
+				$translate = '
+					<div id="translation-transifex">
+						<p>
+							<a target="_blank" href="http://goo.gl/Sg2owo">'.sprintf(__('Help translate WR PageBuilder to %s.') , $language).'</a>
+							<span id="wr-close"></span>
+						</p>
+					</div>
+					<script type="text/javascript">
+						jQuery(document).ready( function($) {
+							$("#wr-close").click(function(e){
+								$.post( ajaxurl, {
+										pointer: "wr_pb_settings_pointer_translate", // pointer ID
+										action: "dismiss-wp-pointer"
+								});
+								$("#translation-transifex").hide();
+							})
+						});
+					</script>
+				';
+			}
+
 			echo '
-                <input id="wr_active_tab" name="wr_active_tab" value="' . $tab_active . '" type="hidden">
-                <input id="wr_deactivate_pb" name="wr_deactivate_pb" value="' . $wr_deactivate_pb . '" type="hidden">
-                <div class="jsn-bootstrap3 wr-editor-wrapper" ' . $wrapper_style . '>
-                    <ul class="nav nav-tabs" id="wr_editor_tabs">
-                        <li class="active"><a href="#wr_editor_tab1">' . __( 'Classic Editor', WR_PBL ) . '</a></li>
-                        <li><a href="#wr_editor_tab2">' . __( 'WR PageBuilder', WR_PBL ) . '</a></li>
-                    </ul>
-                    <div class="tab-content wr-editor-tab-content">
-                        <div class="tab-pane active" id="wr_editor_tab1">';
+				<input id="wr_active_tab" name="wr_active_tab" value="' . $tab_active . '" type="hidden">
+				<input id="wr_deactivate_pb" name="wr_deactivate_pb" value="' . $wr_deactivate_pb . '" type="hidden">
+				<div class="jsn-bootstrap3 wr-editor-wrapper" ' . $wrapper_style . '>
+					<ul class="nav nav-tabs" id="wr_editor_tabs">
+						<li class="active"><a href="#wr_editor_tab1">' . __( 'Classic Editor', WR_PBL ) . '</a></li>
+						<li><a href="#wr_editor_tab2">' . __( 'WR PageBuilder', WR_PBL ) . '</a></li>
+					</ul>
+					'.$translate.'
+					<div class="tab-content wr-editor-tab-content">
+						<div class="tab-pane active" id="wr_editor_tab1">';
 		}
 	}
 

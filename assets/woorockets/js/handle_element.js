@@ -744,6 +744,9 @@
 						});
 
 						if (typeof(tinymce.get(new_textarea_id)) !== null){
+							// Replace \n with br tag
+							$('#' + new_textarea_id).val($('#' + new_textarea_id).val().replace('\n', '<br>'));
+
 							tinymce.execCommand('mceAddEditor', false, new_textarea_id);
 
 							var editor = tinymce.get(new_textarea_id);

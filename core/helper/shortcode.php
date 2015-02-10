@@ -708,14 +708,16 @@ if ( ! class_exists( 'WR_Pb_Helper_Shortcode' ) ) {
 				$content = str_replace( '[', '&#91;', $content );
 				$content = str_replace( '&#91;wr_', '[wr_', $content );
 				$content = str_replace( '&#91;/wr_', '[/wr_', $content );
-				$content = do_shortcode( $autop ? wpautop( $content ) : $content );
-			} else {
-				$content = do_shortcode( $autop ? wpautop( $content ) : $content );
 			}
+
+			$content = do_shortcode( $autop ? wpautop( $content ) : $content );
 
 			// remove empty p tag which wrap <div>
 			$content = preg_replace( '/<p>(<!--[^>]*-->)*\n*(<div)/s', '$2', $content );
 			$content = preg_replace( '/(<\/div>)(.*)\n*<\/p>/s', '$1$2', $content );
+
+			// Replace each &#038; with &
+			$content = str_replace( '&#0f38;', '&', $content );
 
 			return balanceTags( $content );
 		}

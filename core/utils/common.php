@@ -24,9 +24,35 @@ class WR_Pb_Utils_Common {
 			return false;
 		}
 		global $wpdb;
-		$keys  = implode( ', ', $keys );
 		$extra = ! empty ( $post_id ) ? 'post_id = ' . esc_sql( $post_id ) . ' AND' : '';
-		$wpdb->query( $wpdb->prepare( "DELETE FROM $wpdb->postmeta WHERE $extra meta_key IN (%s)", $keys ) );
+
+		$sql = "DELETE FROM $wpdb->postmeta WHERE $extra meta_key IN (".implode(', ', array_fill(0, count($keys), '%s')).")";
+
+		// Call $wpdb->prepare passing the values of the array as separate arguments
+		$query = call_user_func_array(array($wpdb, 'prepare'), array_merge(array($sql), $keys));
+		$wpdb->query( $query );
+
+		// del all blog
+		if( is_network_admin() ){
+			// get list id blog all
+			$list_prefix_musite = $wpdb->get_results(
+				"SELECT blog_id FROM $wpdb->blogs",
+				ARRAY_A
+			);
+
+			if($list_prefix_musite && count($list_prefix_musite) > 1){
+				foreach ($list_prefix_musite as $key => $value) {
+					if ($value['blog_id'] == 1) continue;
+
+					$prefix = $wpdb->prefix.$value['blog_id'].'_';
+					$sql = "DELETE FROM {$prefix}postmeta WHERE $extra meta_key IN (".implode(', ', array_fill(0, count($keys), '%s')).")";
+
+					// Call $wpdb->prepare passing the values of the array as separate arguments
+					$query = call_user_func_array(array($wpdb, 'prepare'), array_merge(array($sql), $keys));
+					$wpdb->query( $query );
+				}
+			}
+		}
 	}
 
 	/**

@@ -2138,6 +2138,42 @@ button.qt-fullscreen {
 .wr-logo-40.megamenu:hover {
 	background-image: url("../images/logo-40/megamenu_hover.png");
 }
+
+/* Translation */
+#translation-transifex{
+    float: right;
+    margin: -29px 0 0 0;
+}
+#translation-transifex p{
+	font-size:12px	
+}
+#translation-transifex #wr-close{
+	padding-left: 23px;
+	position: relative;
+	float: right;
+	display: inline-block;
+	text-decoration: none;
+	cursor:pointer;
+}
+#translation-transifex #wr-close:before{
+	background: 0 0;
+	color: #999;
+	content: '\f153';
+	display: block!important;
+	font: 400 13px/1 dashicons;
+	speak: none;
+	margin: 1px 0;
+	text-align: center;
+	-webkit-font-smoothing: antialiased!important;
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	left: 5px;
+	top: 1px;
+}
+#translation-transifex #wr-close:hover:before {
+	color: #c00;
+}
 .wr-logo-40.corsa {
 	width: 100px;
 	background-image: url("../images/logo-40/corsa.png");

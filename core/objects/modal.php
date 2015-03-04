@@ -325,7 +325,7 @@ if ( ! class_exists( 'WR_Pb_Objects_Modal' ) ) {
 			}
 
 			// Auto-append `Shortcode Content` tab
-			if ( $shortcode != 'wr_row' ) {
+			if ( $shortcode != 'wr_row' && $shortcode != 'wr_column') {
 				self::shortcode_content_tab( $tabs, $contents, $raw_shortcode );
 			}
 

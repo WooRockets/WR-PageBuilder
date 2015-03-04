@@ -133,6 +133,20 @@
 	max-width: 680px;
 }
 
+/* === Style for modal edit column === */
+.jsn-modal #wr-element-column {
+	padding: 20px 25px;
+}
+
+.jsn-modal #wr-element-column .control-group {
+	display: inline-block;
+	clear: none;
+	width: 33.33%;
+}
+.jsn-modal #wr-element-column .control-group:nth-child(4) {
+	clear: left;
+}
+
 /* === shortcode_inner_wrapper === */
 #shortcode_inner_wrapper {
 	padding: 15px;
@@ -2145,7 +2159,7 @@ button.qt-fullscreen {
     margin: -29px 0 0 0;
 }
 #translation-transifex p{
-	font-size:12px	
+	font-size:12px
 }
 #translation-transifex #wr-close{
 	padding-left: 23px;

@@ -862,8 +862,10 @@
             if ($(this).hasClass('row')) {
                 parent_item = $(this).parent('.jsn-iconbar').parent('.jsn-row-container');
                 el_type = 'element';
-            }
-            else {
+            } else if ($(this).hasClass('column')) {
+            	parent_item = $(this).parent('.jsn-iconbar').parents('.jsn-column-container').first();
+                el_type = 'element';
+            } else {
                 parent_item = $(this).parent('.jsn-iconbar').parent('.jsn-item');
                 el_type = parent_item.attr('data-el-type');
             }
@@ -1443,6 +1445,9 @@
 
 		if (active_shortcode.hasClass('jsn-row-container')) {
 			shortcode_content = shortcode_content.replace('[/wr_row]','');
+		}
+		if (active_shortcode.hasClass('jsn-column-container')) {
+			shortcode_content = shortcode_content.replace('[/wr_column]','');
 		}
 		// step_to_track(3, shortcode_content);
 		active_shortcode.find("[data-sc-info^='shortcode_content']").first().text(shortcode_content);

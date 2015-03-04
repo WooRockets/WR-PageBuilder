@@ -141,9 +141,9 @@
 .jsn-modal #wr-element-column .control-group {
 	display: inline-block;
 	clear: none;
-	width: 33.33%;
+	width: 25%;
 }
-.jsn-modal #wr-element-column .control-group:nth-child(4) {
+.jsn-modal #wr-element-column .control-group:nth-child(5) {
 	clear: left;
 }
 

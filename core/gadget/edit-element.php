@@ -84,12 +84,12 @@ class WR_Gadget_Edit_Element extends WR_Pb_Gadget_Base {
 	 */
 	public function filter_assets() {
 		static $executed;
+		global $wp_styles, $wp_scripts;
 
+		// Check if requesting form only
+		$form_only = ( isset( $_GET['form_only'] ) && absint( $_GET['form_only'] ) ) ? TRUE : FALSE ;
+		
 		if ( ! isset( $executed ) ) {
-			global $wp_styles, $wp_scripts;
-
-			// Check if requesting form only
-			$form_only = ( isset( $_GET['form_only'] ) && absint( $_GET['form_only'] ) );
 
 			// Remove unnecessary assets
 			foreach ( array( &$wp_styles, &$wp_scripts ) as $assets ) {

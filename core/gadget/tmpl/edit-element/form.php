@@ -13,7 +13,7 @@
 @header( 'Content-Type: ' . get_option( 'html_type' ) . '; charset=' . get_option( 'blog_charset' ) );
 
 // Check if requesting form only
-$form_only = ( isset( $_GET['form_only'] ) && absint( $_GET['form_only'] ) );
+$form_only = ( isset( $_GET['form_only'] ) && absint( $_GET['form_only'] ) ) ? TRUE : FALSE ;
 
 // Print HTML structure if not requesting form only
 if ( ! $form_only ) :

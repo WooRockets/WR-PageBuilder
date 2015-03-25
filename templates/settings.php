@@ -22,14 +22,14 @@
 
 	<?php
 	// Show message when save
-	$saved = ( isset ( $_GET ) && $_GET['settings-updated'] == 'true' ) ? __( 'Settings saved.', WR_PBL ) : __( 'Settings saved.', WR_PBL );
+	$saved = ( isset ( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) ? __( 'Settings saved.', WR_PBL ) : __( 'Settings saved.', WR_PBL );
 
 	$msg = $type = '';
 	if ( isset ( $_GET['settings-updated'] ) && $_GET['settings-updated'] == 'true' ) {
 		$msg  = __( 'Settings saved.', WR_PBL );
 		$type = 'updated';
 	} else {
-		if ( $_GET['settings-updated'] != 'true' ) {
+		if ( isset ( $_GET['settings-updated'] ) && $_GET['settings-updated'] != 'true' ) {
 			$msg  = __( 'Settings is not saved.', WR_PBL );
 			$type = 'error';
 		}

@@ -19,7 +19,7 @@ class WR_Pb_Helper_Html_Tiny_Mce extends WR_Pb_Helper_Html {
 		$element = parent::get_extra_info( $element );
 		$label = parent::get_label( $element );
 		$rows = isset($element['rows']) ? $element['rows'] : 10;
-		if ( $element['exclude_quote'] == '1' ) {
+		if ( isset($element['exclude_quote']) && $element['exclude_quote'] == '1' ) {
 			$element['std'] = str_replace( '<wr_quote>', '"', $element['std'] );
 		}
 

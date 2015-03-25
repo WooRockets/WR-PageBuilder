@@ -260,6 +260,10 @@ class WR_Pb_Product_Plugin {
 					'id'    => 'fullmode',
 					'title' => __( 'Enable full mode', WR_PBL ),
 			),
+			array(
+					'id'    => 'auto_check_update',
+					'title' => __( 'Send plugin info to WooRockets for improving', WR_PBL )
+			)
 		);
 
 		foreach ( $fields as $field ) {
@@ -300,7 +304,7 @@ class WR_Pb_Product_Plugin {
 	public static function wr_pb_settings_options() {
 		if ( ! isset( self::$settings ) ) {
 			// Define options
-			$options  = array( 'wr_pb_settings_enable_for', 'wr_pb_settings_cache', 'wr_pb_settings_fullmode', 'wr_pb_settings_boostrap_js', 'wr_pb_settings_boostrap_css' );
+			$options  = array( 'wr_pb_settings_enable_for', 'wr_pb_settings_cache', 'wr_pb_settings_fullmode', 'wr_pb_settings_boostrap_js', 'wr_pb_settings_boostrap_css', 'wr_pb_settings_auto_check_update' );
 
 			// Get saved options value
 			self::$settings = array();
@@ -474,6 +478,30 @@ class WR_Pb_Product_Plugin {
 <p class="description">
 <?php _e( 'You should choose NOT to load Bootstrap CSS / JS if your theme or some other plugin installed on your website already loaded it.', WR_PBL ); ?>
 </p>
+<?php
+	}
+
+	/**
+	 * Render HTML code for `Auto Check Update` field.
+	 *
+	 * @return  void
+	 */
+	public static function wr_pb_setting_callback_auto_check_update() {
+		$settings = self::wr_pb_settings_options();
+		extract( $settings );
+		?>
+<div>
+	<select name="wr_pb_settings_auto_check_update">
+		<option value="enable"
+		<?php selected( $wr_pb_settings_auto_check_update, 'enable' ); ?>>
+			<?php _e( 'Yes', WR_PBL ); ?>
+		</option>
+		<option value="disable"
+		<?php selected( $wr_pb_settings_auto_check_update, 'disable' ); ?>>
+			<?php _e( 'No', WR_PBL ); ?>
+		</option>
+	</select>
+</div>
 <?php
 	}
 }

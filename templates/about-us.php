@@ -42,7 +42,7 @@
 
 		<div id="wr-header">
 			<a class="wr-logoheader" target="_blank" href="http://www.woorockets.com/?utm_source=PageBuilder%20About&utm_medium=top%20logo&utm_campaign=Cross%20Promo%20Plugins"><img src="<?php echo WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/about-us/logo-header.png'; ?>" alt="woorockets.com" /></a>
-			<p><?php printf(__('Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href="%s" target="_blank" >Twitter</a> or <a href="%s" target="_blank" >Subscribe</a> to our email list and be the first to get updated.', WR_MEGAMENU_TEXTDOMAIN ) , 'http://bit.ly/wr-freebie-twitter', 'http://www.woorockets.com/?utm_source=PageBuilder%20About&utm_medium=banner-link&utm_campaign=Cross%20Promo%20Plugins#subscribe'); ?></p>
+			<p><?php printf(__('Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href="%s" target="_blank" >Twitter</a> or <a href="%s" target="_blank" >Subscribe</a> to our email list and be the first to get updated.', WR_PBL ) , 'http://bit.ly/wr-freebie-twitter', 'http://www.woorockets.com/?utm_source=PageBuilder%20About&utm_medium=banner-link&utm_campaign=Cross%20Promo%20Plugins#subscribe'); ?></p>
 			<span id="close-header" class="dashicons dashicons-no"></span>
 		</div>
 

@@ -36,7 +36,7 @@ class WR_Pb_Core {
 		if (
 				'post.php' == $pagenow || 'post-new.php' == $pagenow // Post editing page
 				|| 'widgets.php' == $pagenow                         // Widget page, for WR Page Element Widget
-				|| $_GET['wr-gadget'] != ''                          // WR Gadet
+				|| ( isset( $_GET['wr-gadget'] ) && $_GET['wr-gadget'] != '' )	// WR Gadet
 				|| ( defined( 'DOING_AJAX' ) && DOING_AJAX )         // Ajax page
 				|| ! is_admin()                                      // Front end
 		)
@@ -505,14 +505,14 @@ class WR_Pb_Core {
 
 				$element->config['shortcode']           = $shortcode;
 				$element->config['shortcode_structure'] = WR_Pb_Utils_Placeholder::add_placeholder( "[wr_widget widget_id=\"$shortcode\"]%s[/wr_widget]", 'widget_title' );
-				$element->config['el_type']             = $type;
+				$element->config['el_type']             = 'widget';
 
 				// Get element type
 				$element_type = $element->element_in_pgbldr( null, null, null, null, false);
 
 				// Print template tag
 				foreach ( $element_type as $element_structure ) {
-					echo balanceTags( "<script type='text/html' id='tmpl-{$shortcode}'>\n{$element_structure}\n</script>\n" );
+					echo balanceTags( "<script abc type='text/html' id='tmpl-{$shortcode}'>\n{$element_structure}\n</script>\n" );
 				}
 			}
 		}

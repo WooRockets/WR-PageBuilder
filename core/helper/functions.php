@@ -202,12 +202,12 @@ if ( ! class_exists( 'WR_Pb_Helper_Functions' ) ) {
 			$side = WR_Pb_Helper_Functions::is_preview() ? 'admin' : 'wp';
 
 			if ( ! $assign ) {
-				if ( in_array( $file, (array) $_SESSION['processed-assets'][$post_id][$side]['assets'] ) ) {
+					if ( isset($_SESSION['processed-assets'][$post_id][$side]['assets']) && in_array( $file, (array) $_SESSION['processed-assets'][$post_id][$side]['assets'] ) ) {
 					return;
 				}
 			} else {
 				// store it as processed asset
-				$_SESSION['processed-assets'][$post_id]['assets'][$side][] = $file;
+				$_SESSION['processed-assets'][$post_id][$side]['assets'][] = $file;
 			}
 		}
 
@@ -693,7 +693,7 @@ if ( ! class_exists( 'WR_Pb_Helper_Functions' ) ) {
 			if ( ! self::is_preview() ) {
 				WR_Pb_Init_Assets::load( 'wr-pb-modal-js' );
 
-				if ( $_GET['wr_layout'] == 1 ) {
+				if ( isset( $_GET['wr_layout'] ) && $_GET['wr_layout'] == 1 ) {
 					// Load premade layout script
 					WR_Pb_Init_Assets::load( 'wr-pb-premade-pages-js' );
 				} else {
@@ -871,6 +871,8 @@ if ( ! class_exists( 'WR_Pb_Helper_Functions' ) ) {
 				'this_'                 => '',
 				'drag_handle'           => true,
 				'is_sub_element'        => false,
+				'edit_inline'        	=> false,
+				'edit_using_ajax'       => ''
 			);
 			$data = array_merge( $default, $data );
 			extract( $data );

@@ -38,13 +38,15 @@ if ( ! class_exists( 'WR_Pb_Helper_Shortcode' ) ) {
 					self::reload_wr_shortcodes( 1 );
 				}
 
-				foreach ( $providers as $dir => $provider ) {
-					$is_not_active = isset( $provider['file'] ) && ! is_plugin_active( $provider['file'] ) && $provider['name'] != __( 'Standard Elements', WR_PBL );
+				if ( $providers ) {
+					foreach ( $providers as $dir => $provider ) {
+						$is_not_active = isset( $provider['file'] ) && ! is_plugin_active( $provider['file'] ) && $provider['name'] != __( 'Standard Elements', WR_PBL );
 
-					// if a provider is removed
-					if ( ! file_exists( $dir ) || $is_not_active ) {
-						self::reload_wr_shortcodes( 1 );
-						return ;
+						// if a provider is removed
+						if ( ! file_exists( $dir ) || $is_not_active ) {
+							self::reload_wr_shortcodes( 1 );
+							return ;
+						}
 					}
 				}
 			}

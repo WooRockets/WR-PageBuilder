@@ -25,7 +25,13 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		 */
 		function element_config() {
 			$this->config['shortcode']     = strtolower( __CLASS__ );
-			$this->config['extract_param'] = array( 'span' );
+			$this->config['extract_param'] = array(
+				'span',
+				'hidden_on'
+			);
+
+			// Use Ajax to speed up element settings modal loading speed
+			$this->config['edit_using_ajax'] = true;
 		}
 
 		/**
@@ -33,7 +39,31 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		 *
 		 */
 		function element_items() {
+			$this->items = array(
+				'Notab' => array(
+					// --------------------------------------------------------------- HIDDEN
+					array(
+						'name'    => __( 'Hidden on ...', WR_PBL ),
+						'id'      => 'hidden_on',
+						'type'    => 'checkbox',
+						'std'     => '',
+						'options' => array(
+							'hidden-lg' => __( 'Large' , WR_PBL ),
+							'hidden-md' => __( 'Medium', WR_PBL ),
+							'hidden-sm' => __( 'Small', WR_PBL ),
+							'hidden-xs' => __( 'Extra-Small', WR_PBL )
+						)
+					)
+				)
+			);
+		}
 
+		/**
+		 * get params & structure of shortcode
+		 */
+		public function shortcode_data() {
+			$this->config['params'] = WR_Pb_Helper_Shortcode::generate_shortcode_params( $this->items, null, null, false, true );
+			$this->config['shortcode_structure'] = WR_Pb_Helper_Shortcode::generate_shortcode_structure( $this->config['shortcode'], $this->config['params'] );
 		}
 
 		/**
@@ -45,7 +75,11 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		public function element_in_pgbldr( $content = '', $shortcode_data = '' ) {
 			$column_html    = empty($content) ? '' : WR_Pb_Helper_Shortcode::do_shortcode_admin( $content, true );
 			$span           = ( ! empty($this->params['span'] ) ) ? $this->params['span'] : 'span12';
-			$shortcode_data = '[' . $this->config['shortcode'] . ' span="' . $span . '"]';
+			if ( empty( $shortcode_data ) )
+				$shortcode_data = $this->config['shortcode_structure'];
+			// remove [/wr_row][wr_column...] from $shortcode_data
+			$shortcode_data = explode( '][', $shortcode_data );
+			$shortcode_data = $shortcode_data[0] . ']';
 
 			// Remove empty value attributes of shortcode tag.
 			$shortcode_data	= preg_replace( '/\[*([a-z_]*[\n\s\t]*=[\n\s\t]*"")/', '', $shortcode_data );
@@ -54,9 +88,14 @@ if ( ! class_exists( 'WR_Column' ) ) {
 			$column[] = '<div class="jsn-column-container clearafter shortcode-container ">
 							<div class="jsn-column ' . $span . '">
 								<div class="thumbnail clearafter">
-									<textarea class="hidden" name="shortcode_content[]" >' . $shortcode_data . '</textarea>
+									<textarea class="hidden" data-sc-info="shortcode_content" name="shortcode_content[]" >' . $shortcode_data . '</textarea>
 									<div class="jsn-column-content item-container" data-column-class="' . $span . '" >
-										<div class="jsn-handle-drag jsn-horizontal jsn-iconbar-trigger"><div class="jsn-iconbar layout"><a class="item-delete column" onclick="return false;" title="' . __( 'Delete column', WR_PBL ) . '" href="#"><i class="icon-trash"></i></a></div></div>
+										<div class="jsn-handle-drag jsn-horizontal jsn-iconbar-trigger">
+											<div class="jsn-iconbar layout">
+												<a href="javascript:void(0);" title="Edit Column" data-shortcode="' . $this->config['shortcode'] . '" class="element-edit column" data-use-ajax="' . ( $this->config['edit_using_ajax'] ? 1 : 0 ) . '"><i class="icon-pencil"></i></a>
+												<a class="item-delete column" onclick="return false;" title="' . __( 'Delete column', WR_PBL ) . '" href="#"><i class="icon-trash"></i></a>
+											</div>
+										</div>
 										<div class="jsn-element-container item-container-content">
 											' . $column_html . '</div>
 										<a class="jsn-add-more wr-more-element" href="javascript:void(0);"><i class="icon-plus"></i>' . __( 'Add Element', WR_PBL ) . '</a>
@@ -72,10 +111,18 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		 * define shortcode structure of element
 		 */
 		function element_shortcode( $atts = null, $content = null ) {
-			extract( shortcode_atts( array( 'span' => 'span6', 'style' => '' ), $atts ) );
+			extract( shortcode_atts(
+				array(
+	        		'span' => 'span12',
+	        		'hidden_on' => '',
+	        		'style' => ''
+	        	),
+	        	$atts
+	        ) );
 			$style   = empty( $style ) ? '' : "style='$style'";
 			$span    = intval( substr( $span, 4 ) );
-			$class   = "col-md-$span col-sm-$span col-xs-12";
+			$hidden_on = trim( str_replace( '__#__', ' ', $hidden_on ) );
+			$class   = "col-md-$span col-sm-$span col-xs-12 $hidden_on";
 
 			$content = WR_Pb_Helper_Shortcode::remove_autop( $content );
 

@@ -24,10 +24,21 @@
     $.WR_Text = function () {
         if (typeof $.IGSelectFonts != 'undefined') { new $.IGSelectFonts(); }
         if (typeof $.IGColorPicker != 'undefined') { new $.IGColorPicker(); }
-    }
+    };
 
     $(document).ready(function () {
         $.WR_Text();
+        tinymce.remove(tinymce.get('param-text'));
+        tinymce.init({
+        	selector: '#param-text',
+        	wpautop: true,
+        	setup : function(ed) {
+				ed.on('blur', function(e) {
+					var new_content = ed.getContent();
+					$('#param-text').html(new_content).trigger('change').trigger('change');
+				});
+			},
+        	menubar: false
+        });
     });
-
-})(jQuery)
+})(jQuery);

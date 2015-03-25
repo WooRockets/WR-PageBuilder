@@ -133,6 +133,15 @@
 	max-width: 680px;
 }
 
+/* === Style for modal edit column === */
+.jsn-modal #wr-element-column {
+	padding: 20px 25px;
+}
+.jsn-modal #wr-element-column .control-group input[type="checkbox"] {
+	margin-top: -1px;
+	margin-right: 4px;
+}
+
 /* === shortcode_inner_wrapper === */
 #shortcode_inner_wrapper {
 	padding: 15px;
@@ -737,6 +746,11 @@ input:checked+.radio_image {
 /* === Custom WYSIWYG editor === */
 .wysiwyg {
 	width: 100% !important;
+}
+#qt_content_dfw{
+	font: 400 20px/1 dashicons;
+	color: #777;
+	margin: 5px 5px 0 0;
 }
 
 /* === Premade layout === */
@@ -2145,7 +2159,7 @@ button.qt-fullscreen {
     margin: -29px 0 0 0;
 }
 #translation-transifex p{
-	font-size:12px	
+	font-size:12px
 }
 #translation-transifex #wr-close{
 	padding-left: 23px;

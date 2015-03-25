@@ -91,6 +91,8 @@ class WR_Pb_Shortcode_Element extends WR_Pb_Shortcode_Common {
 	 * Add more options to all elements
 	 */
 	public function element_items_extra() {
+		$css_suffix = array();
+		$id_wrapper = array();
 		$shotcode_name = $this->config['shortcode'];
 
 		$disable_el = array(
@@ -265,7 +267,7 @@ class WR_Pb_Shortcode_Element extends WR_Pb_Shortcode_Common {
 		$content_class   = ( $is_sub_element ) ? 'jsn-item-content' : 'wr-pb-element';
 		$modal_title     = empty ( $modal_title ) ? ( ! empty( $exception['data-modal-title'] ) ? "data-modal-title='{$exception['data-modal-title']}'" : '' ) : $modal_title;
 		$element_type    = "data-el-type='$type'";				
-		$edit_using_ajax = $this->config['edit_using_ajax'] ? sprintf( "data-using-ajax='%s'", esc_attr( $this->config['edit_using_ajax'] ) ) : '';
+		$edit_using_ajax = (isset($this->config['edit_using_ajax']) && $this->config['edit_using_ajax']) ? sprintf( "data-using-ajax='%s'", esc_attr( $this->config['edit_using_ajax'] ) ) : '';
 		
 		$data = array(
 			'element_wrapper' => $element_wrapper,

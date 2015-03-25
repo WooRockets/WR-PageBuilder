@@ -47,6 +47,14 @@ class WR_Pb_Init {
 		add_action( 'widgets_init', array(                 &$this, 'init'          ), 100 );
 		add_action( 'admin_init'  , array(       'WR_Pb_Gadget_Base', 'hook'          ), 100 );
 		add_action( 'admin_init'  , array( 'WR_Pb_Product_Plugin', 'settings_form' )      );
+		
+		// Check update
+		if ( ( get_option( 'wr_pb_settings_auto_check_update', 'enable' ) == 'enable' ) && ( time() > get_option( 'wr_pagebuilder_update_schedule', 0 ) ) ) {
+			update_option( 'wr_pagebuilder_update_schedule', time() + ( 2 * 7 * 24 * 60 * 60 ) );
+			add_action( 'init', array( 'WR_Pb_Helper_Update_Checker', 'check_by_curl' ) );
+			add_action( 'wp_enqueue_scripts', array( 'WR_Pb_Helper_Update_Checker', 'check_by_ajax' ) );
+			add_action( 'admin_enqueue_scripts', array( 'WR_Pb_Helper_Update_Checker', 'check_by_ajax' ) );
+		}
 
 		// Activate plugin
 		register_activation_hook( WR_PB_FILE, array( $this, 'do_activate' ) );

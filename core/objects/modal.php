@@ -325,7 +325,7 @@ if ( ! class_exists( 'WR_Pb_Objects_Modal' ) ) {
 			}
 
 			// Auto-append `Shortcode Content` tab
-			if ( $shortcode != 'wr_row' ) {
+			if ( $shortcode != 'wr_row' && $shortcode != 'wr_column' ) {
 				self::shortcode_content_tab( $tabs, $contents, $raw_shortcode );
 			}
 
@@ -446,7 +446,7 @@ if ( ! class_exists( 'WR_Pb_Objects_Modal' ) ) {
 					// Set auto title for the subitem if have
 					$extract_title   =( isset( $el_title ) && $el_title != __( '(Untitled)', WR_PBL ) ) ? $el_title : '';
 					// MODIFY $instance->items
-					WR_Pb_Helper_Shortcode::generate_shortcode_params( $instance->items, NULL, $extract_params, TRUE, FALSE, $extract_title, $has_preview, $sc_content_tab );
+					WR_Pb_Helper_Shortcode::generate_shortcode_params( $instance->items, NULL, $extract_params, TRUE, FALSE, $extract_title, $has_preview );
 
 					// if have sub-shortcode, re-generate shortcode structure
 					if ( ! empty( $instance->config['has_subshortcode'] ) ) {

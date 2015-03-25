@@ -221,7 +221,15 @@ class WR_Testimonial extends WR_Pb_Shortcode_Parent {
 				$testimonial_info['content'] = "<div class='wr-testimonial-box top'><div class='arrow'></div><div class='wr-testimonial-content'><p>" . $item_content . '</p></div></div>';
 			}
 
-			$img = ! empty( $item['image_file'] ) ? "<div class='wr-testimonial-avatar'><img class='$image_container_style' src='{$item['image_file']}' /></div>" : '';
+			if ( isset ( $item['image_file'] ) && ! empty( $item['image_file'] ) ) {
+				$data = getimagesize( $item['image_file'] );
+				$width = $data[0];
+				$height = $data[1];
+				$img = "<div class='wr-testimonial-avatar'><img width='{$width}' height='{$height}' class='$image_container_style' src='{$item['image_file']}' /></div>";
+			} else {
+				$img = '';
+			}
+
 			$testimonial_info['image']    = ( in_array( 'image', $content_elements ) ) ? $img : '';
 
 			// Process company field
@@ -242,9 +250,9 @@ class WR_Testimonial extends WR_Pb_Shortcode_Parent {
 				$arr_style[] = 'color: ' . $item['name_color'];
 			}
 			$style     = ( $arr_style ) ? "style='" . implode( ';', $arr_style ) . "'" : '';
-			$name      = ( in_array( 'name', $content_elements ) ) ? "<strong {$style} class='wr-testimonial-name'>{$item['name']}</strong>" : '';
-			$job_title = ( in_array( 'job_title', $content_elements ) ) ? "<span class='wr-testimonial-jobtitle'>{$item['job_title']}</span>" : '';
-			$country   = ( in_array( 'country', $content_elements ) ) ? "<span class='wr-testimonial-country'>{$item['country']}</span>" : '';
+			$name      = ( isset ( $item['name'] ) && in_array( 'name', $content_elements ) ) ? "<strong {$style} class='wr-testimonial-name'>{$item['name']}</strong>" : '';
+			$job_title = ( isset ( $item['job_title'] ) &&  in_array( 'job_title', $content_elements ) ) ? "<span class='wr-testimonial-jobtitle'>{$item['job_title']}</span>" : '';
+			$country   = ( isset ( $item['country'] ) &&  in_array( 'country', $content_elements ) ) ? "<span class='wr-testimonial-country'>{$item['country']}</span>" : '';
 			if ( $company_link ) {
 				$company   = ( in_array( 'company', $content_elements ) ) ? "<span class='wr-testimonial-link'>$company_link</span>" : '';
 			}

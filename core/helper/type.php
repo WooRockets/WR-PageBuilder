@@ -271,9 +271,9 @@ if ( ! class_exists( 'WR_Pb_Helper_Type' ) ) {
 		static function get_text_align() {
 			return array(
 				'inherit' => __( 'Inherit', WR_PBL ),
-				'left'    => __( '<i class="wr-icon-align-left" title="Left"></i>', WR_PBL ),
-				'center'  => __( '<i class="wr-icon-align-center" title="Center"></i>', WR_PBL ),
-				'right'   => __( '<i class="wr-icon-align-right" title="Right"></i>', WR_PBL )
+				'left'    => '<i class="wr-icon-align-left" title="' . __( 'Left', WR_PBL ) . '"></i>',
+				'center'  => '<i class="wr-icon-align-center" title="' . __( 'Center', WR_PBL ) . '"></i>',
+				'right'   => '<i class="wr-icon-align-right" title="' . __( 'Right', WR_PBL ) . '"></i>'
 			);
 		}
 
@@ -285,9 +285,9 @@ if ( ! class_exists( 'WR_Pb_Helper_Type' ) ) {
 		static function get_map_align() {
 			return array(
 				'no'      => __( 'No Alignment', WR_PBL ),
-				'left'    => __( '<i class="wr-icon-align-left" title="Left"></i>', WR_PBL ),
-				'center'  => __( '<i class="wr-icon-align-center" title="Center"></i>', WR_PBL ),
-				'right'   => __( '<i class="wr-icon-align-right" title="Right"></i>', WR_PBL )
+				'left'    => '<i class="wr-icon-align-left" title="' . __( 'Left', WR_PBL ) . '"></i>',
+				'center'  => '<i class="wr-icon-align-center" title="' . __( 'Center', WR_PBL ) . '"></i>',
+				'right'   => '<i class="wr-icon-align-right" title="' . __( 'Right', WR_PBL ) . '"></i>'
 			);
 		}
 

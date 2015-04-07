@@ -358,22 +358,28 @@ msgid "Add Item"
 msgstr ""
 
 #: core/helper/html/margin.php:45 core/helper/type.php:220
+#: shortcodes/tab/tab.php:139
 msgid "Top"
 msgstr ""
 
 #: core/helper/html/margin.php:64 core/helper/type.php:207
 #: core/helper/type.php:222 shortcodes/audio/audio.php:244
 #: shortcodes/video/video.php:356
+#: core/helper/type.php:274 core/helper/type.php:288
+#: shortcodes/tab/tab.php:141
 msgid "Left"
 msgstr ""
 
 #: core/helper/html/margin.php:85 core/helper/type.php:221
+#: shortcodes/tab/tab.php:140
 msgid "Bottom"
 msgstr ""
 
 #: core/helper/html/margin.php:105 core/helper/type.php:208
 #: core/helper/type.php:223 shortcodes/audio/audio.php:245
 #: shortcodes/video/video.php:357
+#: core/helper/type.php:276 core/helper/type.php:290
+#: shortcodes/tab/tab.php:142
 msgid "Right"
 msgstr ""
 
@@ -557,6 +563,7 @@ msgstr ""
 
 #: core/helper/type.php:209 shortcodes/audio/audio.php:246
 #: shortcodes/video/video.php:358
+#: core/helper/type.php:275 core/helper/type.php:289
 msgid "Center"
 msgstr ""
 
@@ -576,18 +583,6 @@ msgstr ""
 #: shortcodes/heading/heading.php:114 shortcodes/list/list.php:191
 #: shortcodes/promobox/promobox.php:230
 msgid "Inherit"
-msgstr ""
-
-#: core/helper/type.php:274 core/helper/type.php:288
-msgid "<i class=\"wr-icon-align-left\" title=\"Left\"></i>"
-msgstr ""
-
-#: core/helper/type.php:275 core/helper/type.php:289
-msgid "<i class=\"wr-icon-align-center\" title=\"Center\"></i>"
-msgstr ""
-
-#: core/helper/type.php:276 core/helper/type.php:290
-msgid "<i class=\"wr-icon-align-right\" title=\"Right\"></i>"
 msgstr ""
 
 #: core/helper/type.php:287 shortcodes/audio/audio.php:243
@@ -2315,22 +2310,6 @@ msgstr ""
 msgid "Tab Position"
 msgstr ""
 
-#: shortcodes/tab/tab.php:139
-msgid "<i class=\"wr-icon-tab-top\" title=\"Top\"></i>"
-msgstr ""
-
-#: shortcodes/tab/tab.php:140
-msgid "<i class=\"wr-icon-tab-bottom\" title=\"Bottom\"></i>"
-msgstr ""
-
-#: shortcodes/tab/tab.php:141
-msgid "<i class=\"wr-icon-tab-left\" title=\"Left\"></i>"
-msgstr ""
-
-#: shortcodes/tab/tab.php:142
-msgid "<i class=\"wr-icon-tab-right\" title=\"Right\"></i>"
-msgstr ""
-
 #: shortcodes/tab/tab.php:193
 msgid "Tab Item "
 msgstr ""
@@ -2766,6 +2745,7 @@ msgid "by"
 msgstr ""
 
 #: templates/page-builder.php:198
+#: templates/about-us.php:101
 msgid "Documentation"
 msgstr ""
 
@@ -2885,4 +2865,149 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "http://www.wordpress.org/plugins/wr-pagebuilder"
+msgstr ""
+
+#: templates/about-us.php:45
+msgid "Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href=\"%s\" target=\"_blank\" >Twitter</a> or <a href=\"%s\" target=\"_blank\" >Subscribe</a> to our email list and be the first to get updated."
+msgstr ""
+
+#: templates/about-us.php:76
+msgid "<strong>WR Page Builder</strong> is the easiest page builder for WordPress and a totally free WordPress page builder plugin for everyone. It is a simple drag’n’drop plugin that helps you build a complete WordPress page within few minutes without any coding knowledge required."
+msgstr ""
+
+#: templates/about-us.php:79
+msgid "Current version"
+msgstr ""
+
+#: templates/about-us.php:79
+msgid "Change log"
+msgstr ""
+
+#: templates/about-us.php:80
+msgid "Follow us to get latest updates"
+msgstr ""
+
+#: templates/about-us.php:81
+msgid "Follow"
+msgstr ""
+
+#: templates/about-us.php:92
+msgid "Enter your email"
+msgstr ""
+
+#: templates/about-us.php:95
+msgid "Join our mailing list"
+msgstr ""
+
+#: templates/about-us.php:96
+msgid "Receive the latest updates about WR Page Builder as well as all the best news from WooRockets"
+msgstr ""
+
+#: templates/about-us.php:102
+msgid "Detailed construction of how to use WR Page Builder"
+msgstr ""
+
+#: templates/about-us.php:109
+msgid "Hot Features"
+msgstr ""
+
+#: templates/about-us.php:112
+msgid "For Developers"
+msgstr ""
+
+#: templates/about-us.php:115
+msgid "For Translators"
+msgstr ""
+
+#: templates/about-us.php:121
+msgid "Intuitive Layout"
+msgstr ""
+
+#: templates/about-us.php:122
+msgid "Once installed, it’s located next to the default WordPress Editor. To help you easily create your pages/posts, <strong>WR Page Builder</strong> is designed with a simple and intuitive layout. You can easily switch between compact mode and full preview mode to preview everything you have created without going back to the front-end."
+msgstr ""
+
+#: templates/about-us.php:125
+msgid "Drag and Drop Layout"
+msgstr ""
+
+#: templates/about-us.php:126
+msgid "Drag and drop is a convenient functionality for creating a page or a post. You can easily arrange columns, move page elements or widgets into another position and even resize columns using just your mouse. You can also use the “Move button” on the sidebar to move rows up or down."
+msgstr ""
+
+#: templates/about-us.php:129
+msgid "Advanced Page Elements (Built-in Shortcodes)"
+msgstr ""
+
+#: templates/about-us.php:130
+msgid "We have created many advanced page elements, such as: Pricing Tables, QR codes, Testimonials, Tables… You can choose the most suitable field and add as many elements as you want for your site without any coding. Interestingly, you can easily search these elements with the Spotlight Filter."
+msgstr ""
+
+#: templates/about-us.php:134
+msgid "If you are going to build Add-on for WR Page Builder, this document is made for you. This part includes a knowledge base about WR Page Builder, some basic APIs, and a tutorial to make a simple Add-on with a simple element."
+msgstr ""
+
+#: templates/about-us.php:135
+msgid "Docs for Developers"
+msgstr ""
+
+#: templates/about-us.php:136
+msgid "Get our Source Code at Github!"
+msgstr ""
+
+#: templates/about-us.php:137
+msgid "Source Code"
+msgstr ""
+
+#: templates/about-us.php:138
+msgid "Having any exciting ideas or improvements for WR Page Builder to grow our WordPress Community? Drop an email to our WooRockets Astronaut Tony at"
+msgstr ""
+
+#: templates/about-us.php:141
+msgid "If you are reading this, we need your contribution! We appreciate all kinds of support for Translating WR Page Builder into your language!"
+msgstr ""
+
+#: templates/about-us.php:141
+msgid "Translate WR Page Builder"
+msgstr ""
+
+#: templates/about-us.php:142
+msgid "Our awesome translators"
+msgstr ""
+
+#: templates/about-us.php:159
+msgid "Rate WR Page Builder"
+msgstr ""
+
+#: templates/about-us.php:160
+msgid "Share your thoughts of WR Page Builder with other WordPress folks. Next versions of Page Builder will be improved basing on your opinions."
+msgstr ""
+
+#: templates/about-us.php:165
+#: templates/about-us.php:178
+msgid "Submit your Website"
+msgstr ""
+
+#: templates/about-us.php:166
+msgid "Share your website using WR Page Builder with us. We can include it in our showcase collection and have it exposed to thousands of WooRockets's website visitors."
+msgstr ""
+
+#: templates/about-us.php:173
+msgid "Review"
+msgstr ""
+
+#: templates/about-us.php:187
+msgid "Learn more from <strong>OUR BLOG</strong>"
+msgstr ""
+
+#: templates/about-us.php:189
+msgid "Follow our blog for latest news, tutorials & interviews about WooComerce & WordPress"
+msgstr ""
+
+#: templates/about-us.php:192
+msgid "SEE OUR OTHER AWESOMENESS"
+msgstr ""
+
+#: templates/about-us.php:197
+msgid "Freebies download"
 msgstr ""

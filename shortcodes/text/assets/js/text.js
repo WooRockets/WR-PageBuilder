@@ -12,6 +12,8 @@
 /**
  * Custom script for Textbox element
  */
+var initContentEditor;
+
 ( function ($) {
     "use strict";
 
@@ -28,17 +30,22 @@
 
     $(document).ready(function () {
         $.WR_Text();
+
+        // Fix conflict script when create new tinymce editor
+        $('#content-html').click();
         tinymce.remove(tinymce.get('param-text'));
-        tinymce.init({
-        	selector: '#param-text',
-        	wpautop: true,
-        	setup : function(ed) {
-				ed.on('blur', function(e) {
-					var new_content = ed.getContent();
-					$('#param-text').html(new_content).trigger('change').trigger('change');
-				});
-			},
-        	menubar: false
+
+        // Re-init content editor
+        if (initContentEditor == null) {
+        	initContentEditor = tinyMCEPreInit.mceInit['content'];
+        }
+        $('#content-tmce').removeAttr('onclick');
+        $('#content-tmce').off('click');
+        $('#content-tmce').click(function() {
+        	tinymce.remove(tinymce.get('content'));
+        	tinymce.init(initContentEditor);
+        	$('#wp-content-wrap').removeClass('html-active');
+        	$('#wp-content-wrap').addClass('tmce-active');
         });
     });
 })(jQuery);

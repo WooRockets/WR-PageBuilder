@@ -63,6 +63,7 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		 */
 		public function shortcode_data() {
 			$this->config['params'] = WR_Pb_Helper_Shortcode::generate_shortcode_params( $this->items, null, null, false, true );
+			$this->config['params']['span'] = ( ! empty( $this->params['span'] ) ) ? $this->params['span'] : 'span12';
 			$this->config['shortcode_structure'] = WR_Pb_Helper_Shortcode::generate_shortcode_structure( $this->config['shortcode'], $this->config['params'] );
 		}
 
@@ -73,8 +74,8 @@ if ( ! class_exists( 'WR_Column' ) ) {
 		 * @return string
 		 */
 		public function element_in_pgbldr( $content = '', $shortcode_data = '' ) {
-			$column_html    = empty($content) ? '' : WR_Pb_Helper_Shortcode::do_shortcode_admin( $content, true );
-			$span           = ( ! empty($this->params['span'] ) ) ? $this->params['span'] : 'span12';
+			$column_html    = empty( $content ) ? '' : WR_Pb_Helper_Shortcode::do_shortcode_admin( $content, true );
+			$span           = ( ! empty( $this->params['span'] ) ) ? $this->params['span'] : 'span12';
 			if ( empty( $shortcode_data ) )
 				$shortcode_data = $this->config['shortcode_structure'];
 			// remove [/wr_row][wr_column...] from $shortcode_data

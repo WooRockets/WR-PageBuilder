@@ -238,6 +238,22 @@
 	-webkit-box-shadow: 0 -1px 0 0 #fff inset;
 	-moz-box-shadow: 0 -1px 0 0 #fff inset;
 	box-shadow: 0 -1px 0 0 #fff inset;
+	height: auto;
+}
+.wr-dialog .ui-dialog-titlebar > .ui-dialog-title {
+    line-height: 18px;
+}
+.wr-dialog .ui-dialog-titlebar > .ui-dialog-titlebar-close:before {
+    content: '';
+}
+.wr-dialog .select2-container .select2-search-choice-close {
+    display: none;
+}
+.wr-dialog .select2-container .select2-arrow {
+	margin-right: 0;
+}
+.wr-dialog .select2-container {
+	display: inline-block !important;
 }
 .wr-placeholder {
 	opacity: 0.5;

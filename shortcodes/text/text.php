@@ -74,7 +74,7 @@ class WR_Text extends WR_Pb_Shortcode_Element {
 					'name' => __( 'Parent Element Text', WR_PBL ),
 					'desc' => __( 'Enter some content for this textblock', WR_PBL ),
 					'id'   => 'text',
-					'type' => 'text_area_tinymce',
+					'type' => 'tiny_mce',
 					'role' => 'content',
 					'std'  => WR_Pb_Helper_Type::lorem_text(),
 					'rows' => 15,

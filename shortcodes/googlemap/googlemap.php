@@ -155,7 +155,7 @@ class WR_Googlemap extends WR_Pb_Shortcode_Parent {
 					'type'            => 'checkbox',
 					'class'           => 'jsn-column-item checkbox',
 					'container_class' => 'jsn-columns-container jsn-columns-count-two',
-					'std'             => 'streetViewControl__#__zoomControl__#__panControl__#__mapTypeControl__#__scaleControl__#__overviewMapControl',
+					'std'             => 'streetViewControl__#__zoomControl__#__panControl__#__mapTypeControl__#__scaleControl__#__overviewMapControl__#__scrollwheel',
 					'options'         => array(
 						'streetViewControl'  => __( 'Street View', WR_PBL ),
 						'zoomControl'        => __( 'Zoom Controls', WR_PBL ),
@@ -163,6 +163,7 @@ class WR_Googlemap extends WR_Pb_Shortcode_Parent {
 						'mapTypeControl'     => __( 'Map Type Controls', WR_PBL ),
 						'scaleControl'       => __( 'Scale Controls', WR_PBL ),
 						'overviewMapControl' => __( 'Overview Map Controls', WR_PBL ),
+						'scrollwheel'        => __( 'Scrollwheel Zooming', WR_PBL ),
 					),
 				),
 				WR_Pb_Helper_Type::get_apprearing_animations(),
@@ -195,7 +196,7 @@ class WR_Googlemap extends WR_Pb_Shortcode_Parent {
 		$html_element = $container_class = $str_scripts = '';
 		$arr_params   = ( shortcode_atts( $this->config['params'], $atts ) );
 		extract( $arr_params );
-		$arrDefaultOptions = array('streetViewControl', 'zoomControl', 'panControl', 'mapTypeControl', 'scaleControl', 'overviewMapControl');
+		$arrDefaultOptions = array('streetViewControl', 'zoomControl', 'panControl', 'mapTypeControl', 'scaleControl', 'overviewMapControl', 'scrollwheel');
 		if ( $gmap_elements ) {
 			$arr_elements = array_filter( explode( '__#__', $gmap_elements ) );
 			foreach ( $arrDefaultOptions as $i => $item ) {
@@ -377,6 +378,13 @@ class WR_Googlemap extends WR_Pb_Shortcode_Parent {
 					}
 				}
 				google.maps.event.addDomListener(window, \'load\', initialize_' . $random_id . ');
+
+				// Center map on resize
+				google.maps.event.addDomListener(window, \'resize\', function() {
+					var center = map_' . $random_id . '.getCenter();
+					google.maps.event.trigger(map_' . $random_id . ', \'resize\');
+					map_' . $random_id . '.setCenter(center);
+				});
 			});
 		})(jQuery)</script>';
 		$class = 'wr-googlemap';

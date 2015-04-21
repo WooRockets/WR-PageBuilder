@@ -117,3 +117,9 @@ For further information, product details, help and tutorials, please visit our w
 
  * Fixed Style of modal conflict with Woocommerce plugin
  * Fixed Bug conflict with Advanced Custom Fields plugin
+
+
+ = 2.4.12 =
+
+ * Fixed display problem of Google map element on resizing browser
+ * Added parameter 'Scrollwheel Zooming' to Google map element

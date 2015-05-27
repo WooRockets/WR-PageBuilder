@@ -112,6 +112,19 @@ if ( ! class_exists( 'WR_Pb_Helper_Type' ) ) {
 			);
 		}
 
+        /**
+         ** share type options
+         *
+         * @return array
+         */
+        static function get_share_type() {
+            return array(
+                'left' => __( 'Left', WR_PBL ),
+                'center' => __( 'Center', WR_PBL ),
+                'right'    => __( 'Right', WR_PBL ),
+            );
+        }
+
 		/**
 		 ** progress bar color options
 		 *

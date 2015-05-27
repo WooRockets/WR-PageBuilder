@@ -58,6 +58,13 @@ if ( ! class_exists( 'WR_Item_Carousel' ) ) {
 						'role'  => 'title',
 						'std'   => __( WR_Pb_Utils_Placeholder::add_placeholder( 'Carousel Item %s', 'index' ), WR_PBL ),
 			),
+            array(
+                        'name'  => __( 'Alt Description', WR_PBL ),
+                        'id'    => 'alt',
+                        'type'  => 'text_field',
+                        'class' => 'input-sm',
+                        'std'   => __( WR_Pb_Utils_Placeholder::add_placeholder( 'Item description  %s', 'index' ), WR_PBL ),
+            ),
 			array(
 						'name' => __( 'Body', WR_PBL ),
 						'id'   => 'body',
@@ -87,7 +94,7 @@ if ( ! class_exists( 'WR_Item_Carousel' ) ) {
 		public function element_shortcode_full( $atts = null, $content = null ) {
 			extract( shortcode_atts( $this->config['params'], $atts ) );
 			$content_class = ! empty( $image_file ) ? 'carousel-caption' : 'carousel-content';
-			$img           = ! empty( $image_file ) ? "<img width='{WIDTH}' height='{HEIGHT}' src='$image_file' style='height : {HEIGHT}px;'>" : '';
+			$img           = ! empty( $image_file ) ? "<img width='{WIDTH}' height='{HEIGHT}' src='$image_file' alt='$alt' style='height : {HEIGHT}px;'>" : '';
 
 			// remove image shortcode in content
 			$content = WR_Pb_Helper_Shortcode::remove_wr_shortcodes( $content, 'wr_image' );

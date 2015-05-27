@@ -123,3 +123,9 @@ For further information, product details, help and tutorials, please visit our w
 
  * Fixed display problem of Google map element on resizing browser
  * Added parameter 'Scrollwheel Zooming' to Google map element
+
+ = 2.5.0 =
+
+ * Fixed broken lines in Price Table Element
+ * Fixed Alt attribute missing for images in carousel
+ * Added Share element

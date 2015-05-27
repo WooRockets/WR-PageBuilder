@@ -83,6 +83,13 @@ class WR_Pb_Converter_Visual_Composer extends WR_Pb_Converter {
 				'el_class' => 'css_suffix',
 			),
 		),
+        'vc_message' => array(
+            'tag' => 'wr_share',
+            'attributes' => array(
+                'color'    => 'alert_style',
+                'el_class' => 'css_suffix',
+            ),
+        ),
 
 		'vc_toggle' => array(
 			'tag' => 'wr_item_accordion',

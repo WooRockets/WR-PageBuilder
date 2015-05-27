@@ -24,6 +24,27 @@
 			"transitionOut": "elastic",
 			"type"         : "iframe"
 		});
+
+        var c_li_first = $('.wr-prtbl-cols.first .wr-prtbl-features li');
+        c_col_not_first = $('.wr-prtbl-cols:not(.first)');
+        avg_height = $('.wr-prtbl-cols:not(.first) .wr-prtbl-header').height();
+        i = 0;
+        c_li_first.each(function () {
+            height = $(this).height();
+            c_col_not_first.each(function(){
+                $(this).find('.wr-prtbl-features li').eq(i).height(height);
+            });
+            i++;
+        });
+
+        c_col_not_first.each(function(){
+            lgt = $(this).find('.wr-prtbl-header .wr-prtbl-meta p').length;
+            if(lgt >0){
+                $('.wr-prtbl-cols.first .wr-prtbl-header').height(avg_height);
+                return false;
+            }
+        });
+
 	});
 
 })(jQuery);

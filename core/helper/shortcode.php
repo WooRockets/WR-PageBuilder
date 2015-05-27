@@ -63,9 +63,9 @@ if ( ! class_exists( 'WR_Pb_Helper_Shortcode' ) ) {
 			);
 
 			// Compare current provides vs stored providers
-			if ( $providers == $Wr_Sc_Providers ) {
-				return ;
-			}
+//			if ( $providers == $Wr_Sc_Providers ) {
+//				return ;
+//			}
 
 			// Update providers data
 			update_option( '_wr_pb_providers', serialize( $Wr_Sc_Providers ) );

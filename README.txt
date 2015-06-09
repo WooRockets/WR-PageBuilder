@@ -38,7 +38,7 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 > <strong>Get Involved</strong>
 
 > * <b>Fork on Github</b>: WR PageBuilder’s source code is published on <a href="http://github.com/WooRockets/WR-PageBuilder">Github</a> and is always updated to latest version. Feel free to use our plugin to server any of your purposes. Your engagement is always welcome!
-> * <b>Help translate on Transifex</b>: Make WR PageBuilder better for local communities by translating it to different languages. Your help will make it easier for thousands of WordPress users. Join translation team <a href="http://www.transifex.com/projects/p/wr-pagebuilder/">here</a>.
+> * <b>Help bring this plugin to the world</b>: Help many WordPress users in your community by translating it into your languages. The source file is available on <a href="https://github.com/WooRockets/Translation-file-WR-PageBuilder">GitHub</a>. <strong>Note:</strong> The project for WR Page Builder is no longer maintained on Transifex.com.
 
 <i>*<a href="https://wordpress.org/support/view/plugin-reviews/wr-pagebuilder">If you like the plugin, please vote for it!</a>*</i>
 
@@ -129,3 +129,7 @@ For further information, product details, help and tutorials, please visit our w
  * Fixed broken lines in Price Table Element
  * Fixed Alt attribute missing for images in carousel
  * Added Share element
+
+ = 2.5.1 =
+
+ * Changed banners in back-end

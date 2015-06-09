@@ -186,27 +186,11 @@ $enable_fullmode = ! isset( $settings['wr_pb_settings_fullmode'] ) || ( isset( $
 <div id="branding">
 	<div class="pull-left">
 		<div>
-			<a
-				href="http://www.woorockets.com/plugins/wr-pagebuilder/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By"
-				target="_blank"><?php _e( 'WR PageBuilder', WR_PBL ); ?> </a>
-				<?php _e( 'by', WR_PBL )?>
-			<a href="http://www.woorockets.com/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By" target="_blank">WooRockets.com</a>
-		</div>
-		<div>
-			<a
+			<?php _e( 'Powered by', WR_PBL )?>
+			<a href="http://www.woorockets.com/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By" target="_blank">WooRockets.com</a> | <a
 				href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By"
-				target="_blank"><?php _e( 'Documentation', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a
-				href="http://www.woorockets.com/forum/product-support/wr-pagebuilder/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By"
-				target="_blank"><?php _e( 'Support', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	
-			<a class='wr-report-bug' href='#'><?php _e( 'Report bug', WR_PBL ) ?></a>
+				target="_blank"><?php _e( 'Documentation', WR_PBL ); ?> </a>
 		</div>
-	</div>
-	<div class="pull-right">
-		<span class="wr-other-free-plugins-text">Other free plugins</span>
-		<a class="wr-logo-40 contactform" href="http://www.woorockets.com/plugins/wr-contactform/?utm_source=PageBuilder%20Footer&utm_medium=icon&utm_campaign=Cross%20Promo%20Plugins" target="_blank"></a>
-		<a class="wr-logo-40 megamenu" href="http://www.woorockets.com/plugins/wr-megamenu/?utm_source=PageBuilder%20Footer&utm_medium=icon&utm_campaign=Cross%20Promo%20Plugins" target="_blank"></a>
 	</div>
 	<div class="clearbreak"></div>
 </div>

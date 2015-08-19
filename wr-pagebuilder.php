@@ -3,7 +3,7 @@
  * Plugin Name: WR PageBuilder
  * Plugin URI:  http://www.woorockets.com
  * Description: Awesome content builder for Wordpress websites
- * Version:     2.5.1
+ * Version:     2.5.2
  * Author:      WooRockets Team <support@www.woorockets.com>
  * Author URI:  http://www.wordpress.org/plugins/wr-pagebuilder
  * License:     GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html

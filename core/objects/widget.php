@@ -24,7 +24,7 @@ if ( ! class_exists( 'WR_Pb_Objects_Widget' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function WR_Pb_Objects_Widget() {
+		function __construct() {
 			$this->wr_widget_cssclass    = 'wr-widget-pagebuilder';
 			$this->wr_widget_description = __( 'Presentation of any PageBuilder element', WR_PBL );
 			$this->wr_widget_idbase      = 'wr_widget_pagebuilder';
@@ -34,7 +34,7 @@ if ( ! class_exists( 'WR_Pb_Objects_Widget' ) ) {
 			$widget_ops = array( 'classname' => $this->wr_widget_cssclass, 'description' => $this->wr_widget_description );
 
 			/* Create the widget. */
-			$this->WP_Widget( 'wr_widget_pagebuilder', $this->wr_widget_name, $widget_ops );
+			parent::__construct( 'wr_widget_pagebuilder', $this->wr_widget_name, $widget_ops );
 		}
 
 		/**

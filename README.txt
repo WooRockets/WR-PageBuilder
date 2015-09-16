@@ -14,8 +14,6 @@ WR Page Builder is a simple Drag and Drop page builder that helps you build a co
 
 The plugin is similar to an advanced editor and used for both post and page. It includes full page elements, widget support, built-in short codes and much more options that provide an unlimited number of style variations so there is no need to touch any code. In particular, the remarkable improvement in the live preview mode, there will no longer be any feeling glitzy when creating too many things.
 
-<b>More detail:</b> <a href="http://www.woorockets.com/plugins/wr-pagebuilder/">http://www.woorockets.com/plugins/wr-pagebuilder</a>
-
 <b>See demo:</b> <a href="http://demo.woorockets.com/plugins/wr-pagebuilder/">http://demo.woorockets.com/plugins/wr-pagebuilder</a>
 
 <h4>Main Features:</h4>
@@ -32,7 +30,6 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 
 <h4>Support</h4>
 
-* <a href="http://www.woorockets.com/forum/">Support Forum</a>
 * <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
 
 > <strong>Get Involved</strong>
@@ -132,4 +129,12 @@ For further information, product details, help and tutorials, please visit our w
 
  = 2.5.1 =
 
- * Changed banners in back-end
+ * Minor changes in back-end setting
+ 
+ = 2.5.2 =
+
+ * Updated Polish translation
+ 
+ = 2.5.3 =
+
+ * Fixed Some minor bugs

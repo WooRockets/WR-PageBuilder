@@ -221,10 +221,9 @@ class WR_Testimonial extends WR_Pb_Shortcode_Parent {
 				$testimonial_info['content'] = "<div class='wr-testimonial-box top'><div class='arrow'></div><div class='wr-testimonial-content'><p>" . $item_content . '</p></div></div>';
 			}
 
-			if ( isset ( $item['image_file'] ) && ! empty( $item['image_file'] ) ) {
-				$data = getimagesize( $item['image_file'] );
-				$width = $data[0];
-				$height = $data[1];
+			if ( isset ( $item['image_file'] ) && ! empty( $item['image_file'] ) ) {				
+				$width = $attachment['sizes'][$image_size]['width'];
+				$height = $attachment['sizes'][$image_size]['height'];
 				$img = "<div class='wr-testimonial-avatar'><img width='{$width}' height='{$height}' class='$image_container_style' src='{$item['image_file']}' /></div>";
 			} else {
 				$img = '';

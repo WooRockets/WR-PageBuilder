@@ -163,6 +163,26 @@ class WR_Pb_Core {
 		add_action( 'admin_enqueue_scripts', array( $this, 'add_wp_pointer_assets' ) );
 
 		do_action( 'wr_pb_custom_hook' );
+
+		// global variable iframe_load_completed to use in checking load iframe in Text Element Editor
+		add_action( 'admin_head', array( &$this, 'add_custom_global_variable' ) );
+	}
+
+
+	/**
+	* use global variable for Text Element Editor in loading iframe
+	*/
+
+	function add_custom_global_variable () { 
+	?>
+
+		<script type="text/javascript">
+			//alert("ss");
+			var iframe_load_completed = false;
+
+		</script>
+
+	<?php 
 	}
 
 	/**

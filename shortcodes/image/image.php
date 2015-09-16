@@ -219,10 +219,11 @@ class WR_Image extends WR_Pb_Shortcode_Element {
 		if ( $image_file ) {
 			$image_id       = WR_Pb_Helper_Functions::get_image_id( $image_file );
 			$attachment     = wp_prepare_attachment_for_js( $image_id );
-			$image_file     = ( ! empty( $attachment['sizes'][$image_size]['url'] ) ) ? $attachment['sizes'][$image_size]['url'] : $image_file;
-			$data = getimagesize( $image_file );
-			$width = $data[0];
-			$height = $data[1];
+			$image_file     = ( ! empty( $attachment['sizes'][$image_size]['url'] ) ) ? $attachment['sizes'][$image_size]['url'] : $image_file;			
+			
+			$width = $attachment['sizes'][$image_size]['width'];
+			$height = $attachment['sizes'][$image_size]['height'];
+			
 			$html_elemments .= "<img width='{$width}' height='{$height}' src='{$image_file}'{$alt_text}{$class_img} />";
 			$script         = '';
 			$target         = '';

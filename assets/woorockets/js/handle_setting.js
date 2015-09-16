@@ -505,7 +505,7 @@
 
         return tmp_content;
     }
-
+    
 	// Load preview iframe
 	$.HandleSetting.loadIframe = function(curr_iframe, url, tmp_content) {
 		$('#wr_preview_data').remove();
@@ -526,6 +526,10 @@
 			$.HandleSetting.selector(curr_iframe, '#modalOptions #wr_overlay_loading').fadeOut('fast');
 
 			$('#wr_previewing').val('0');
+
+			// Set global variable when iframe has loaded
+			iframe_load_completed = true;
+			//console.log(iframe_load_completed)
 		});
 
 		tmp_form.remove();

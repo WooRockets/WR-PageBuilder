@@ -213,7 +213,9 @@ class WR_Image extends WR_Pb_Shortcode_Element {
 			$arr_params['div_margin_left']   = $arr_params['image_margin_left'];
 
 		$class_img = ( $image_container_style != 'no-styling' ) ? $image_container_style : '';
-		$class_img = ( $image_effect == 'yes' ) ? $class_img . ' image-scroll-fade' : $class_img;
+		if( isset( $image_effect ) ){
+			$class_img = ( $image_effect == 'yes' ) ? $class_img . ' image-scroll-fade' : $class_img;
+		}
 		$class_img = ( ! empty( $class_img ) ) ? ' class="' . $class_img . '"' : '';
 
 		if ( $image_file ) {
@@ -228,7 +230,7 @@ class WR_Image extends WR_Pb_Shortcode_Element {
 			$script         = '';
 			$target         = '';
 
-			if ( $image_effect == 'yes' AND ! isset( $_POST['action'] ) ) {
+			if ( isset( $image_effect ) AND $image_effect == 'yes' AND ! isset( $_POST['action'] ) ) {
 				$html_elemments = "<img src='" . WR_Pb_Helper_Functions::path( 'assets/3rd-party' ) . '/jquery-lazyload/grey.gif' . "' data-original='{$image_file}' width='{$width}' height='{$height}' {$alt_text} {$class_img}/>";
 			}
 

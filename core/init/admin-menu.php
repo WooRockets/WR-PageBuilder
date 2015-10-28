@@ -114,9 +114,11 @@ class WR_Pb_Init_Admin_Menu {
 		self::$add[] = $menu;
 
 		// Add submenu if specified
-		if ( @is_array( $menu['children'] ) ) {
-			foreach ( $menu['children'] AS $submenu ) {
-				self::add( $submenu, $menu['menu_slug'] );
+		if ( isset( $menu['children'] ) ) {
+			if ( @is_array( $menu['children'] ) ) {
+				foreach ( $menu['children'] AS $submenu ) {
+					self::add( $submenu, $menu['menu_slug'] );
+				}
 			}
 		}
 	}

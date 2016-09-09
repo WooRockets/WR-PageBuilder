@@ -734,22 +734,26 @@ if ( ! class_exists( 'WR_Pb_Helper_Type' ) ) {
 		 * @return array
 		 */
 		static function get_single_by_post_types( $posttype = '' ) {
+			global $wpdb;
+			
 			$posttypes = self::get_post_types();
 			$results   = array();
 			foreach ( $posttypes as $slug => $name ) {
 				if ( ! isset( $results[$slug] ) )
 				$results[$slug] = array();
-				// query post by post type
-				$args = array( 'post_type' => $slug, 'posts_per_page' => -1, 'post_status' => ($slug == 'attachment' ) ? 'inherit' : 'publish' );
-				$query = new WP_Query( $args );
-				while ( $query->have_posts() ) {
-					$query->the_post();
-					$results[$slug][get_the_ID()] = __( get_the_title(), WR_PBL );
+			
+				$list_post = $wpdb->get_results( "SELECT ID, post_title FROM $wpdb->posts  WHERE post_type = '" . $slug . "' AND post_status = '" . ( ( $slug == 'attachment' ) ? 'inherit' : 'publish' ) . "'  ORDER BY post_date DESC", ARRAY_A );
+				
+				if( $list_post ) {
+					foreach( $list_post as $val ) {
+						$results[ $slug ][ $val['ID'] ] = __( $val['post_title'], WR_PBL );
+					}
 				}
-				wp_reset_postdata();
+				
 			}
 			if ( $posttype )
-			return $results[$posttype];
+				return $results[$posttype];
+			
 			return $results;
 		}
 

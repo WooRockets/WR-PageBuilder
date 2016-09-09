@@ -10,6 +10,16 @@ WR Page Builder is a simple Drag and Drop page builder that helps you build a co
 
 == Description ==
 
+> Big Announcement for Sep 2016!
+
+> We’ve took into account your feedback and released a brand new version WR PageBuilder is compatible with latest version WordPress and latest plugins.
+
+> Another news is finally… we’ve released Nitro - Universal WooCommerce themes with great eCommerce features and 12 specific demo niches including fashion, shoes, sports gears, kids fashion, electronics, and much more. Moreover, we’ll be releasing 3 new niche demos for every month. 
+
+> Check now at <a href="http://nitro.woorockets.com">http://nitro.woorockets.com</a>
+
+> <i>Published by 8 Sep.</i>
+
 WR Page Builder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. Designed with an intuitive interface, simple and extremely easy to use, this plugin gives a new experience for building pages and creating an entire online shop by visual drag-and-drop functionality.
 
 The plugin is similar to an advanced editor and used for both post and page. It includes full page elements, widget support, built-in short codes and much more options that provide an unlimited number of style variations so there is no need to touch any code. In particular, the remarkable improvement in the live preview mode, there will no longer be any feeling glitzy when creating too many things.
@@ -30,7 +40,7 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 
 <h4>Support</h4>
 
-* <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
+> * <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
 
 > <strong>Get Involved</strong>
 
@@ -134,7 +144,15 @@ For further information, product details, help and tutorials, please visit our w
  = 2.5.2 =
 
  * Updated Polish translation
- 
+
  = 2.5.3 =
 
  * Fixed Some minor bugs
+
+ = 2.5.4 =
+
+ * Fixed Bug editor in text element
+
+ = 2.5.5 =
+
+ * Fixed mass major bugs

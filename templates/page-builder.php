@@ -21,7 +21,7 @@ $enable_fullmode = ! isset( $settings['wr_pb_settings_fullmode'] ) || ( isset( $
 <!-- Buttons bar -->
 <div
 	class="jsn-form-bar">
-	<div id="status-switcher" class="btn-group" data-toggle="buttons-radio">
+	<div style="visibility: hidden;" id="status-switcher" class="btn-group" data-toggle="buttons-radio">
 		<button type="button" class="switchmode-button btn btn-default active"
 			id="status-on"
 			data-original-title="<?php _e( 'Active Page Builder', WR_PBL ) ?>">
@@ -33,7 +33,7 @@ $enable_fullmode = ! isset( $settings['wr_pb_settings_fullmode'] ) || ( isset( $
 			<?php _e( 'Off', WR_PBL ) ?>
 		</button>
 	</div>
-	<div id="mode-switcher" class="btn-group" data-toggle="buttons-radio">
+	<div style="visibility: hidden;" id="mode-switcher" class="btn-group" data-toggle="buttons-radio">
 		<button type="button" class="switchmode-button btn btn-default active"
 			id="switchmode-compact">
 			<?php _e( 'Compact', WR_PBL ) ?>
@@ -186,10 +186,13 @@ $enable_fullmode = ! isset( $settings['wr_pb_settings_fullmode'] ) || ( isset( $
 <div id="branding">
 	<div class="pull-left">
 		<div>
-			<?php _e( 'Powered by', WR_PBL )?>
-			<a href="http://www.woorockets.com/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By" target="_blank">WooRockets.com</a> | <a
-				href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/?utm_source=PageBuilder%20Backend&utm_medium=Text&utm_campaign=Powered%20By"
-				target="_blank"><?php _e( 'Documentation', WR_PBL ); ?> </a>
+			<?php _e( 'Check new product', WR_PBL ); ?> - <a href="http://nitro.woorockets.com/?utm_source=PageBuilder&utm_medium=BuilderGUI&utm_campaign=CrossPromoPlugins" target="_blank">Nitro</a>
+		</div>
+	</div>
+	<div class="pull-right">
+		<div>
+			<?php _e( 'Powered by', WR_PBL ); ?>
+			<a href="http://www.woorockets.com/?utm_source=PageBuilder&utm_medium=BuilderGUI&utm_campaign=PoweredBy" target="_blank">WooRockets.com</a>
 		</div>
 	</div>
 	<div class="clearbreak"></div>

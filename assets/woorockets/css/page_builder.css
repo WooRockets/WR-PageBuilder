@@ -126,6 +126,9 @@
 #modalOptions .wp-switch-editor {
 	height: 27px !important;
 }
+#modalOptions #wp-param-text-media-buttons #wr_pb_button {
+	display: none;
+}
 
 /* === Style for modal edit row === */
 .jsn-modal #wr-element-row {
@@ -679,9 +682,53 @@ input:checked+.radio_image {
 #wr-shortcodes {
 	margin-top: 10px;
 }
+#wr-shortcodes .new-product {
+	text-align: center;
+	margin: 0;
+	padding: 10px 0;
+}
+#wr-shortcodes .new-product a {
+	color: #428bca;
+}
+#wr-shortcodes .jsn-items-outer {
+	overflow-y: auto;
+}
 #wr-shortcodes .jsn-items-list {
 	height: auto;
 	overflow: auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+#wr-shortcodes .jsn-items-list .jsn-item {
+    min-width: auto;
+    width: 25% !important;
+}
+@media screen and (max-width: 1024px ) {
+	#wr-shortcodes .jsn-items-list .jsn-item {
+		min-width: auto;
+		width: 33.3% !important;
+	}	
+}
+@media screen and (max-width: 800px ) {
+	#wr-shortcodes .jsn-items-list .jsn-item {
+		min-width: auto;
+		width: 50% !important;
+	}	
+}
+@media screen and (max-width: 540px ) {
+	#wr-shortcodes .jsn-items-list .jsn-item {
+		min-width: auto;
+		width: 100% !important;
+	}	
+}
+#wr-shortcodes .jsn-items-list .jsn-item.full-width {
+    width: 100% !important;
+    position: static;
 }
 .jsn-modal-indicator {
 	z-index: 200;
@@ -1494,6 +1541,7 @@ input:checked+.radio_image {
 .jsn-bootstrap3 .ui-resizable-e {
 	background: url("../images/backgrounds/bg-handle-resize-h.png")
 		no-repeat scroll center center #FFFFFF;
+	cursor: ew-resize;
 }
 .jsn-bootstrap3 .ui-resizable-handle {
 	z-index: 0 !important;
@@ -2007,7 +2055,9 @@ button .wr-loading {
 .wr-add-element .jsn-items-list .jsn-item {
 	position: relative;
 	min-width: 250px;
+	display: block;
 }
+
 .jsn-bootstrap3 .jsn-items-list .jsn-item .shortcode-item {
 	text-align: left;
 	font-weight: 700;
@@ -2049,22 +2099,21 @@ button .wr-loading {
 	margin-top: 10px;
 }
 #modalOptions #styling fieldset.wr-fieldset {
-	margin: 35px 0 10px 0;
+	margin: 35px 0 20px 0;
 	float: left;
 	position: relative;
 	width: 100%;
-	padding-left: 30px;
 }
 #modalOptions fieldset.wr-fieldset legend {
 	display: inline-block;
 	width: auto;
 	border: none;
 	padding: 0 10px;
-	margin-bottom: 0;
 	font-size: 14px;
 	font-weight: bold;
-	height: 20px;
-	line-height: 14px;
+	margin: -15px 0 0 30px;
+	float: left;
+	background: #fff;
 }
 /*------   Text danger   ------*/
 .wr-text-danger {
@@ -2215,4 +2264,57 @@ button.qt-fullscreen {
 .wr-other-free-plugins-text {
 	float: left;
 	margin: 12px 5px 0px 0px;
+}
+
+/* Custom thickbox */
+.wr-pb-thickbox {
+	z-index: 100053 !important;
+}
+.wr-pb-thickbox #TB_title {
+	background: #f5f5f5;
+	box-shadow: 0 -1px 0 0 #fff inset;
+	height: auto;
+	margin-bottom: 3px;
+}
+.wr-pb-thickbox #TB_title:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.wr-pb-thickbox #TB_title #TB_ajaxWindowTitle {
+	padding: 15px;
+	font-size: 18px;
+	line-height: 1;
+}
+.wr-pb-thickbox #TB_title #TB_closeWindowButton {
+	margin: 11px 20px 0 0;
+	background: #e8e8e8;
+	text-shadow: 0 1px 0 #ffffff;
+	width: 22px;
+	height: 22px;
+	-webkit-transition: background 0.3s;
+	transition: background 0.3s;
+	outline: none;
+}
+.wr-pb-thickbox #TB_title #TB_closeWindowButton .tb-close-icon {
+	color: #c8c8c8;
+	width: 22px;
+	height: 22px;
+	top: -3px;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	box-shadow: none;
+}
+.wr-pb-thickbox #TB_title #TB_closeWindowButton:hover {
+	background: #ccc;
+}
+.wr-pb-thickbox #TB_title #TB_closeWindowButton:hover .tb-close-icon {
+	color: #525252;
+}
+
+/* Custom colpick */
+div.colpick_submit {
+    top: 146px;
+    height: 19px;
+    line-height: 19px;
 }

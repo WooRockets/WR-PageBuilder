@@ -65,27 +65,24 @@
 
 	// show options form
 	?>
-	<form method="POST" action="options.php">
-	<?php
-	$page = 'wr-pb-settings';
-	settings_fields( $page );
-	do_settings_sections( $page );
-	submit_button();
-	?>
-	</form>
 
-	<div id="wr-promo-ab">
-			<h3>Premium<br>
-			WooCommerce Themes</h3>
-			<ul>
-			<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/excellent-icon.png"></span>Excellent designs</li>
-			<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/unlimited-icon.png"></span>Unlimited customization ability</li>
-			<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/additional-icon.png"></span>Additional eCommerce features</li>
-			</ul>
-			<p class="btn-premium"><a href="http://www.woorockets.com/themes/?utm_source=PageBuilder&utm_medium=Setting&utm_campaign=Cross%20Promo%20Banner" target="_blank"><strong>View the collection now</strong><br>
-			<span>And learn how our themes can boost your business!</span></a></p>
+	<div class="wr-setting">
+		<form method="POST" action="options.php">
+			<?php
+			$page = 'wr-pb-settings';
+			settings_fields( $page );
+			do_settings_sections( $page );
+			submit_button();
+			?>
+		</form>
+		<div id="wr-promo-ab">
+			<div class="logo-slogan">
+				<img src="http://www.woorockets.com/images/nitro-logo-white.png" />
+				<p><?php _e( 'Universal<br>WooCommerce Theme<br>from ecommerce experts', WR_PBL ); ?></p>
+			</div>
+			<p class="btn-premium"><a href="http://nitro.woorockets.com/?utm_source=PageBuilder&utm_medium=SettingsPage&utm_campaign=CrossPromoPlugins" target="_blank"><?php _e( 'Explore Now', WR_PBL ); ?></a></p>
+		</div>
 	</div>
-
 </div>
 
 	<?php
@@ -121,51 +118,59 @@
 		.wr-accordion-title { margin: 0; padding: 8px 20px; cursor: pointer; background: #C3C3C3; }
 		.wr-accordion-content { padding: 0; border-top: 1px solid #E5E5E5; line-height: 0; display: none; }
 
+		.wr-setting {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+		}
+		.wr-setting form {
+			-webkit-box-flex: 1;
+			-webkit-flex: 1 0;
+			-ms-flex: 1 0;
+			flex: 1 0;
+		}
+		.wr-setting form .submit {
+			padding-bottom: 0;
+    		margin-bottom: 0;
+		}
+
 		/*** Premium ***/
 		#wr-promo-ab {
-		  background: url(' . WR_PB_URI . 'assets/woorockets/images/about-us/bg-wr-promo.jpg) center top no-repeat;
-		  background-size: auto 100%;
-		  text-align: center;
-		  overflow: hidden;
-		  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		  width: 1030px;
-  		  margin-top: 20px;
+			background: url(' . WR_PB_URI . 'assets/woorockets/images/about-us/bg-wr-promo.jpg) center top no-repeat;
+			background-size: cover;
+			text-align: center;
+			overflow: hidden;
+			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			width: 1030px;
+			margin-top: 20px;
+			width: 250px;
+			margin: 0 0 0 30px;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			justify-content: center;
 		}
-		#wr-promo-ab h3 {
-		    margin: 70px 0 30px;
-		    color: #fff;
-		    font-size: 32px;
-		    font-weight: bold;
-		    line-height: 1.1;
+		#wr-promo-ab .logo-slogan p {
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			margin: 20px 0 50px;
 		}
-		#wr-promo-ab ul {
-		    margin: 0 10px 25px 10px;
-		    padding: 0;
-		    list-style: none;
-		    color: #6c7885;
-		}
-		#wr-promo-ab li {
-		    display: inline-block;
-		    line-height: 31px;
-		    margin: 0 5px 10px;
-		}
-		#wr-promo-ab li span {
-		    background: #6c7886;
-		    float: left;
-		    border-radius: 50%;
-		    -o-border-radius: 50%;
-		    -ms-border-radius: 50%;
-		    -moz-border-radius: 50%;
-		    -webkit-border-radius: 50%;
-		    margin: 0 5px 0 0;
-		}
-		#wr-promo-ab li img {
-		    margin: 8px;
-		    float: left !important;
-		}
+
 		#wr-promo-ab .btn-premium {
-		    margin: 0 0 60px 0;
+			margin: 0;
 		}
+
 		#wr-promo-ab .btn-premium a {
 		    display: inline-block;   
 		    margin: 0;
@@ -189,9 +194,7 @@
 		    -ms-transition: all 0.3s;
 		    -moz-transition: all 0.3s;
 		    -webkit-transition: all 0.3s;
-		}
-		#wr-promo-ab .btn-premium strong {
-		    font-size: 18px;
+		    font-size: 13px;
 		}
 		#wr-promo-ab .btn-premium a:hover {
 		    background: #2a6d40;
@@ -203,24 +206,21 @@
 		    -webkit-box-shadow: 0 4px 0 0 #418858;
 		}
 
-		@media only screen and (max-width: 1232px), (max-device-width: 1232px) {
-			#wr-promo-ab {
-				width:100%
+		@media screen and (max-width:840px){
+			.wr-setting {
+			    -webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
 			}
-		}
-
-		@media only screen and (max-width: 768px), (max-device-width: 768px) {
-		  #wr-promo-ab ul {
-		    width: 270px;
-		    margin-right: auto;
-		    margin-left: auto;
-		  }
-		  #wr-promo-ab ul li {
-		    display: block;
-		    text-align: left;
-		    margin-left: 0;
-		    margin-bottom: 20px;
-		  }
+			.wr-setting form {
+				width: 100%;
+    			margin-bottom: 30px;
+			}
+			#wr-promo-ab {
+			    width: 100%;
+			    margin: 0;
+			    padding: 20px;
+			}
 		}
 
         ';

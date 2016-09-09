@@ -2868,7 +2868,7 @@ msgid "http://www.wordpress.org/plugins/wr-pagebuilder"
 msgstr ""
 
 #: templates/about-us.php:45
-msgid "Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href=\"%s\" target=\"_blank\" >Twitter</a> or <a href=\"%s\" target=\"_blank\" >Subscribe</a> to our email list and be the first to get updated."
+msgid "Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href=\"%s\" target=\"_blank\" >Twitter</a>."
 msgstr ""
 
 #: templates/about-us.php:76

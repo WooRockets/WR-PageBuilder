@@ -20,7 +20,7 @@ class WR_Pb_Helper_Html_Text_Area extends WR_Pb_Helper_Html {
 		$label = parent::get_label( $element );
 		$element['row'] = ( isset( $element['row'] ) ) ? $element['row'] : '8';
 		$element['col'] = ( isset( $element['col'] ) ) ? $element['col'] : '50';
-		if ( $element['exclude_quote'] == '1' ) {
+		if ( isset( $element['exclude_quote'] ) && $element['exclude_quote'] == '1' ) {
 			$element['std'] = str_replace( '<wr_quote>', '"', $element['std'] );
 		}
 		$output = "<textarea class='{$element['class']}' id='{$element['id']}' rows='{$element['row']}' cols='{$element['col']}' name='{$element['id']}' DATA_INFO>{$element['std']}</textarea>";

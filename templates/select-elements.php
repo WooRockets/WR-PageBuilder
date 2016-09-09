@@ -102,34 +102,42 @@ if ( empty ( $elements ) || empty ( $elements['element'] ) ) {
 					</fieldset>
 				</div>
 				<!-- Elements -->
-				<ul class="jsn-items-list">
-				<?php
-				// shortcode elements
-				foreach ( $elements_html as $idx => $element ) {
-					echo balanceTags( $element );
-				}
+				<div class="jsn-items-outer">
+					<ul class="jsn-items-list">
+					<?php
+					// shortcode elements
+					foreach ( $elements_html as $idx => $element ) {
+						echo balanceTags( $element );
+					}
 
-				// widgets
-				global $Wr_Pb_Widgets;
-				foreach ( $Wr_Pb_Widgets as $wg_class => $config ) {
-					$extra_                    = $config['extra_'];
-					$config['edit_using_ajax'] = true;
-					echo balanceTags( WR_Pb_Shortcode_Element::el_button( $extra_, $config ) );
-				}
-				?>
-					<!-- Generate text area to add element from raw shortcode -->
-					<li class="jsn-item full-width" data-value='raw'
-						data-sort='shortcode'><textarea id="raw_shortcode"></textarea>
+					// widgets
+					global $Wr_Pb_Widgets;
+					foreach ( $Wr_Pb_Widgets as $wg_class => $config ) {
+						$extra_                    = $config['extra_'];
+						$config['edit_using_ajax'] = true;
+						echo balanceTags( WR_Pb_Shortcode_Element::el_button( $extra_, $config ) );
+					}
+					?>
+						<!-- Generate text area to add element from raw shortcode -->
+						<li class="jsn-item full-width" data-value='raw'
+							data-sort='shortcode'><textarea id="raw_shortcode"></textarea>
 
-						<div class="text-center rawshortcode-container">
-							<button class="shortcode-item btn btn-success"
-								data-shortcode="raw" id="rawshortcode-add">
-								<?php _e( 'Add Element', WR_PBL ); ?>
-							</button>
-						</div>
-					</li>
-				</ul>
-				<p style="text-align: center">
+							<div class="text-center rawshortcode-container">
+								<button class="shortcode-item btn btn-success"
+									data-shortcode="raw" id="rawshortcode-add">
+									<?php _e( 'Add Element', WR_PBL ); ?>
+								</button>
+							</div>
+						</li>
+					</ul>
+
+					<p class="new-product">
+						<?php echo _e( 'Check new product', WR_PBL ); ?>
+						 - <a href="http://nitro.woorockets.com/?utm_source=PageBuilder&utm_medium=BuilderGUI&utm_campaign=CrossPromoPlugins" target="_blank">Nitro</a>
+					</p>
+				</div>
+
+				<!-- <p style="text-align: center"> -->
 				<?php // echo esc_html( __( 'Want to add more elements?', WR_PBL ) ); ?>
 					&nbsp;<!--a target="_blank"
 						href="<?php //echo esc_url( admin_url( 'admin.php?page=wr-pb-addons' ) ); ?>"><?php //echo esc_html( __( 'Check add-ons.', WR_PBL ) ); ?>

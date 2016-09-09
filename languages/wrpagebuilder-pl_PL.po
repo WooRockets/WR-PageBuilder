@@ -2607,8 +2607,8 @@ msgid "http://www.wordpress.org/plugins/wr-pagebuilder"
 msgstr "http://www.wordpress.org/plugins/wr-pagebuilder"
 
 #: templates/about-us.php:45
-msgid "Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href=\"%s\" target=\"_blank\" >Twitter</a> or <a href=\"%s\" target=\"_blank\" >Subscribe</a> to our email list and be the first to get updated."
-msgstr "Dziękujemy za instalację WR Page Builder od WooRockets Team! Tworzymy nowe wysokiej jakości wtyczki i motywy dla ciebie ;) Obserwuj nas na <a href=\"%s\" target=\"_blank\" >Twitterze</a> lub <a href=\"%s\" target=\"_blank\" >zapisz się</a> na naszą listę mailingową, aby na bieżąco śledzić nowości."
+msgid "Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href=\"%s\" target=\"_blank\" >Twitter</a>."
+msgstr "Dziękujemy za instalację WR Page Builder od WooRockets Team! Tworzymy nowe wysokiej jakości wtyczki i motywy dla ciebie ;) Obserwuj nas na <a href=\"%s\" target=\"_blank\" >Twitterze</a>."
 
 #: templates/about-us.php:76
 msgid "<strong>WR Page Builder</strong> is the easiest page builder for WordPress and a totally free WordPress page builder plugin for everyone. It is a simple drag’n’drop plugin that helps you build a complete WordPress page within few minutes without any coding knowledge required."

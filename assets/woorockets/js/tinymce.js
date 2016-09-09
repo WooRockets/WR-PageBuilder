@@ -8,10 +8,14 @@
         		
         		 // triggers the thickbox
                 tb_show( Wr_Translate.inno_shortcode, '#TB_inline?width=' + 100 + '&height=' + 100 + '&inlineId=wr_pb-form' );
+
+                var thickbox = $('#TB_window');
+
                 // custom style
+                thickbox.addClass( 'wr-pb-thickbox' );
                 var height = $(window).height() * 0.8;
-                $('#TB_window').css({'overflow-y' : 'auto', 'overflow-x' : 'hidden', 'width' : '95%', 'margin-left' : '0px', 'left' : '2.5%', height: height + 'px'});
-                $('#TB_window .jsn-items-list').height(height - 146);
+                thickbox.css({'overflow-y' : 'auto', 'overflow-x' : 'hidden', 'width' : '95%', 'margin-left' : '0px', 'left' : '2.5%', height: height + 'px'});
+                $('#TB_window .jsn-items-outer').height(height - 115);
         	});
         	
         	// re-calculate sizes of modal "Add Page Element" when window resize
@@ -27,7 +31,7 @@
         				width : width + 'px',
         				height : height + 'px',
         			});
-        			$('#TB_window .jsn-items-list').height(height - 146);
+        			$('#TB_window .jsn-items-outer').height(height - 115);
         		}
         	});
         });

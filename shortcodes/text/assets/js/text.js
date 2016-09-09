@@ -30,58 +30,71 @@ var initContentEditor;
 
     $(document).ready(function () {        
         $.WR_Text();
-        $('#content-html').click();        
-        var intTimeout = 5000;
-        var intAmount = 100;
-        var isInit = false;
-        $('#param-text-tmce').removeAttr('onclick');
-        $('#param-text-tmce').off('click');
-        var ifLoadedInt = setInterval(function(){
-            if (iframe_load_completed || intAmount >= intTimeout) {                
-                initContentEditor = tinyMCEPreInit.mceInit['param-text'];              
-               intAmount += 100;
-                initContentEditor.setup = function(ed){
-                    ed.on('blur', function(){
-                        if ( $('.mce-tinymce').length > 1) {
-                            $('.mce-tinymce').first().hide();    
-                        }                        
-                         tinyMCE.triggerSave();
-                         jQuery('.wr_pb_editor').first().trigger('change');
-                    });
-                }
-                // Visual Tab
-                $('#param-text-tmce').click(function(){                    
-                    setTimeout( function(){
-                         if ( $('.mce-tinymce').length > 1) {
-                            $('.mce-tinymce').first().hide();    
-                        }
-                    },500);                   
-                    tinymce.remove(tinymce.get('param-text'));
-                    tinymce.init(initContentEditor);                     
-                    isInit = true;
-                    $('#wp-content-wrap').removeClass('html-active');
-                    $('#wp-content-wrap').addClass('tmce-active');
-                });
 
-                // Text tab
-                $('#param-text-html').click(function(){
-                    setTimeout( function(){
-                         if ( $('.mce-tinymce').length > 1) {
-                            $('.mce-tinymce').first().hide();    
-                        }
-                    },500);                    
-                    tinymce.remove(tinymce.get('param-text'));
-                    tinymce.init(initContentEditor); 
-                    $('#wp-content-wrap').removeClass('tmce-active');
-                    $('#wp-content-wrap').addClass('html-active');
-                });
+        var intTimeout = 5000;
+        var intAmount  = 100;
+
+        var ifLoadedInt = setInterval(function(){
+            if (iframe_load_completed || intAmount >= intTimeout) {
+
+                var text_content = $( '#param-text.form-control' ).html();
+
+                var wr_editor = $( '#tmpl-wr-editor' ).html();
+
+                wr_editor = wr_editor.replace( '_WR_CONTENT_', text_content );
+
+                $( '#param-text' ).after( wr_editor );
+
+                $( '#param-text.form-control' ).remove();
+
+                ( function() {
+                    var init, id, $wrap;
+
+                    // Render Visual Tab
+                    for ( id in tinyMCEPreInit.mceInit ) {
+                        if ( id != 'param-text' )
+                            continue;
+
+                        init  = tinyMCEPreInit.mceInit[id];
+                        $wrap = tinymce.$( '#wp-' + id + '-wrap' );
+
+                        tinymce.remove(tinymce.get('param-text'));
+                        tinymce.init( init );
+
+                        setTimeout( function(){
+                            $( '#wp-param-text-wrap' ).removeClass( 'html-active' );
+                            $( '#wp-param-text-wrap' ).addClass( 'tmce-active' );
+                        }, 10 );
+
+                        if ( ! window.wpActiveEditor )
+                                window.wpActiveEditor = id;
+
+                        break;
+                    }
+
+                    // Render Text tab
+                    for ( id in tinyMCEPreInit.qtInit ) {
+                        if ( id != 'param-text' )
+                            continue;
+
+                        quicktags( tinyMCEPreInit.qtInit[id] );
+
+                        // Re call inset quicktags button
+                        QTags._buttonsInit();
+
+                        if ( ! window.wpActiveEditor )
+                            window.wpActiveEditor = id;
+
+                        break;
+                    }
+                }());
+
                 iframe_load_completed = false;
                 window.clearInterval(ifLoadedInt);
-            }                
+            }
         },
         intAmount
-        );    
-
+        );
 
     });
 })(jQuery);

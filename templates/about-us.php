@@ -42,7 +42,7 @@
 
 		<div id="wr-header">
 			<a class="wr-logoheader" target="_blank" href="http://www.woorockets.com/?utm_source=PageBuilder%20About&utm_medium=top%20logo&utm_campaign=Cross%20Promo%20Plugins"><img src="<?php echo WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/about-us/logo-header.png'; ?>" alt="woorockets.com" /></a>
-			<p><?php printf(__('Thank you for installing WR Page Builder from WooRockets Team! We are making new hi-quality themes and plugins for you ;) Follow us on <a href="%s" target="_blank" >Twitter</a> or <a href="%s" target="_blank" >Subscribe</a> to our email list and be the first to get updated.', WR_PBL ) , 'http://bit.ly/wr-freebie-twitter', 'http://www.woorockets.com/?utm_source=PageBuilder%20About&utm_medium=banner-link&utm_campaign=Cross%20Promo%20Plugins#subscribe'); ?></p>
+			<p><?php printf(__('Thank you for installing WR Page Builder! Don\'t forget to check out our <a href="%s">brand new theme Nitro</a>.', WR_PBL ) , 'http://nitro.woorockets.com/?utm_source=PageBuilder&utm_medium=Topbar&utm_campaign=CrossPromoPlugins' ); ?></p>
 			<span id="close-header" class="dashicons dashicons-no"></span>
 		</div>
 
@@ -84,6 +84,14 @@
 		</div>
 	</div>
 
+	<div id="wr-promo-ab">
+		<div class="logo-slogan">
+			<img src="http://www.woorockets.com/images/nitro-logo-white.png" />
+			<p><?php _e( 'Universal WooCommerce Theme from ecommerce experts', WR_PBL ); ?></p>
+		</div>
+		<p class="btn-premium"><a href="http://www.woorockets.com/themes/?utm_source=PageBuilder&utm_medium=About&utm_campaign=Cross%20Promo%20Banner" target="_blank"><?php _e( 'Explore Now', WR_PBL ); ?></a></p>
+	</div>
+
 	<div id="email-features">
 		<div class="left-feature">
 			<div class="box-email">
@@ -102,6 +110,7 @@
 				<p><?php _e( 'Detailed construction of how to use WR Page Builder', WR_PBL ); ?></p>
 			</div>
 		</div>
+
 		<div class="right-feature">
 			<div role="tabpanel">
 				<ul class="nav nav-tabs wr-pb-tabs" role="tablist">
@@ -179,18 +188,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="wr-promo-ab">
-		<h3>Premium<br>
-		WooCommerce Themes</h3>
-		<ul>
-		<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/excellent-icon.png"></span>Excellent designs</li>
-		<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/unlimited-icon.png"></span>Unlimited customization ability</li>
-		<li><span><img src="<?php echo WR_PB_URI; ?>assets/woorockets/images/about-us/additional-icon.png"></span>Additional eCommerce features</li>
-		</ul>
-		<p class="btn-premium"><a href="http://www.woorockets.com/themes/?utm_source=PageBuilder&utm_medium=About&utm_campaign=Cross%20Promo%20Banner" target="_blank"><strong>View the collection now</strong><br>
-		<span>And learn how our themes can boost your business!</span></a></p>
 	</div>
 
 	<div id="wr-logo">

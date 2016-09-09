@@ -210,11 +210,6 @@ class WR_Carousel extends WR_Pb_Shortcode_Parent {
 		if ( ! empty( $dimension_height ) )
 		$styles[] = "height : {$dimension_height}px;";
 
-		if ( in_array( $align, array( 'left', 'right', 'inherit') ) ) {
-			$styles[] = "float : $align;";
-		} else if ( $align == 'center' )
-		$styles[] = 'margin : 0 auto;';
-
 		$styles = trim( implode( ' ', $styles ) );
 		$styles = ! empty( $styles ) ? "style='$styles'" : '';
 
@@ -247,7 +242,7 @@ class WR_Carousel extends WR_Pb_Shortcode_Parent {
 		if ($show_arrows == 'yes')
 		$carousel_navigator = "<a class='left carousel-control'><span class='icon-arrow-left'></span></a><a class='right carousel-control'><span class='icon-arrow-right'></span></a>";
 
-		$html = "<div class='carousel slide' $styles id='$carousel_id'>$carousel_indicators $carousel_content $carousel_navigator</div>";
+		$html = "<div class='carousel slide wr-align-$align' $styles id='$carousel_id'>$carousel_indicators $carousel_content $carousel_navigator</div>";
 
 		return $this->element_wrapper( $html . $script, $arr_params );
 	}

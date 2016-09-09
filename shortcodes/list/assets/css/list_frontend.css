@@ -71,6 +71,13 @@
     float: right;
     margin-left: 15px;
 }
+.jsn-bootstrap3 .wr-list-icons.wr-position-center {
+    text-align: center;
+}
+.jsn-bootstrap3 .wr-list-icons.wr-position-center .wr-icon-base {
+    margin-left: auto;
+    margin-right: auto;
+}
 .jsn-bootstrap3 .wr-list-content-wrap {
     overflow: hidden;
 }

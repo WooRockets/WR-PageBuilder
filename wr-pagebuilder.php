@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WR PageBuilder
  * Plugin URI:  http://www.woorockets.com
- * Description: Awesome content builder for Wordpress websites
- * Version:     2.5.3
+ * Description: Awesome content builder for Wordpress websites. Check new product - <a href="http://nitro.woorockets.com/?utm_source=PageBuilder&utm_medium=PluginDescription&utm_campaign=CrossPromoPlugins">Nitro</a>.
+ * Version:     2.5.5
  * Author:      WooRockets Team <support@www.woorockets.com>
  * Author URI:  http://www.wordpress.org/plugins/wr-pagebuilder
  * License:     GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html

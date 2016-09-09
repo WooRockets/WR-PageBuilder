@@ -161,7 +161,9 @@
 			}
 
 			//$("#wr-add-element").hide();
+			tb_remove();
 			$('.jsn-modal:last').remove();
+
 			$.HandleElement.showLoading();
 
 			// Get title of clicked element

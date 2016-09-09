@@ -389,14 +389,22 @@ if ( ! class_exists( 'WR_Pb_Helper_Functions' ) ) {
 				$( document ).ready( function () {
 					$( '$selector' ).click( function(e){
 						e.preventDefault();
-						var url = $(this).attr('href');
 
-						var width = screen.availWidth * 0.75;
-						var height = screen.availHeight * 0.75;
-						var left = parseInt((screen.availWidth/2) - (width/2));
-						var top = parseInt((screen.availHeight/2) - (height/2));
-						var windowFeatures = 'width=' + width + ',height=' + height + ',status,resizable,left=' + left + ',top=' + top + 'screenX=' + left + ',screenY=' + top;
-						myWindow = window.open(url, 'subWind', windowFeatures);
+						var _this = $(this);
+						var url = _this.attr('href');
+
+						var image_new_window = new Image();
+						image_new_window.src = url;
+						image_new_window.onload = function() {
+							var width = this.width;
+							var height = this.height;
+
+							var left = parseInt((screen.availWidth/2) - (width/2));
+							var top = parseInt((screen.availHeight/2) - (height/2));
+
+							var windowFeatures = 'width=' + width + ',height=' + height + ',status,resizable,left=' + left + ',top=' + top + 'screenX=' + left + ',screenY=' + top;
+							myWindow = window.open(url, 'subWind', windowFeatures);
+						};
 					} );
 				});
 			})( jQuery )";

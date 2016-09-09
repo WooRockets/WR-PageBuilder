@@ -122,7 +122,6 @@ class WR_Pb_Core {
 
 		// print html template of shortcodes
 		add_action( 'admin_footer', array( &$this, 'element_tpl' ) );
-		add_filter( 'wp_handle_upload_prefilter', array( &$this, 'media_file_name' ), 100 );
 
 		// add IGPB button to Wordpress TinyMCE
 		add_filter( 'wp_default_editor', create_function('', 'return "html";') );
@@ -166,8 +165,25 @@ class WR_Pb_Core {
 
 		// global variable iframe_load_completed to use in checking load iframe in Text Element Editor
 		add_action( 'admin_head', array( &$this, 'add_custom_global_variable' ) );
+
+		// Add wp editor html
+		add_action( 'wr_pb_footer', array( __CLASS__, 'text_html_wp_editor' ) );
+
 	}
 
+	/**
+	* Render html wp editor
+	*/
+	public static function text_html_wp_editor() {
+		echo "<script type='text/html' id='tmpl-wr-editor'>";
+			wp_editor( '_WR_CONTENT_', 'param-text', array(
+										'textarea_name' => 'param-text',
+										'textarea_rows' => 15,
+										'editor_class' => 'wr_pb_editor'
+									)
+			);
+		echo '</script>';
+	}
 
 	/**
 	* use global variable for Text Element Editor in loading iframe
@@ -868,20 +884,6 @@ class WR_Pb_Core {
 			echo "<div class='jsn-bootstrap3'>" . $content . '</div>';
 		}
 		exit;
-	}
-
-	/**
-	 * Get media file name
-	 *
-	 * @param array $file
-	 * @return array
-	 */
-	function media_file_name( $file ) {
-		$file_name = iconv( 'utf-8', 'ascii//TRANSLIG//IGNORE', $file['name'] );
-		if ( $file_name ) {
-			$file['name'] = $file_name;
-		}
-		return $file;
 	}
 
 	/**

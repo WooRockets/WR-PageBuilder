@@ -124,8 +124,13 @@
 		// Update column width when window resize
 		resizeHandle:function (self) {
 			$(window).resize(function() {
-				if($('body').children('.ui-dialog').length)
-					$('html, body').animate({scrollTop: $('body').children('.ui-dialog').first().offset().top - 60}, 'fast');
+				var ui_dialog = $('body').children('.ui-dialog');
+
+				if( ui_dialog.length ) {
+					var offset_top = ui_dialog.find( '#wr-shortcodes' ).length ? 200 : 60;
+					$('html, body').animate({scrollTop: $('body').children('.ui-dialog').first().offset().top - offset_top}, 'fast');
+				}
+
 				self.fnReset(self);
 				var _rows	= $('.jsn-row-container', self.wrapper);
 				self.wrapper.trigger('wr-pagebuilder-column-size-changed', [_rows]);
@@ -922,7 +927,7 @@
 				$(box).width(width);
 				$(box).height(height);
 				$('#wr-add-element-modal').height('100%');
-				$('.jsn-items-list', $(box)).height(height - 160);
+				$('.jsn-items-outer' ).height( height - 115 );
 				$(box).css({
 					top :'50%',
 					left :'50%',

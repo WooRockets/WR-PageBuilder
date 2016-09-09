@@ -11,6 +11,16 @@
 div.wr_text p.dropcap:first-letter {
     margin: 0.1em 0.2em 0.1em -0.05em;
 }
+.jsn-bootstrap3 .carousel.wr-align-left {
+    text-align: left;
+}
+.jsn-bootstrap3 .carousel.wr-align-right {
+    text-align: right;
+}
+.jsn-bootstrap3 .carousel.wr-align-center {
+    text-align: center;
+}
+
 .jsn-master .jsn-bootstrap3 .mejs-container, .jsn-master .jsn-bootstrap3 .local_file, iframe, object, video {
     max-width: 100%;
 }
@@ -122,7 +132,12 @@ ul.wr-social-links li a.twitter:hover {
 
 /*------   Icon   ------*/
 .jsn-bootstrap3 .progress-info i {
-	margin-right: 10px;
+    margin-right: 10px;
+}
+
+/*------   Tab   ------*/
+.jsn-bootstrap3 .tabs-below .nav-tabs li.active a {
+	margin-top: 1px;
 }
 
 /*------   Accordion   ------*/

@@ -124,25 +124,26 @@ class WR_Pb_Converter {
 		// Get available data converter
 		$files      = $wp_filesystem->dirlist( dirname( __FILE__ ) );
 		$converters = array();
-
-		foreach ( $files as $file ) {
-			if ( 'converter.php' != $file['name'] ) {
-				$converter = substr( $file['name'], 0, -4 );
-
-				// Generate data converter class name
-				$class = explode( '-', $converter );
-				$class = array_map( 'ucfirst', $class );
-				$class = 'WR_Pb_Converter_' . implode( '_', $class );
-
-				if ( class_exists( $class, true ) ) {
-					// Check if there is data to convert
-					if ( call_user_func( array( $class, 'check' ), $post ) ) {
-						$converters[ $converter ] = ucwords( str_replace( '-', ' ', substr( $file['name'], 0, -4 ) ) );
+		
+		if (!empty($files)) {
+			foreach ( $files as $file ) {
+				if ( 'converter.php' != $file['name'] ) {
+					$converter = substr( $file['name'], 0, -4 );
+	
+					// Generate data converter class name
+					$class = explode( '-', $converter );
+					$class = array_map( 'ucfirst', $class );
+					$class = 'WR_Pb_Converter_' . implode( '_', $class );
+	
+					if ( class_exists( $class, true ) ) {
+						// Check if there is data to convert
+						if ( call_user_func( array( $class, 'check' ), $post ) ) {
+							$converters[ $converter ] = ucwords( str_replace( '-', ' ', substr( $file['name'], 0, -4 ) ) );
+						}
 					}
 				}
 			}
 		}
-
 		// Allow 3rd-party plugin to hook into data conversion
 		$converters = apply_filters( 'wr_pb_get_data_converters', $converters );
 
